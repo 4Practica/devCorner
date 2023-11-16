@@ -7,7 +7,7 @@ function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<div className={`${styles.root}`}>
+		<>
 			<div>
 				<a href="https://vitejs.dev" target="_blank">
 					<img src={viteLogo} className={styles.logo} alt="Vite logo" />
@@ -32,7 +32,7 @@ function App() {
 			<p className={`${styles.readTheDocs}`}>
 				Click on the Vite and React logos to learn more
 			</p>
-		</div>
+		</>
 	);
 }
 
