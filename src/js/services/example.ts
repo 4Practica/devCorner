@@ -1,3 +1,3 @@
-export const test = ( ) => {
-    console.log("Haciendo una preuab")
+export const test = () => {
+  console.log('Haciendo una preuab')
 }

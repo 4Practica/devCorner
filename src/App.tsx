@@ -1,11 +1,10 @@
-import { HomeView } from '@views';
+import { HomeView } from '@views'
 
 function App() {
-
   return (
     <>
       <HomeView />
-      {"Esto es un test 2"}
+      {'Esto es un test 2'}
     </>
   )
 }
