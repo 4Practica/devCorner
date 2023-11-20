@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <HomeView />
+      {"Esto es un test"}
     </>
   )
 }
