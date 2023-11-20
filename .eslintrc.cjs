@@ -9,6 +9,7 @@ module.exports = {
   ignorePatterns: [
     'dist',
     '.eslintrc.cjs',
+    'vite.config.ts',
     'package.json',
     'package-lock.json',
   ],
