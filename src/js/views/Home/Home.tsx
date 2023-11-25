@@ -1,9 +1,12 @@
-import style from './Home.module.css';
+import { Hero } from './Components'
 
 export const Home = () => {
-    return (
-        <h1 className={style.title}>Hola desde home</h1>
-    )
+  return (
+    <>
+      <Hero />
+      <h1>Hola desde home</h1>
+    </>
+  )
 }
 
-export default Home;
+export default Home

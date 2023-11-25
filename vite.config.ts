@@ -1,10 +1,10 @@
 import { defineConfig, loadEnv } from 'vite'
 /* import alias from '@rollup/plugin-alias'; */
 import react from '@vitejs/plugin-react'
-import path from 'path';
+import path from 'path'
 
 // https://vitejs.dev/config/
-export default defineConfig(({command, mode}) => {
+export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const projectRootDir = path.resolve(__dirname)
   const globalConfig = {
@@ -21,7 +21,7 @@ export default defineConfig(({command, mode}) => {
         }
       }) */
     ],
-    base: "/",
+    base: '/',
     resolve: {
       alias: {
         '@utils': path.resolve(projectRootDir, '/src/js/utils'),
@@ -30,32 +30,31 @@ export default defineConfig(({command, mode}) => {
         '@common': path.resolve(projectRootDir, '/src/js/common'),
         '@styles': path.resolve(projectRootDir, '/src/styles'),
         '@assets': path.resolve(projectRootDir, '/src/assets'),
-      }
-    }
+      },
+    },
   }
   if (command === 'serve') {
-    
     return {
       ...globalConfig,
-      publicDir: "/public",
+      publicDir: '/public',
       server: {
         port: 3000,
         open: true,
-      }
+      },
     }
   }
   if (command === 'build') {
     return {
       ...globalConfig,
       build: {
-        outDir: "./dist",
-        assetsDir: "./app",
+        outDir: './dist',
+        assetsDir: './app',
         cssCodeSplit: true,
         sourcemap: true,
         emptyOutDir: true,
         reportCompressedSize: true,
         chunkSizeWarningLimit: 520,
-      }
+      },
     }
   }
 })
