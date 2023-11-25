@@ -1,6 +1,8 @@
+import style from './Home.module.css';
+
 export const Home = () => {
     return (
-        <h1>Hola desde home</h1>
+        <h1 className={style.title}>Hola desde home</h1>
     )
 }
 
