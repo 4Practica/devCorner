@@ -1,4 +1,22 @@
-:root {
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  max-width: var(--responsive-max-device);
+  min-width: var(--responsive-min-device);
+
+  margin: 0 auto;
+}
+
+
+
+/* :root {
   font-family: var(--secondary-font);
   line-height: 1.5;
   font-weight: 400;
@@ -78,4 +96,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
