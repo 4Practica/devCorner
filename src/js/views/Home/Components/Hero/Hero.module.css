@@ -144,14 +144,14 @@
 
 @keyframes floating {
   0% {
-    bottom: 0px
+    bottom: 0px;
   }
 
   50% {
-    bottom: 10px
+    bottom: 10px;
   }
 
   100% {
-    bottom: 0px
+    bottom: 0px;
   }
 }
