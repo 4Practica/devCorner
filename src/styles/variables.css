@@ -15,6 +15,7 @@
   --color-gray-900: #272727;
 
   --color-purple: #8971fe;
+  --color-yellow: #d7ff70;
   color-scheme: light dark;
   background-color: var(--color-main-light);
   color: var(--color-main-dark);
