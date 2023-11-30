@@ -16,7 +16,9 @@ const {
   pt_20,
   pb_20,
   visible,
+  input,
   input_border,
+  input_bg,
   button,
   second_text,
   first_text,
@@ -62,9 +64,11 @@ export const Hero = () => {
           className={`${flex} ${form_direction} ${form_width} ${gap_20}`}
         >
           <div className={`${flex} `}>
-            <label htmlFor='email'>cscascsc</label>
+            <label htmlFor='email'>
+              <i className='fa-regular fa-envelope'></i>
+            </label>
             <input
-              className={`${input_border}`}
+              className={`${input} ${input_border} ${input_bg}`}
               type='text'
               name='email'
               id='email'
