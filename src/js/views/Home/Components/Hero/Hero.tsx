@@ -26,7 +26,7 @@ const {
 export const Hero = () => {
   const [data, setData] = useState({ email: '' })
 
-  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
     //Aqui la funcion para el submit
     e.preventDefault()
   }
