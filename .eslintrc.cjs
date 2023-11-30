@@ -36,13 +36,6 @@ module.exports = {
     'no-duplicate-imports': 'error',
     'arrow-body-style': ['error', 'always'],
     'eqeqeq': ['error', 'always'],
-    'camelcase': [
-      'error',
-      {
-        ignoreDestructuring: true,
-        ignoreImports: true,
-      },
-    ],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
