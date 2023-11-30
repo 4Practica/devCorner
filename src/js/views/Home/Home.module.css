@@ -1,4 +1,9 @@
 .title {
-    font-family: var(--font-primary);
-    color: var(--color-primary);
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+}
+
+.container {
+  max-width: var(--responsive-max-device);
+  min-width: var(--responsive-min-device);
 }
