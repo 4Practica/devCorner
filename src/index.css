@@ -8,9 +8,6 @@
 
 #root {
   min-height: 100vh;
-  max-width: var(--responsive-max-device);
-  min-width: var(--responsive-min-device);
-
   margin: 0 auto;
 }
 
