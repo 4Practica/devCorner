@@ -70,6 +70,10 @@
   color: var(--color-gray-400);
 }
 
+.email_icon {
+  color: white;
+}
+
 /* Form classes */
 .form_direction {
   flex-direction: column;
@@ -186,6 +190,7 @@
 
   .left_side {
     margin-top: auto;
+    padding-right: 2.5rem;
   }
 
   .section_padding {
@@ -210,7 +215,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 2rem;
+    gap: 4rem;
     padding-bottom: 1.5rem;
     height: 60vh;
     border-radius: 10px;
@@ -219,8 +224,10 @@
   .left_image,
   .middle_image,
   .right_image {
+    border-radius: 10px;
     width: 50%;
     height: 350px;
+    box-shadow: 0 10px 13px rgba(0, 0, 0, 0.4);
   }
 
   .middle_image {
@@ -228,7 +235,8 @@
   }
 }
 
-@media (min-width: 1420px) {}
+@media (min-width: 1420px) {
+}
 
 @keyframes floating {
   0% {
