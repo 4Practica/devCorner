@@ -28,6 +28,10 @@
   padding-bottom: 20px;
 }
 
+.pl_2 {
+  padding-left: 2px;
+}
+
 .gap_20 {
   gap: 20px;
 }
@@ -56,12 +60,13 @@
 }
 
 .first_text {
-  font-size: var(--font-lg);
+  font-size: var(--font-xl);
   color: var(--color-main-dark);
 }
 
-.second_text {
-  font-size: var(--font-xs);
+.second_text,
+.email_icon {
+  font-size: var(--font-sm);
   color: var(--color-gray-400);
 }
 
@@ -76,10 +81,11 @@
 
 .input_border {
   border: 0;
-  border-bottom: 2px solid var(--color-purple);
+  /* border-bottom: 2px solid var(--color-purple); */
 }
 
 .input {
+  width: 100%;
   padding-left: 5px;
   outline: none;
   background-color: transparent;
@@ -109,37 +115,93 @@
   animation: floating 1s linear infinite;
 }
 
+.form_border {
+  border-bottom: 2px solid var(--color-purple);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
 @media (min-width: 520px) {
   .section_direction {
     align-items: column;
   }
+
+  .second_text,
+  .email_icon,
+  .arrow_text {
+    font-size: var(--font-md);
+  }
+
+  .input {
+    font-size: var(--font-sm);
+  }
+
+  .input::placeholder {
+    font-size: var(--font-sm);
+  }
+
+  .form_width {
+    width: 45%;
+  }
 }
 
 @media (min-width: 720px) {
-  .vh_100 {
-    background-color: blue;
+  .first_text {
+    font-size: var(--font-xxl);
+  }
+
+  .second_text,
+  .email_icon,
+  .arrow_text {
+    font-size: var(--font-lg);
+  }
+
+  .input {
+    font-size: var(--font-md);
+  }
+
+  .input::placeholder {
+    font-size: var(--font-md);
+  }
+
+  .form_width {
+    width: 40%;
   }
 }
 
 @media (min-width: 920px) {
-  .vh_100 {
-    background-color: gray;
-  }
-
   .section_direction {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
+  }
+
+  .left_side {
+    padding-top: 5vh;
+  }
+
+  .section_padding {
+    padding: 0 10vw;
+  }
+
+  .image {
+    display: none;
   }
 
   .visible {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media (min-width: 1420px) {
-  .vh_100 {
-    background-color: pink;
-  }
 }
 
 @keyframes floating {
