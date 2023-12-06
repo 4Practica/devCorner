@@ -135,7 +135,8 @@
 
   .second_text,
   .email_icon,
-  .arrow_text {
+  .arrow_text,
+  .arrow {
     font-size: var(--font-md);
   }
 
@@ -159,7 +160,8 @@
 
   .second_text,
   .email_icon,
-  .arrow_text {
+  .arrow_text,
+  .arrow {
     font-size: var(--font-lg);
   }
 
