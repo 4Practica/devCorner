@@ -195,9 +195,34 @@
   }
 
   .visible {
+    display: block;
+    padding-top: 3vh;
+  }
+
+  .content_width {
+    width: 50%;
+  }
+
+  .right_side {
+    background-color: var(--color-purple);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    height: 60vh;
+    border-radius: 10px;
+  }
+
+  .left_image,
+  .middle_image,
+  .right_image {
+    width: 50%;
+    height: 350px;
+  }
+
+  .middle_image {
+    height: 450px;
   }
 }
 

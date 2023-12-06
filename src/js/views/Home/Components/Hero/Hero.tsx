@@ -27,8 +27,12 @@ const {
   arrow,
   arrow_text,
   image,
+  left_image,
+  middle_image,
+  right_image,
   email_icon,
   left_side,
+  right_side,
 } = styles
 
 export const Hero = () => {
@@ -99,7 +103,20 @@ export const Hero = () => {
           </div>
         </div>
         <div className={`${content_width} ${full_height} ${visible}`}>
-          <div>Contenedor de las imagenes</div>
+          <div className={`${right_side}`}>
+            <img
+              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+              className={`${left_image}`}
+            />
+            <img
+              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+              className={`${middle_image}`}
+            />
+            <img
+              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+              className={`${right_image}`}
+            />
+          </div>
         </div>
       </div>
     </section>
