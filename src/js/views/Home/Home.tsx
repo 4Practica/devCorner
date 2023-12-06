@@ -1,11 +1,12 @@
+import { AppContainer } from '../../common/layout'
 import { Hero } from './Components'
-import styles from './Home.module.css'
+//import styles from './Home.module.css'
 
 export const Home = () => {
   return (
-    <main className={`${styles.container} `}>
+    <AppContainer>
       <Hero />
-    </main>
+    </AppContainer>
   )
 }
 
