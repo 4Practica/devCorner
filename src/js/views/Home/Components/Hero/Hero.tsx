@@ -54,10 +54,10 @@ export const Hero = () => {
         className={`${image}`}
       />
       <div
-        className={`${flex} ${section_direction} ${vh_100} ${section_padding} ${left_side}`}
+        className={`${flex} ${section_direction} ${vh_100} ${section_padding} `}
       >
         <div
-          className={`${content_width} ${flex} ${content_direction} ${gap_20}`}
+          className={`${content_width} ${flex} ${content_direction} ${gap_20} ${left_side}`}
         >
           <h1 className={`${first_text}`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi

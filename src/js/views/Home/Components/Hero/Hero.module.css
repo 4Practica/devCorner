@@ -183,7 +183,7 @@
   }
 
   .left_side {
-    padding-top: 5vh;
+    margin-top: auto;
   }
 
   .section_padding {
@@ -201,8 +201,7 @@
   }
 }
 
-@media (min-width: 1420px) {
-}
+@media (min-width: 1420px) {}
 
 @keyframes floating {
   0% {
