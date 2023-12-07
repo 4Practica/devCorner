@@ -3,6 +3,10 @@
   display: flex;
 }
 
+.column {
+  flex-direction: column;
+}
+
 .align_end {
   align-items: end;
 }
@@ -32,19 +36,15 @@
   padding-left: 2px;
 }
 
-.gap_20 {
+.gap_20_px {
   gap: 20px;
 }
 
-.gap_10 {
+.gap_10_px {
   gap: 10px;
 }
 
 /* Section classes */
-.section_direction {
-  flex-direction: column;
-  justify-content: flex-end;
-}
 
 .section_padding {
   padding: 10vh 10vw 0 10vw;
@@ -57,6 +57,14 @@
 
 .content_width {
   width: 100%;
+}
+
+.content_alignment {
+  justify-content: space-between;
+}
+
+.content_height {
+  min-height: 100%;
 }
 
 .first_text {
@@ -119,6 +127,10 @@
   animation: floating 1s linear infinite;
 }
 
+.pb_arrow {
+  padding-bottom: 20px;
+}
+
 .form_border {
   border-bottom: 2px solid var(--color-purple);
 }
@@ -166,15 +178,15 @@
   .email_icon,
   .arrow_text,
   .arrow {
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
   }
 
   .input {
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
   }
 
   .input::placeholder {
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
   }
 
   .form_width {
@@ -185,16 +197,26 @@
 @media (min-width: 920px) {
   .section_direction {
     flex-direction: row;
-    align-items: flex-start;
   }
 
-  .left_side {
-    margin-top: auto;
-    padding-right: 2.5rem;
+  .form_width {
+    width: 50%;
+  }
+
+  .input {
+    font-size: var(--font-md);
+  }
+
+  .input::placeholder {
+    font-size: var(--font-md);
   }
 
   .section_padding {
-    padding: 0 10vw;
+    padding: 5vh 5vw;
+  }
+
+  .pt_10_per {
+    padding-top: 15%;
   }
 
   .image {
@@ -203,11 +225,22 @@
 
   .visible {
     display: block;
-    padding-top: 3vh;
   }
 
   .content_width {
     width: 50%;
+  }
+
+  .pb_arrow {
+    padding-bottom: 0;
+  }
+
+  .pr_10_per {
+    padding-right: 10%;
+  }
+
+  .pt_25_per {
+    padding-top: 25%;
   }
 
   .right_side {
@@ -215,23 +248,24 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 4rem;
-    padding-bottom: 1.5rem;
-    height: 60vh;
+    gap: 4.2rem;
+    height: 100%;
     border-radius: 10px;
+    overflow-x: hidden;
+    padding: 5vh 0;
   }
 
   .left_image,
   .middle_image,
   .right_image {
     border-radius: 10px;
-    width: 50%;
-    height: 350px;
-    box-shadow: 0 10px 13px rgba(0, 0, 0, 0.4);
+    width: 60%;
+    height: 70%;
+    box-shadow: 0 10px 13px rgba(0, 0, 0, 0.65);
   }
 
   .middle_image {
-    height: 450px;
+    height: 85%;
   }
 }
 
