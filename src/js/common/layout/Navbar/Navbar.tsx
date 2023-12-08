@@ -7,23 +7,23 @@ const Navbar = () => {
     <nav className={styles.color}>
       <div>
         <picture>
-          <source srcSet="" media="" />
-          <img src="" alt="" />
+          <source srcSet='' media='' />
+          <img src='' alt='' />
         </picture>
       </div>
       <ul>
-        <Link to="/">Home</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/about">About us</Link>
+        <Link to='/'>Home</Link>
+        <Link to='/blog'>Blog</Link>
+        <Link to='/about'>About us</Link>
       </ul>
-      <Button 
-        type="button"
+      <Button
+        type='button'
         bgColor='bg-primary'
         fontColor='color-light'
         text='Contact'
         proportion='button_regular'
         onClick={(event) => {
-          console.log(event.target) 
+          console.log(event.target)
         }}
       />
     </nav>
