@@ -2,27 +2,39 @@ import { useState } from 'react'
 import styles from './Hero.module.css'
 
 const {
+  vh_100,
+  gap_20_px,
+  gap_10_px,
+  pl_2,
+  pt_25_per,
+  pr_10_per,
   flex,
+  column,
   section_direction,
   section_padding,
-  vh_100,
-  full_height,
   content_width,
   content_direction,
-  gap_20,
-  gap_10,
+  content_alignment,
+  content_height,
+  second_text,
+  first_text,
   form_direction,
   form_width,
-  pt_20,
-  pb_20,
-  visible,
+  form_border,
+  email_icon,
   input,
   input_border,
   input_bg,
   button,
-  second_text,
-  first_text,
   arrow,
+  arrow_text,
+  pb_arrow,
+  visible,
+  image,
+  left_image,
+  middle_image,
+  right_image,
+  right_side,
 } = styles
 
 export const Hero = () => {
@@ -42,53 +54,74 @@ export const Hero = () => {
   }
 
   return (
-    <section
-      className={`${flex} ${section_direction} ${vh_100} ${section_padding}`}
-    >
+    <section>
+      <img
+        src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+        className={`${image}`}
+      />
       <div
-        className={`${content_width} ${flex} ${content_direction} ${gap_20}`}
+        className={`${flex} ${section_direction} ${vh_100} ${section_padding} `}
       >
-        <h1 className={`${first_text}`}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-          quibusdam nostrum cumque
-        </h1>
-        <p className={`${second_text}`}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          voluptatum accusantium sint cum id molestias ducimus, reprehenderit
-          illo quisquam dignissimos cumque veritatis quod omnis natus tempore
-          libero eaque voluptatibus ullam!
-        </p>
-
-        <form
-          onSubmit={handleSubmit}
-          className={`${flex} ${form_direction} ${form_width} ${gap_20}`}
+        <div
+          className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per}`}
         >
-          <div className={`${flex} `}>
-            <label htmlFor='email'>
-              <i className='fa-regular fa-envelope'></i>
-            </label>
-            <input
-              className={`${input} ${input_border} ${input_bg}`}
-              type='text'
-              name='email'
-              id='email'
-              value={data.email}
-              placeholder='Lorem ipsum'
-              onChange={handleChange}
+          <div className={`${flex} ${column} ${gap_20_px} ${pt_25_per}`}>
+            <h1 className={`${first_text}`}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              quibusdam nostrum cumque
+            </h1>
+            <p className={`${second_text}`}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              voluptatum accusantium sint cum id molestias ducimus,
+              reprehenderit illo quisquam dignissimos cumque veritatis quod
+              omnis natus tempore libero eaque voluptatibus ullam!
+            </p>
+
+            <form
+              onSubmit={handleSubmit}
+              className={`${flex} ${form_width} ${form_direction} ${gap_20_px} `}
+            >
+              <div className={`${flex} ${form_border} ${pl_2}`}>
+                <label htmlFor='email'>
+                  <i className={`fa-regular fa-envelope ${email_icon}`}></i>
+                </label>
+                <input
+                  className={`${input} ${input_border} ${input_bg}`}
+                  type='text'
+                  name='email'
+                  id='email'
+                  value={data.email}
+                  placeholder='Lorem ipsum'
+                  onChange={handleChange}
+                />
+              </div>
+              <button type='submit' className={`${button}`}>
+                Contact
+              </button>
+            </form>
+          </div>
+
+          <div className={`${flex} ${gap_10_px} ${pb_arrow}`}>
+            <i className={`fa-solid fa-down-long ${arrow}`}></i>
+            <h5 className={`${arrow_text}`}>Lorem ipsum</h5>
+          </div>
+        </div>
+        <div className={`${content_width} ${visible} ${content_height}`}>
+          <div className={`${right_side}`}>
+            <img
+              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+              className={`${left_image}`}
+            />
+            <img
+              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+              className={`${middle_image}`}
+            />
+            <img
+              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+              className={`${right_image}`}
             />
           </div>
-          <button type='submit' className={`${button}`}>
-            Contact
-          </button>
-        </form>
-
-        <div className={`${flex} ${pt_20} ${gap_10} ${pb_20}`}>
-          <i className={`fa-solid fa-down-long ${arrow}`}></i>
-          <h5>Lorem ipsum</h5>
         </div>
-      </div>
-      <div className={`${content_width} ${full_height} ${visible}`}>
-        Derecha
       </div>
     </section>
   )
