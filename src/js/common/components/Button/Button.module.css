@@ -6,10 +6,18 @@
   border-radius: 2.25rem;
   border: 0;
   font-family: var(--font-primary);
-  font-weight: 800;
-  font-size: var(--font-xs);
+  font-weight: 700;
   letter-spacing: 0.03rem;
 }
+.button.button_small {
+  font-size: var(--font-sm);
+  padding: 0.7rem 1.5rem;
+}
 .button.button_regular {
-  padding: 0.5rem 1rem;
+  font-size: var(--font-md);
+  padding: 0.7rem 1.8rem;
+}
+.button.button_big {
+  font-size: var(--font-lg);
+  padding: .8rem 2rem;
 }

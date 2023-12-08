@@ -8,7 +8,7 @@ type FontColors =
   | 'color-dark'
   | 'color-light'
 type ButtonsProportion = 'button_big' | 'button_regular' | 'button_small'
-type ButtonProps = {
+interface ButtonProps {
   type: ButtonTypes
   bgColor: BgColors
   fontColor: FontColors
