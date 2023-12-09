@@ -247,8 +247,6 @@
     padding-right: 10%;
   }
 
-
-
   .right_side {
     background-color: var(--color-purple);
     display: flex;
@@ -275,7 +273,8 @@
   }
 }
 
-@media (min-width: 1420px) {}
+@media (min-width: 1420px) {
+}
 
 @keyframes floating {
   0% {
