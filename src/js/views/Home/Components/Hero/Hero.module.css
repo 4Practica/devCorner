@@ -144,6 +144,10 @@
   filter: brightness(0.5);
 }
 
+.pt_left_side {
+  padding-top: 5vh;
+}
+
 @media (min-width: 520px) {
   .section_direction {
     align-items: column;
@@ -199,6 +203,10 @@
     flex-direction: row;
   }
 
+  .pt_left_side {
+    padding-top: 10vh;
+  }
+
   .form_width {
     width: 50%;
   }
@@ -239,9 +247,7 @@
     padding-right: 10%;
   }
 
-  .pt_25_per {
-    padding-top: 25%;
-  }
+
 
   .right_side {
     background-color: var(--color-purple);
@@ -269,8 +275,7 @@
   }
 }
 
-@media (min-width: 1420px) {
-}
+@media (min-width: 1420px) {}
 
 @keyframes floating {
   0% {

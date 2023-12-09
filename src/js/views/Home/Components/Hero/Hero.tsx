@@ -6,7 +6,7 @@ const {
   gap_20_px,
   gap_10_px,
   pl_2,
-  pt_25_per,
+  pt_left_side,
   pr_10_per,
   flex,
   column,
@@ -65,7 +65,7 @@ export const Hero = () => {
         <div
           className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per}`}
         >
-          <div className={`${flex} ${column} ${gap_20_px} ${pt_25_per}`}>
+          <div className={`${flex} ${column} ${gap_20_px} ${pt_left_side}`}>
             <h1 className={`${first_text}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
               quibusdam nostrum cumque
