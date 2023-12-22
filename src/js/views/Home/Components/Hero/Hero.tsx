@@ -54,7 +54,7 @@ export const Hero = () => {
   }
 
   return (
-    <section>
+    <section id='hero-cta'>
       <img
         src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
         className={`${image}`}
