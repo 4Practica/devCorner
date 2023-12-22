@@ -1,4 +1,5 @@
 .app_container {
+  position: relative;
   min-width: var(--responsive-min-device);
   width: 100%;
   max-width: var(--responsive-max-device);
