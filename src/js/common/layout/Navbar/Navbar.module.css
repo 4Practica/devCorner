@@ -1,17 +1,26 @@
 .navbar_box {
-  position: absolute;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
+  --layout-transition-time: 300ms;
+
+  position: sticky;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2rem 0fr;
+  grid-template-areas:
+    'main main'
+    'cont cont';
+  row-gap: 0;
   padding: 1.3rem 1.8rem;
   width: 90%;
   height: auto;
   margin: 1rem;
   background-color: var(--color-main-light);
   border-radius: 2rem;
+  transition:
+    grid-template-rows var(--layout-transition-time) ease-in-out,
+    row-gap var(--layout-transition-time) ease-in-out;
 }
 .navbar_main {
+  grid-area: main;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -28,52 +37,30 @@
 .navbar_logo h2 {
   font-size: var(--font-lg);
 }
-.navbar_hamburguer {
-  --nav-hamburguer-width: 2.1875rem;
-  --nav-hamburguer-height: 1.8125rem;
-  --nav-item-height: 0.3125rem;
-
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: var(--nav-hamburguer-width);
-  height: var(--nav-hamburguer-height);
-}
-.navbar_hamburguer__item {
-  position: relative;
-  height: var(--nav-item-height);
-  width: 100%;
-  border-radius: 1rem;
-  background-color: var(--color-main-dark);
-}
-.navbar_hamburguer__item::before,
-.navbar_hamburguer__item::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: var(--nav-item-height);
-  border-radius: 1rem;
-  background-color: var(--color-main-dark);
-}
-.navbar_hamburguer__item::before {
-  top: calc((var(--nav-item-height) / 2) - (var(--nav-hamburguer-height) / 2));
-  left: 0;
-}
-.navbar_hamburguer__item::after {
-  bottom: calc(
-    (var(--nav-item-height) / 2) - (var(--nav-hamburguer-height) / 2)
-  );
-  left: 0;
-}
 .navbar_content {
-  display: none;
+  --content-transition-time: 200ms;
+
+  grid-area: cont;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity var(--content-transition-time) ease-out;
 }
 .navbar_content__items {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
   font-size: var(--font-sm);
   color: var(--color-main-dark);
   list-style: none;
   text-decoration: none;
   font-weight: 700;
+  margin: 1rem 0 2rem 0;
 }
 .navbar_content__items li a {
   font-size: var(--font-sm);
@@ -83,18 +70,66 @@
 }
 
 /* Navbar active */
-.navbar_box.active .navbar_content {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  padding: 1rem 0;
-  width: 100%;
+
+/* Navbar active animations */
+.navbar_box.active {
+  grid-template-rows: 2rem 1fr;
+  row-gap: 1rem;
 }
-.navbar_box.active .navbar_content__items {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  gap: 0.5rem;
-  width: 100%;
-  margin: 1rem 0 2rem 0;
+
+.navbar_box.active .navbar_content {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 920px) {
+  .navbar_box {
+    position: absolute;
+    z-index: 2;
+    grid-template-columns: auto 2fr;
+    grid-template-rows: 3.5rem;
+    grid-template-areas: 'logo links ';
+    column-gap: 3vw;
+    padding: 5vh 5vw;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0 0 0;
+    background-color: transparent;
+    border-radius: none;
+    transition: none;
+  }
+  .navbar_main {
+    grid-area: logo;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .navbar_logo {
+    /* No changes */
+  }
+  .navbar_logo h2 {
+    font-size: var(--font-lg);
+  }
+  .navbar_content {
+    grid-area: links;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: initial;
+    opacity: 1;
+    transition: none;
+    padding: 0 1rem;
+  }
+  .navbar_content__items {
+    flex-flow: row nowrap;
+    column-gap: 1rem;
+    width: auto;
+    margin: 0;
+  }
+  .navbar_content__items li a {
+    font-size: var(--font-lg);
+  }
+  .navbar_box.active {
+    grid-template-rows: 3.5rem;
+    row-gap: 0;
+  }
 }

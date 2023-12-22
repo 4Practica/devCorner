@@ -1,11 +1,16 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '../../components'
 import styles from './Navbar.module.css'
+import { NavbarHamburguer } from './components'
+import { useButtonConfig, useButtonHandler } from './Navbar.hooks'
 
 const Navbar = () => {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
-  console.log(styles)
+  const buttonConfig = useButtonConfig()
+  useEffect(() => {
+    return setHamburguerIsOpen(false)
+  }, [])
   return (
     <nav
       className={`${styles.navbar_box} ${
@@ -20,21 +25,15 @@ const Navbar = () => {
           </picture>
           <h2>{'<Img/>'}Logo</h2>
         </div>
-
-        <div
-          className={`${styles.navbar_hamburguer}`}
-          onClick={() => {
-            setHamburguerIsOpen((prev) => {
-              return !prev
-            })
-          }}
-        >
-          <div className={styles.navbar_hamburguer__item} />
-        </div>
+        <NavbarHamburguer
+          isOpen={hamburguerIsOpen}
+          handleOpen={setHamburguerIsOpen}
+        />
       </div>
 
       <div className={styles.navbar_content}>
         <ul className={`${styles.navbar_content__items}`}>
+          {/* <NavbarLink /> */}
           <li className={``}>
             <Link to='/'>Home</Link>
           </li>
@@ -48,14 +47,13 @@ const Navbar = () => {
         <div className={``}>
           <Button
             type='button'
-            bgColor='bg-primary'
-            fontColor='color-light'
-            text='Contact'
-            proportion='button_small'
-            onClick={(event) => {
-              console.log(event.target)
-            }}
-          />
+            bgColor={buttonConfig.background}
+            fontColor={buttonConfig.color}
+            proportion={buttonConfig.proportion}
+            onClick={useButtonHandler}
+          >
+            Contact
+          </Button>
         </div>
       </div>
     </nav>

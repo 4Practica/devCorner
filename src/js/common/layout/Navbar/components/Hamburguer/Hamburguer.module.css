@@ -1,0 +1,173 @@
+.hamburguer {
+  --nav-hamburguer-width: 2.1875rem;
+  --nav-hamburguer-height: 1.8125rem;
+  --nav-item-height: 0.3125rem;
+
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--nav-hamburguer-width);
+  height: var(--nav-hamburguer-height);
+}
+.hamburguer__item {
+  position: relative;
+  height: var(--nav-item-height);
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--color-main-dark);
+}
+.hamburguer__item::before,
+.hamburguer__item::after {
+  --item-position: calc(
+    (var(--nav-item-height) / 2) - (var(--nav-hamburguer-height) / 2)
+  );
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: var(--nav-item-height);
+  border-radius: 1rem;
+  background-color: var(--color-main-dark);
+}
+.hamburguer__item::before {
+  top: var(--item-position);
+  left: 0;
+}
+.hamburguer__item::after {
+  bottom: var(--item-position);
+  left: 0;
+}
+@media only screen and (min-width: 920px) {
+  .hamburguer {
+    display: none;
+  }
+  .hamburguer.open .hamburguer__item,
+  .hamburguer.open .hamburguer__item::before,
+  .hamburguer.open .hamburguer__item::after,
+  .hamburguer.stop .hamburguer__item,
+  .hamburguer.stop .hamburguer__item::before,
+  .hamburguer.stop .hamburguer__item::after,
+  .hamburguer.close .hamburguer__item,
+  .hamburguer.close .hamburguer__item::before,
+  .hamburguer.close .hamburguer__item::after {
+    animation-play-state: paused;
+  }
+}
+/* Animations start */
+.hamburguer.open .hamburguer__item,
+.hamburguer.open .hamburguer__item::before,
+.hamburguer.open .hamburguer__item::after {
+  --hamburguer-duration: 300ms;
+  animation-duration: var(--hamburguer-duration);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+.hamburguer.open .hamburguer__item {
+  animation-name: open-disappear;
+}
+.hamburguer.open .hamburguer__item::before {
+  animation-name: open-top;
+}
+.hamburguer.open .hamburguer__item::after {
+  animation-name: open-bottom;
+}
+
+@keyframes open-disappear {
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes open-top {
+  25% {
+    top: 0;
+  }
+  50% {
+    top: 0;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes open-bottom {
+  25% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.hamburguer.close .hamburguer__item,
+.hamburguer.close .hamburguer__item::before,
+.hamburguer.close .hamburguer__item::after {
+  animation-duration: var(--hamburguer-duration);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+.hamburguer.close .hamburguer__item {
+  animation-name: close-disappear;
+}
+.hamburguer.close .hamburguer__item::before {
+  animation-name: close-top;
+}
+.hamburguer.close .hamburguer__item::after {
+  animation-name: close-bottom;
+}
+
+.hamburguer.stop .hamburguer__item,
+.hamburguer.stop .hamburguer__item::before,
+.hamburguer.stop .hamburguer__item::after {
+  animation-play-state: paused;
+}
+
+@keyframes close-disappear {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: var(--color-main-dark);
+  }
+}
+
+@keyframes close-top {
+  from {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 0;
+  }
+  to {
+    top: var(--item-position);
+  }
+}
+
+@keyframes close-bottom {
+  from {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0);
+    bottom: 0;
+  }
+  to {
+    bottom: var(--item-position);
+  }
+}
