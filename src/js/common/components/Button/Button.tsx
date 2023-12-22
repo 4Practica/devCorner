@@ -1,37 +1,33 @@
+import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import styles from './Button.module.css'
 
 type ButtonTypes = 'submit' | 'reset' | 'button'
-type BgColors = 'bg-primary' | 'bg-secondary' | 'bg-dark' | 'bg-light'
-type FontColors =
-  | 'color-primary'
-  | 'color-secondary'
-  | 'color-dark'
-  | 'color-light'
 type ButtonsProportion = 'button_big' | 'button_regular' | 'button_small'
+
 interface ButtonProps {
   type: ButtonTypes
-  bgColor: BgColors
-  fontColor: FontColors
-  text: string
+  bgColor: BG_STYLES_CLASSES
+  fontColor: COLOR_STYLES_CLASSES
   proportion: ButtonsProportion
-  onClick: (event: React.MouseEvent<HTMLElement>) => void
+  children: React.ReactNode
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
   type = 'button',
-  bgColor = 'bg-primary',
-  fontColor = 'color-dark',
+  bgColor = BG_STYLES_CLASSES.PRIMARY,
+  fontColor = COLOR_STYLES_CLASSES.DARK,
   proportion = 'button_regular',
-  text,
+  children,
   onClick,
-}: ButtonProps) => {
+}) => {
   return (
     <button
       type={type}
       className={`${styles.button} ${bgColor} ${fontColor} ${styles[proportion]}`}
       onClick={onClick}
     >
-      {text}
+      {children}
     </button>
   )
 }
