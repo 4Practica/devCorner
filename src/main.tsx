@@ -8,12 +8,18 @@ import '@styles/responsive.css'
 import '@styles/global.css'
 import './index.css'
 import App from './App.tsx'
+import { HomeView } from '@views/index.ts'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
+    children: [{
+      path: '',
+      element: <HomeView />
+    }]
+
   },
 ])
 
