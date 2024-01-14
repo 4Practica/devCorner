@@ -1,7 +1,7 @@
 .navbar_box {
   --layout-transition-time: 300ms;
 
-  position: sticky;
+  position: fixed;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2rem 0fr;
@@ -83,7 +83,7 @@
 
 @media only screen and (min-width: 920px) {
   .navbar_box {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     grid-template-columns: auto 2fr;
     grid-template-rows: 3.5rem;
