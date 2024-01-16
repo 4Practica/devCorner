@@ -8,7 +8,8 @@ function App() {
         <Navbar />
         <Outlet />
       </AppContainer>
-  </div>)
+    </div>
+  )
 }
 
 export default App
