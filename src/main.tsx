@@ -8,7 +8,7 @@ import '@styles/responsive.css'
 import '@styles/global.css'
 import './index.css'
 import App from './App.tsx'
-import { HomeView } from '@views/index.ts'
+import { BlogLandingView, HomeView } from '@views/index.ts'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <HomeView />,
+      },
+      {
+        path: 'blog',
+        element: <BlogLandingView />,
       },
     ],
   },

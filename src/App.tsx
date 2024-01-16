@@ -3,12 +3,10 @@ import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
-    <div style={{ minHeight: '500vh' }}>
-      <AppContainer>
-        <Navbar />
-        <Outlet />
-      </AppContainer>
-    </div>
+    <AppContainer>
+      <Navbar />
+      <Outlet />
+    </AppContainer>
   )
 }
 
