@@ -8,7 +8,7 @@ import '@styles/responsive.css'
 import '@styles/global.css'
 import './index.css'
 import App from './App.tsx'
-import { BlogContentView, HomeView } from '@views/index.ts'
+import { BlogLandingView, HomeView } from '@views/index.ts'
 
 const router = createBrowserRouter([
   {
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         element: <HomeView />,
       },
       {
-        path: '',
-        element: <BlogContentView />,
+        path: 'blog',
+        element: <BlogLandingView />,
       },
     ],
   },

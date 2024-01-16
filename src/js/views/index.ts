@@ -1,2 +1,2 @@
 export { default as HomeView } from './Home'
-export { default as BlogContentView } from './BlogContent'
+export { default as BlogLandingView } from './BlogLandings'
