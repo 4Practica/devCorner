@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import styles from './Hero.module.css'
+// import { Button } from '@common/components'
+// import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 
 const {
   vh_100,
@@ -10,6 +12,7 @@ const {
   pr_10_per,
   flex,
   column,
+  hero_container,
   section_direction,
   section_padding,
   content_width,
@@ -54,14 +57,12 @@ export const Hero = () => {
   }
 
   return (
-    <section id='hero-cta'>
+    <section id='hero-cta' className={`${vh_100} ${hero_container}`}>
       <img
         src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
         className={`${image}`}
       />
-      <div
-        className={`${flex} ${section_direction} ${vh_100} ${section_padding} `}
-      >
+      <div className={`${flex} ${section_direction} ${section_padding} `}>
         <div
           className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per}`}
         >
@@ -96,8 +97,19 @@ export const Hero = () => {
                 />
               </div>
               <button type='submit' className={`${button}`}>
-                Contact
+                Subscribe
               </button>
+              {/* <Button
+                type={'submit'}
+                bgColor={BG_STYLES_CLASSES.DARK}
+                fontColor={COLOR_STYLES_CLASSES.LIGHT}
+                proportion={'button_small'}
+                onClick={() => {
+                  //nada
+                }}
+              >
+                Subscribe
+              </Button> */}
             </form>
           </div>
 
