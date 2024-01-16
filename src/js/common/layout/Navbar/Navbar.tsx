@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '../../components'
 import styles from './Navbar.module.css'
 import { NavbarHamburguer } from './components'
 import { useButtonConfig, useButtonHandler } from './Navbar.hooks'
+import { useScreenSize } from '@common/utils/hooks'
 
 const Navbar = () => {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
-  const buttonConfig = useButtonConfig()
+  const screenSize = useScreenSize()
+  const navigate = useNavigate()
+  const buttonConfig = useButtonConfig(screenSize)
   useEffect(() => {
     return setHamburguerIsOpen(false)
   }, [])
@@ -50,9 +53,9 @@ const Navbar = () => {
             bgColor={buttonConfig.background}
             fontColor={buttonConfig.color}
             proportion={buttonConfig.proportion}
-            onClick={useButtonHandler}
+            onClick={useButtonHandler(navigate)}
           >
-            Contact
+            Subscribe
           </Button>
         </div>
       </div>
