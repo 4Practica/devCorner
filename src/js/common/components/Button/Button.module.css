@@ -8,6 +8,7 @@
   font-family: var(--font-primary);
   font-weight: 700;
   letter-spacing: 0.03rem;
+  cursor: pointer;
 }
 .button.button_small {
   font-size: var(--font-sm);
