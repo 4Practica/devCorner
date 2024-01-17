@@ -11,14 +11,14 @@
   cursor: pointer;
 }
 .button.button_small {
-  font-size: var(--font-sm);
+  font-size: var(--font-xs);
   padding: 0.7rem 1.5rem;
 }
 .button.button_regular {
-  font-size: var(--font-md);
+  font-size: var(--font-sm);
   padding: 0.7rem 1.8rem;
 }
 .button.button_big {
-  font-size: var(--font-lg);
+  font-size: var(--font-md);
   padding: 0.8rem 2rem;
 }

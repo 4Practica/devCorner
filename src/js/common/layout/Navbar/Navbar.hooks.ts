@@ -19,8 +19,8 @@ export const useButtonConfig = (screenSize: ScreenSize) => {
     background: BG_STYLES_CLASSES.PRIMARY,
     proportion:
       screenSize.width >= RESPONSIVE_SIZE.LG ?
-        'button_regular'
-      : 'button_small',
+        'button_small'
+      : 'button_regular',
   }
 
   return buttonConfig

@@ -63,20 +63,16 @@ export const Hero = () => {
       />
       <div className={`${flex} ${section_direction} ${section_padding} `}>
         <div
-          className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per}`}
+          className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per} ${vh_100}`}
         >
           <div className={`${flex} ${column} ${gap_20_px} ${pt_left_side}`}>
             <h1 className={`${first_text}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              quibusdam nostrum cumque
+              Lorem ipsum dolor sit amet consectetur
             </h1>
             <p className={`${second_text}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              voluptatum accusantium sint cum id molestias ducimus,
-              reprehenderit illo quisquam dignissimos cumque veritatis quod
-              omnis natus tempore libero eaque voluptatibus ullam!
+              voluptatum accusantium sint cum id molestias ducimus
             </p>
-
             <form onSubmit={handleSubmit} className={`${form} ${gap_20_px} `}>
               <div className={`${flex} ${form_border} ${pl_2}`}>
                 <label htmlFor='email'>
@@ -88,7 +84,7 @@ export const Hero = () => {
                   name='email'
                   id='email'
                   value={data.email}
-                  placeholder='Lorem ipsum'
+                  placeholder='Email'
                   onChange={handleChange}
                 />
               </div>
@@ -96,10 +92,7 @@ export const Hero = () => {
                 type={'submit'}
                 bgColor={BG_STYLES_CLASSES.PRIMARY}
                 fontColor={COLOR_STYLES_CLASSES.LIGHT}
-                proportion={'button_regular'}
-                onClick={() => {
-                  //nada
-                }}
+                proportion={'button_small'}
               >
                 Subscribe
               </Button>

@@ -61,7 +61,8 @@
 }
 
 .content_alignment {
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5rem;
 }
 
 .content_height {
@@ -69,7 +70,7 @@
 }
 
 .first_text {
-  font-size: var(--font-xl);
+  font-size: var(--font-2xl);
   color: var(--color-main-dark);
 }
 
@@ -124,7 +125,7 @@
 }
 
 .pt_left_side {
-  padding-top: 5vh;
+  padding-top: 0;
 }
 
 @media (min-width: 520px) {
@@ -136,7 +137,7 @@
   .email_icon,
   .arrow_text,
   .arrow {
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
   }
 
   .input {
@@ -154,14 +155,14 @@
 
 @media (min-width: 720px) {
   .first_text {
-    font-size: var(--font-xxl);
+    font-size: var(--font-2xl);
   }
 
   .second_text,
   .email_icon,
   .arrow_text,
   .arrow {
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
   }
 
   .input {
@@ -181,13 +182,20 @@
   .hero_container {
     background-color: var(--color-dark-blue);
   }
+  .first_text {
+    font-size: var(--font-xl);
+  }
+  .content_alignment {
+    justify-content: center;
+    gap: 3rem;
+  }
 
   .section_direction {
     flex-direction: row;
   }
 
   .pt_left_side {
-    padding-top: 10vh;
+    padding-top: 0;
   }
 
   .form {
@@ -195,11 +203,11 @@
   }
 
   .input {
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
   }
 
   .input::placeholder {
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
   }
 
   .section_padding {
@@ -260,9 +268,12 @@
   }
 }
 
-@media (min-width: 1420px) {
+@media (min-width: 1220px) {
   .form {
     width: 55%;
+  }
+  .first_text {
+    font-size: var(--font-2xl);
   }
 }
 

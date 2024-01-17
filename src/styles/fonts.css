@@ -7,10 +7,10 @@
   --font-sm: calc(0.35vw + 1rem);
   --font-md: calc(0.35vw + 1.618rem);
   --font-lg: calc(0.35vw + 2.618rem);
-  --font-xl: calc(0.35vw + 4.236rem);
-  --font-2xl: calc(0.35vw + 6.853rem);
-  --font-3xl: calc(0.35vw + 8.08rem);
-  --font-4xl: calc(0.35vw + 10.942rem);
+  --font-xl: calc(0.35vw + 3.236rem);
+  --font-2xl: calc(0.25vw + 4.253rem);
+  --font-3xl: calc(0.35vw + 5.08rem);
+  --font-4xl: calc(0.35vw + 6.942rem);
 
   font-family: var(--font-secondary);
 }
