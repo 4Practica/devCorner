@@ -19,6 +19,12 @@
   color-scheme: light dark;
   background-color: var(--color-main-light);
   color: var(--color-main-dark);
+
+  --color-dark-blue: #2a3342;
+  --color-light-blue: #333f51;
+  --color-dark-green: #2ad167;
+  --color-light-green: #bbf7d0;
+  --color-light-blue: #333f51;
 }
 
 @media (prefers-color-scheme: dark) {
