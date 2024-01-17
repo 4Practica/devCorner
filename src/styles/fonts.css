@@ -3,12 +3,14 @@
 :root {
   --font-primary: 'Bricolage Grotesque', sans-serif;
   --font-secondary: 'Roboto', sans-serif;
-  --font-xs: calc(0.35vw + 0.6rem);
-  --font-sm: calc(0.35vw + 0.8rem);
-  --font-md: calc(0.35vw + 1rem);
-  --font-lg: calc(0.35vw + 1.2rem);
-  --font-xl: calc(0.35vw + 1.5rem);
-  --font-xxl: calc(0.35vw + 1.8rem);
+  --font-xs: calc(0.35vw + 0.618rem);
+  --font-sm: calc(0.35vw + 1rem);
+  --font-md: calc(0.35vw + 1.618rem);
+  --font-lg: calc(0.35vw + 2.618rem);
+  --font-xl: calc(0.35vw + 4.236rem);
+  --font-2xl: calc(0.35vw + 6.853rem);
+  --font-3xl: calc(0.35vw + 8.08rem);
+  --font-4xl: calc(0.35vw + 10.942rem);
 
   font-family: var(--font-secondary);
 }
