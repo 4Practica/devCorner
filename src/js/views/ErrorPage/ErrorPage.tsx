@@ -18,11 +18,19 @@ const ErrorPage = () => {
           <div className={`${styles.content}`}>
             <span className={`${styles.pill}`}>Error 404</span>
 
-            <h2>Oh no! Error 404.</h2>
-            <p>Something went wrong, so this page is broken.</p>
+            <h2 className={`${styles.heading}`}>Oh no! Error 404.</h2>
+            <p className={`${styles.paragraph}`}>
+              Something went wrong, so this page is broken.
+            </p>
 
-            <button type='button'>Go back to Homepage</button>
-            <button type='button'>Try again</button>
+            <div className={`${styles.buttonContainer}`}>
+              <button type='button' className={`${styles.leftButton}`}>
+                Go back to Homepage
+              </button>
+              <button type='button' className={`${styles.rightButton}`}>
+                Try again
+              </button>
+            </div>
           </div>
 
           <img src={wave} alt='wave' className={`${styles.bottom}`} />
