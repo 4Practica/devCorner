@@ -1,6 +1,5 @@
 import { AppContainer } from '@common/layout'
 import styles from './ErrorPage.module.css'
-// import ErrorViewDog from '@assets/ErrorViewDog.webp'
 import dots from '@assets/dots.svg'
 import wave from '@assets/wave.svg'
 
@@ -8,9 +7,7 @@ const ErrorPage = () => {
   return (
     <AppContainer>
       <div className={`${styles.errorViewContainer}`}>
-        <div className={`${styles.leftSide}`}>
-          {/* <img src={ErrorViewDog} alt='' className={`${styles.leftImage}`} /> */}
-        </div>
+        <div className={`${styles.leftSide}`}></div>
 
         <div className={`${styles.rightSide}`}>
           <img src={dots} alt='dots' className={`${styles.top}`} />
