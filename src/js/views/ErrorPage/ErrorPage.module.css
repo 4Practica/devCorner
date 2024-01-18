@@ -1,0 +1,84 @@
+.errorViewContainer,
+.leftSide,
+.rightSide {
+  min-height: 100vh;
+}
+
+.errorViewContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftSide {
+  display: none;
+  background: url('@assets/ErrorViewDog.webp') no-repeat round;
+}
+
+.leftImage {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.leftSide,
+.rightSide {
+  width: 100%;
+}
+
+.rightSide {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'top'
+    'cont'
+    'bottom';
+}
+
+.top {
+  grid-area: top;
+  justify-self: end;
+  margin: 1rem;
+}
+
+.content {
+  grid-area: cont;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: auto;
+}
+
+.bottom {
+  grid-area: bottom;
+  justify-self: end;
+  align-self: end;
+}
+
+.pill {
+  background-color: var(--color-light-green);
+  color: var(--color-main-light);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  border-radius: 40px;
+  padding: 0.5rem;
+}
+
+@media (min-width: 520px) {
+}
+
+@media (min-width: 720px) {
+}
+
+@media (min-width: 920px) {
+}
+
+@media (min-width: 1220px) {
+  .errorViewContainer {
+    flex-direction: row;
+  }
+
+  .leftSide {
+    display: block;
+  }
+}
