@@ -92,7 +92,7 @@ export const Hero = () => {
                 type={'submit'}
                 bgColor={BG_STYLES_CLASSES.PRIMARY}
                 fontColor={COLOR_STYLES_CLASSES.LIGHT}
-                proportion={'button_small'}
+                proportion={'sm'}
               >
                 Subscribe
               </Button>

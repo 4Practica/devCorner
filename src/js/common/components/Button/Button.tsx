@@ -2,7 +2,7 @@ import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import styles from './Button.module.css'
 
 type ButtonTypes = 'submit' | 'reset' | 'button'
-type ButtonsProportion = 'button_big' | 'button_regular' | 'button_small'
+type ButtonsProportion = 'lg' | 'md' | 'sm'
 
 interface ButtonProps {
   type: ButtonTypes
@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
   bgColor = BG_STYLES_CLASSES.PRIMARY,
   fontColor = COLOR_STYLES_CLASSES.DARK,
-  proportion = 'button_regular',
+  proportion = 'md',
   customClasses = '',
   children,
   onClick,
