@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '../../components'
 import styles from './Navbar.module.css'
 import { NavbarHamburguer } from './components'
-import { useButtonConfig, useButtonHandler } from './Navbar.hooks'
-import { useScreenSize } from '@common/utils/hooks'
+import { useButtonHandler } from './Navbar.hooks'
+import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 
 const Navbar = () => {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
-  const screenSize = useScreenSize()
   const navigate = useNavigate()
-  const buttonConfig = useButtonConfig(screenSize)
+  const location = useLocation()
   useEffect(() => {
     return setHamburguerIsOpen(false)
   }, [])
@@ -18,7 +17,8 @@ const Navbar = () => {
     <nav
       className={`${styles.navbar_box} ${
         hamburguerIsOpen ? styles.active : ''
-      }`}
+      } ${location.pathname === '/' ? styles.home_nav : styles.regular_nav}
+      `}
     >
       <div className={`${styles.navbar_main}`}>
         <div className={styles.navbar_logo}>
@@ -50,9 +50,9 @@ const Navbar = () => {
         <div className={``}>
           <Button
             type='button'
-            bgColor={buttonConfig.background}
-            fontColor={buttonConfig.color}
-            proportion={buttonConfig.proportion}
+            bgColor={BG_STYLES_CLASSES.PRIMARY}
+            fontColor={COLOR_STYLES_CLASSES.LIGHT}
+            proportion={'md'}
             onClick={useButtonHandler(navigate)}
           >
             Subscribe

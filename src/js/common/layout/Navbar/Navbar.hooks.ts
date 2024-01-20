@@ -1,30 +1,5 @@
-import {
-  BG_STYLES_CLASSES,
-  COLOR_STYLES_CLASSES,
-  RESPONSIVE_SIZE,
-} from '@common/utils/enums'
 import { NavigateFunction } from 'react-router-dom'
 import React from 'react'
-import { ScreenSize } from '@common/utils/types/ScreenSize'
-
-export type ButtonConfig = {
-  color: COLOR_STYLES_CLASSES
-  background: BG_STYLES_CLASSES
-  proportion: 'button_small' | 'button_regular' | 'button_small'
-}
-
-export const useButtonConfig = (screenSize: ScreenSize) => {
-  const buttonConfig: ButtonConfig = {
-    color: COLOR_STYLES_CLASSES.LIGHT,
-    background: BG_STYLES_CLASSES.PRIMARY,
-    proportion:
-      screenSize.width >= RESPONSIVE_SIZE.LG ?
-        'button_small'
-      : 'button_regular',
-  }
-
-  return buttonConfig
-}
 
 export const useButtonHandler = (
   navigate: NavigateFunction
