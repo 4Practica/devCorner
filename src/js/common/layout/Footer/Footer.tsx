@@ -2,13 +2,7 @@
 import styles from './Footer.module.css'
 
 const Footer = () => {
-    return (
-        <div 
-            className={`${styles.footer_box}`}
-        >
-            
-        </div>
-    )
+  return <div className={`${styles.footer_box}`}></div>
 }
 
 export default Footer

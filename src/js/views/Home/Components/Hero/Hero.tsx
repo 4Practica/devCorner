@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import styles from './Hero.module.css'
+import { Button } from '@common/components'
+import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 
 const {
   vh_100,
@@ -10,6 +12,7 @@ const {
   pr_10_per,
   flex,
   column,
+  hero_container,
   section_direction,
   section_padding,
   content_width,
@@ -18,14 +21,12 @@ const {
   content_height,
   second_text,
   first_text,
-  form_direction,
-  form_width,
+  form,
   form_border,
   email_icon,
   input,
   input_border,
   input_bg,
-  button,
   arrow,
   arrow_text,
   pb_arrow,
@@ -43,6 +44,7 @@ export const Hero = () => {
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
     //Aqui la funcion para el submit
     e.preventDefault()
+    console.log('HOLAAAAA')
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -54,33 +56,24 @@ export const Hero = () => {
   }
 
   return (
-    <section id='hero-cta'>
+    <section id='hero-cta' className={`${vh_100} ${hero_container}`}>
       <img
         src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
         className={`${image}`}
       />
-      <div
-        className={`${flex} ${section_direction} ${vh_100} ${section_padding} `}
-      >
+      <div className={`${flex} ${section_direction} ${section_padding} `}>
         <div
-          className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per}`}
+          className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per} ${vh_100}`}
         >
           <div className={`${flex} ${column} ${gap_20_px} ${pt_left_side}`}>
             <h1 className={`${first_text}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              quibusdam nostrum cumque
+              Lorem ipsum dolor sit amet consectetur
             </h1>
             <p className={`${second_text}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              voluptatum accusantium sint cum id molestias ducimus,
-              reprehenderit illo quisquam dignissimos cumque veritatis quod
-              omnis natus tempore libero eaque voluptatibus ullam!
+              voluptatum accusantium sint cum id molestias ducimus
             </p>
-
-            <form
-              onSubmit={handleSubmit}
-              className={`${flex} ${form_width} ${form_direction} ${gap_20_px} `}
-            >
+            <form onSubmit={handleSubmit} className={`${form} ${gap_20_px} `}>
               <div className={`${flex} ${form_border} ${pl_2}`}>
                 <label htmlFor='email'>
                   <i className={`fa-regular fa-envelope ${email_icon}`}></i>
@@ -91,13 +84,18 @@ export const Hero = () => {
                   name='email'
                   id='email'
                   value={data.email}
-                  placeholder='Lorem ipsum'
+                  placeholder='Email'
                   onChange={handleChange}
                 />
               </div>
-              <button type='submit' className={`${button}`}>
-                Contact
-              </button>
+              <Button
+                type={'submit'}
+                bgColor={BG_STYLES_CLASSES.PRIMARY}
+                fontColor={COLOR_STYLES_CLASSES.LIGHT}
+                proportion={'button_small'}
+              >
+                Subscribe
+              </Button>
             </form>
           </div>
 

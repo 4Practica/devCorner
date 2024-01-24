@@ -1,0 +1,141 @@
+.errorViewContainer,
+.leftSide,
+.rightSide {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.errorViewContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftSide {
+  display: none;
+  background: url('@assets/ErrorViewDog.webp') no-repeat round;
+}
+
+.leftImage {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.rightSide {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'top'
+    'cont'
+    'bottom';
+}
+
+.top {
+  grid-area: top;
+  justify-self: end;
+  margin: 1rem;
+}
+
+.content {
+  grid-area: cont;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: auto;
+  gap: 1rem;
+}
+
+.heading {
+  font-size: var(--font-md);
+}
+
+.paragraph {
+  color: var(--color-gray-300);
+  font-size: var(--font-sm);
+}
+
+.pill {
+  background-color: var(--color-light-green);
+  color: var(--color-main-light);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  border-radius: 40px;
+  padding: 0.3rem 0.5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.leftButton,
+.rightButton {
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.leftButton {
+  background-color: #026b28;
+}
+
+.rightButton {
+  background-color: #4d5f7a;
+}
+
+.bottom {
+  grid-area: bottom;
+  justify-self: end;
+  align-self: end;
+}
+
+@media (min-width: 520px) {
+}
+
+@media (min-width: 720px) {
+  .heading {
+    font-size: var(--font-lg);
+  }
+
+  .paragraph {
+    font-size: var(--font-md);
+  }
+
+  .leftButton,
+  .rightButton {
+    font-size: var(--font-sm);
+  }
+}
+
+@media (min-width: 920px) {
+}
+
+@media (min-width: 1220px) {
+  .errorViewContainer {
+    flex-direction: row;
+  }
+
+  .leftSide {
+    display: block;
+  }
+
+  .pill {
+    font-size: var(--font-xs);
+  }
+
+  .heading {
+    font-size: var(--font-lg);
+  }
+
+  .paragraph {
+    font-size: var(--font-sm);
+  }
+
+  .leftButton,
+  .rightButton {
+    font-size: var(--font-xs);
+  }
+}

@@ -8,19 +8,7 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const projectRootDir = path.resolve(__dirname)
   const globalConfig = {
-    plugins: [
-      react(),
-      /* alias({
-        entries: {
-          '@utils': path.resolve(projectRootDir, '/src/js/utils'),
-          '@services': path.resolve(projectRootDir, '/src/js/services'),
-          '@views': path.resolve(projectRootDir, '/src/js/views'),
-          '@common': path.resolve(projectRootDir, '/src/js/common'),
-          '@styles': path.resolve(projectRootDir, '/src/styles'),
-          '@assets': path.resolve(projectRootDir, '/src/assets'),
-        }
-      }) */
-    ],
+    plugins: [react()],
     base: '/',
     resolve: {
       alias: {

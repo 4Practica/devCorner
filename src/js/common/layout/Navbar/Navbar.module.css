@@ -1,7 +1,7 @@
 .navbar_box {
   --layout-transition-time: 300ms;
 
-  position: sticky;
+  position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2rem 0fr;
@@ -35,7 +35,7 @@
   align-items: center;
 }
 .navbar_logo h2 {
-  font-size: var(--font-lg);
+  font-size: var(--font-sm);
 }
 .navbar_content {
   --content-transition-time: 200ms;
@@ -106,7 +106,7 @@
     /* No changes */
   }
   .navbar_logo h2 {
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
   }
   .navbar_content {
     grid-area: links;
@@ -126,7 +126,7 @@
     margin: 0;
   }
   .navbar_content__items li a {
-    font-size: var(--font-lg);
+    font-size: var(--font-sm);
   }
   .navbar_box.active {
     grid-template-rows: 3.5rem;

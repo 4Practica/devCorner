@@ -9,8 +9,9 @@ interface ButtonProps {
   bgColor: BG_STYLES_CLASSES
   fontColor: COLOR_STYLES_CLASSES
   proportion: ButtonsProportion
+  customClasses?: string
   children: React.ReactNode
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,13 +19,14 @@ const Button: React.FC<ButtonProps> = ({
   bgColor = BG_STYLES_CLASSES.PRIMARY,
   fontColor = COLOR_STYLES_CLASSES.DARK,
   proportion = 'button_regular',
+  customClasses = '',
   children,
   onClick,
 }) => {
   return (
     <button
       type={type}
-      className={`${styles.button} ${bgColor} ${fontColor} ${styles[proportion]}`}
+      className={`${styles.button} ${styles[proportion]} ${bgColor} ${fontColor} ${customClasses}`}
       onClick={onClick}
     >
       {children}
