@@ -1,0 +1,11 @@
+.card-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  width: 100%;
+  min-width: 290px;
+  max-width: 450px;
+  gap: 0.7rem;
+  height: auto;
+}

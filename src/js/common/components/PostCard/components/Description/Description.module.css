@@ -1,0 +1,6 @@
+.postcard_description > p {
+  font-size: var(--font-sm);
+  color: var(--color-gray-400);
+  font-family: var(--font-secondary);
+  line-height: 1.8rem;
+}

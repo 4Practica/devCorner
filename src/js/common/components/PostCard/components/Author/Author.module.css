@@ -1,0 +1,6 @@
+.postcard_author {
+  font-size: var(--font-sm);
+  color: var(--color-gray-500);
+  font-family: var(--font-secondary);
+  font-weight: 500;
+}

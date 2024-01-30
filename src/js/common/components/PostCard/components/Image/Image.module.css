@@ -1,0 +1,15 @@
+.image-box {
+  width: 100%;
+  min-height: 13.75rem;
+  height: auto;
+  max-height: 19.5rem;
+}
+.image-box > img {
+  width: 100%;
+  min-height: 13.75rem;
+  height: 100%;
+  max-height: 19.5rem;
+
+  object-fit: cover;
+  border-radius: 0.375rem;
+}

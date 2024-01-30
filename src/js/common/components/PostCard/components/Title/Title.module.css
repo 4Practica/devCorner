@@ -1,0 +1,8 @@
+.post-title {
+  font-family: var(--font-primary);
+  letter-spacing: 1px;
+  color: var(--color-black-900);
+  font-size: var(--font-md);
+  font-weight: 900;
+  line-height: 1.9rem;
+}

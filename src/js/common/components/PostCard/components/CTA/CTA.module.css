@@ -1,0 +1,12 @@
+.postcard_cta {
+  font-family: var(--font-primary);
+  font-weight: 900;
+  font-size: var(--font-sm);
+  color: var(--color-dark-green);
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
+}
