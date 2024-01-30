@@ -2,6 +2,9 @@
   --layout-transition-time: 300ms;
 
   position: absolute;
+  z-index: 99;
+  left: 0;
+  right: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2rem 0fr;
@@ -12,12 +15,18 @@
   padding: 1.3rem 1.8rem;
   width: 90%;
   height: auto;
-  margin: 1rem;
+  margin: 1rem auto;
   background-color: var(--color-main-light);
   border-radius: 2rem;
   transition:
     grid-template-rows var(--layout-transition-time) ease-in-out,
     row-gap var(--layout-transition-time) ease-in-out;
+}
+.navbar_box.home_nav {
+}
+.navbar_box.regular_nav {
+  padding: 1.3rem 1.8rem;
+  background-color: var(--color-light-blue);
 }
 .navbar_main {
   grid-area: main;
@@ -89,13 +98,22 @@
     grid-template-rows: 3.5rem;
     grid-template-areas: 'logo links ';
     column-gap: 3vw;
-    padding: 5vh 5vw;
     width: 100%;
     height: auto;
     margin: 1rem 0 0 0;
     background-color: transparent;
     border-radius: none;
     transition: none;
+  }
+  .navbar_box.home_nav {
+    padding: 5vh 5vw;
+  }
+  .navbar_box.regular_nav {
+    position: relative;
+    padding: 1.3rem 1.8rem;
+    margin: 0;
+    border-radius: 0;
+    background-color: var(--color-dark-blue);
   }
   .navbar_main {
     grid-area: logo;
