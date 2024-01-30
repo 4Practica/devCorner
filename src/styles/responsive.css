@@ -7,3 +7,17 @@
   --responsive-device-xl: 1220px;
   --responsive-device-xxl: 1420px;
 }
+
+/* 
+  Use this and only this breakpoints if needed. 
+  Avoid using random or too specific breakpoints.
+  Take into consideration that it's not possible 
+  (yet) to use this variables inside a media query, so, 
+  the purpose of this variables is mainly informative
+  
+  @example 
+  @media only screen and (min-width: 520px) {}
+  @media only screen and (min-width: 720px) {}
+  @media only screen and (min-width: 920px) {}
+
+*/
