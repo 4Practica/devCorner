@@ -67,11 +67,10 @@ export const Hero = () => {
         >
           <div className={`${flex} ${column} ${gap_20_px} ${pt_left_side}`}>
             <h1 className={`${first_text}`}>
-              Lorem ipsum dolor sit amet consectetur
+              Explore the dynamics of software development{' '}
             </h1>
             <p className={`${second_text}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              voluptatum accusantium sint cum id molestias ducimus
+              Subscribe now to explore, learn and grow with each post
             </p>
             <form onSubmit={handleSubmit} className={`${form} ${gap_20_px} `}>
               <div className={`${flex} ${form_border} ${pl_2}`}>
@@ -92,7 +91,7 @@ export const Hero = () => {
                 type={'submit'}
                 bgColor={BG_STYLES_CLASSES.PRIMARY}
                 fontColor={COLOR_STYLES_CLASSES.LIGHT}
-                proportion={'sm'}
+                proportion={'md'}
               >
                 Subscribe
               </Button>
