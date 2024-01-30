@@ -1,4 +1,30 @@
 .blog-main-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
   width: 100%;
-  min-height: 100vh;
+}
+.blog-posts {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(290px, 450px)
+  );
+  gap: 2.5rem;
+  background-color: var(--color-main-dark);
+}
+
+@media only screen and (min-width: 920px) {
+  .blog-main-box {
+    display: flex;
+    margin-top: 0;
+    width: 100%;
+  }
 }

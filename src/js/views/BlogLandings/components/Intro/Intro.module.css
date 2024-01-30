@@ -1,0 +1,26 @@
+.intro {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.intro > h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-lg);
+  color: var(--color-dark);
+}
+.intro > p {
+  font-size: var(--font-md);
+  color: var(--color-dark);
+  font-family: var(--font-secondary);
+  line-height: 1.8rem;
+}
+@media only screen and (min-width: 920px) {
+  .intro {
+    width: 80%;
+  }
+  .intro > p {
+    width: 80%;
+  }
+}
