@@ -1,12 +1,13 @@
-import { AppContainer, Navbar } from '@common/layout'
+import { Navbar } from '@common/layout'
+import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
-    <AppContainer>
+    <React.Fragment>
       <Navbar />
       <Outlet />
-    </AppContainer>
+    </React.Fragment>
   )
 }
 
