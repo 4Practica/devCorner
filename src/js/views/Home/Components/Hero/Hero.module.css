@@ -70,13 +70,13 @@
 }
 
 .first_text {
-  font-size: var(--font-2xl);
+  font-size: var(--font-xl);
   color: var(--color-main-dark);
 }
 
 .second_text,
 .email_icon {
-  font-size: var(--font-sm);
+  font-size: var(--font-md);
   color: var(--color-gray-400);
 }
 
@@ -101,7 +101,7 @@
 }
 
 .input::placeholder {
-  font-size: var(--font-sm);
+  font-size: var(--font-md);
   color: var(--color-gray-500);
 }
 
@@ -137,15 +137,15 @@
   .email_icon,
   .arrow_text,
   .arrow {
-    font-size: var(--font-sm);
+    font-size: var(--font-md);
   }
 
   .input {
-    font-size: var(--font-sm);
+    font-size: var(--font-md);
   }
 
   .input::placeholder {
-    font-size: var(--font-sm);
+    font-size: var(--font-md);
   }
 
   .form {
@@ -162,15 +162,15 @@
   .email_icon,
   .arrow_text,
   .arrow {
-    font-size: var(--font-sm);
+    font-size: var(--font-md);
   }
 
   .input {
-    font-size: var(--font-sm);
+    font-size: var(--font-md);
   }
 
   .input::placeholder {
-    font-size: var(--font-sm);
+    font-size: var(--font-md);
   }
 
   .form {
