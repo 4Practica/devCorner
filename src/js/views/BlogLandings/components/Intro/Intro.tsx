@@ -2,8 +2,13 @@ import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import styles from './Intro.module.css'
 import { Chip } from '@common/components'
 import { SearchBar } from '..'
+import React, { SetStateAction } from 'react'
 
-const Intro = () => {
+interface IntroProps {
+  search: string,
+  handleSearch: React.Dispatch<SetStateAction<string>>
+}
+const Intro: React.FC<IntroProps> = ({ search, handleSearch }) => {
   return (
     <div className={styles.intro}>
       <Chip
@@ -23,7 +28,7 @@ const Intro = () => {
         voluptas accusamus distinctio necessitatibus quae sunt voluptates
         deleniti
       </p>
-      <SearchBar />
+      <SearchBar handleSearch={handleSearch} search={search}/>
     </div>
   )
 }

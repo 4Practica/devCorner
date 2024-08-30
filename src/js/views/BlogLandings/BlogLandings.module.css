@@ -13,7 +13,7 @@
   height: auto;
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 450px));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 480px));
   gap: 2.5rem;
   background-color: var(--color-main-dark);
 }

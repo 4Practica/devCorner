@@ -1,16 +1,25 @@
+import React, { SetStateAction } from 'react'
 import styles from './SearchBar.module.css'
-import search from '@assets/search.svg'
-const SearchBar = () => {
+import searchIcon from '@assets/search.svg'
+
+interface SearchBarProps {
+  search: string, 
+  handleSearch: React.Dispatch<SetStateAction<string>>
+}
+
+
+const SearchBar: React.FC<SearchBarProps> = ({ search, handleSearch}) => {
   return (
     <form className={`${styles['search-bar']}`}>
       <label>
-        <img alt='Buscar' src={search} />
+        <img alt='Buscar' src={searchIcon} />
       </label>
       <input
         type='search'
         placeholder={'Search'}
-        onChange={() => {
-          /* Algo */
+        value={search}
+        onChange={(e) => {
+          handleSearch(e.target.value)
         }}
       />
     </form>

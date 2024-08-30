@@ -3,7 +3,7 @@ import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import React from 'react'
 import styles from './Tags.module.css'
 import { usePostcard } from '../../PostCard.hooks'
-type Label = {
+export type Label = {
   id: string
   value: string
   label: string
