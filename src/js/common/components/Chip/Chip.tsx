@@ -1,12 +1,12 @@
 import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import styles from './Chip.module.css'
 import React from 'react'
+import { TVariants } from '@common/utils/types/global'
 
-type ChipStyles = 'primary' | 'secondary'
 interface ChipsProps {
   bgColor?: BG_STYLES_CLASSES
   fontColor?: COLOR_STYLES_CLASSES
-  chipStyle?: ChipStyles
+  variant?: TVariants
   children: React.ReactNode
   proportion: 'sm' | 'md' | 'lg'
   shape?: 'rounded' | 'square'
@@ -19,7 +19,7 @@ interface ChipsProps {
 const Chip: React.FC<ChipsProps> = ({
   bgColor,
   fontColor,
-  chipStyle = 'primary',
+  variant = 'primary',
   proportion = 'sm',
   shape = 'rounded',
   icon,
@@ -36,7 +36,7 @@ const Chip: React.FC<ChipsProps> = ({
     outline ? styles.outline : '',
     bgColor,
     fontColor,
-    styles[chipStyle],
+    styles[variant],
   ]
   return (
     <div className={chipClasses.join(' ')}>

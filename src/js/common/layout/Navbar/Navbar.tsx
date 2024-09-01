@@ -52,11 +52,11 @@ const Navbar = () => {
           <div className={``}>
             <Button
               type='button'
-              buttonStyle='primary'
+              variant='primary'
               proportion={'md'}
               onClick={useButtonHandler(navigate)}
             >
-            Newsletter
+              Newsletter
             </Button>
           </div>
         </div>

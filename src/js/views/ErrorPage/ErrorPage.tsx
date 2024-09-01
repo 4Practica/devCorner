@@ -31,12 +31,13 @@ const ErrorPage = () => {
               }
               width={320}
               height={180}
+              loading={"eager"}
             />
           </picture>
         </div>
         <div className={`${styles.rightSide}`}>
           <div className={`${styles.content}`}>
-            <Chip chipStyle='secondary' proportion='sm' bold={true}>
+            <Chip variant='secondary' proportion='sm' bold={true}>
               ERROR 404
             </Chip>
             <h1 className={`${styles.heading}`}>Oh no! Error 404.</h1>

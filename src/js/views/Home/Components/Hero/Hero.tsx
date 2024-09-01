@@ -88,7 +88,7 @@ export const Hero = () => {
               </div>
               <Button
                 type={'submit'}
-                buttonStyle='primary'
+                variant='primary'
                 proportion={'md'}
               >
                 Subscribe
