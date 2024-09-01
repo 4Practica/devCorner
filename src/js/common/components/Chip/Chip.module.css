@@ -33,3 +33,22 @@
 .chip.outline {
   border-radius: 0.2rem;
 }
+.chip.primary {
+  background-color: var(--color-primary);
+  color: var(--font-color);
+}
+.chip.secondary {
+  background-color: var(--color-secondary);
+  color: var(--font-color-contrast);
+}
+
+@media (prefers-color-scheme: dark) { 
+  .chip.primary {
+    background-color: var(--color-primary);
+    color: var(--font-color-contrast);
+  }
+  .chip.secondary {
+    background-color: var(--color-secondary);
+    color: var(--font-color);
+  }
+}

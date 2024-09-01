@@ -22,3 +22,22 @@
   font-size: var(--font-md);
   padding: 0.8rem 2rem;
 }
+
+.button.primary {
+  background-color: var(--color-primary);
+  color: var(--font-color);
+}
+.button.secondary {
+  background-color: var(--color-secondary);
+  color: var(--font-color-contrast);
+}
+@media (prefers-color-scheme: dark) {
+  .button.primary {
+    background-color: var(--color-primary);
+    color: var(--font-color-contrast);
+  }
+  .button.secondary {
+    background-color: var(--color-secondary);
+    color: var(--font-color);
+  }
+}

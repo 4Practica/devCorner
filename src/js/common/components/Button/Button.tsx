@@ -3,11 +3,13 @@ import styles from './Button.module.css'
 
 type ButtonTypes = 'submit' | 'reset' | 'button'
 type ButtonsProportion = 'lg' | 'md' | 'sm'
+type ButtonStyle = 'primary' | 'secondary'
 
 interface ButtonProps {
   type: ButtonTypes
-  bgColor: BG_STYLES_CLASSES
-  fontColor: COLOR_STYLES_CLASSES
+  bgColor?: BG_STYLES_CLASSES
+  fontColor?: COLOR_STYLES_CLASSES
+  buttonStyle?: ButtonStyle
   proportion: ButtonsProportion
   customClasses?: string
   children: React.ReactNode
@@ -16,17 +18,19 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({
   type = 'button',
-  bgColor = BG_STYLES_CLASSES.PRIMARY,
-  fontColor = COLOR_STYLES_CLASSES.DARK,
+  bgColor,
+  fontColor,
   proportion = 'md',
   customClasses = '',
+  buttonStyle = 'primary',
   children,
   onClick,
 }) => {
+  const buttonClasses = [styles.button, styles[proportion], bgColor, fontColor, customClasses, styles[buttonStyle]]
   return (
     <button
       type={type}
-      className={`${styles.button} ${styles[proportion]} ${bgColor} ${fontColor} ${customClasses}`}
+      className={buttonClasses.join(" ")}
       onClick={onClick}
     >
       {children}
