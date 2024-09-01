@@ -8,11 +8,11 @@
 .intro > h2 {
   font-family: var(--font-primary);
   font-size: var(--font-lg);
-  color: var(--color-dark);
+  color: var(--color-white-100);
 }
 .intro > p {
   font-size: var(--font-md);
-  color: var(--color-dark);
+  color: var(--color-gray-100);
   font-family: var(--font-secondary);
   line-height: 1.8rem;
 }

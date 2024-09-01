@@ -16,7 +16,7 @@
   width: 90%;
   height: auto;
   margin: 1rem auto;
-  background-color: var(--color-main-light);
+  background-color: var(--bg-color);
   border-radius: 2rem;
   transition:
     grid-template-rows var(--layout-transition-time) ease-in-out,
@@ -26,7 +26,7 @@
 }
 .navbar_box.regular_nav {
   padding: 1.3rem 1.8rem;
-  background-color: var(--color-light-blue);
+  background-color: var(--bg-color);
 }
 .navbar_main {
   grid-area: main;
@@ -45,6 +45,10 @@
 }
 .navbar_logo h2 {
   font-size: var(--font-sm);
+}
+.navbar_logo a {
+  color: var(--font-color);
+  text-decoration: none;
 }
 .navbar_content {
   --content-transition-time: 200ms;
@@ -65,7 +69,7 @@
   gap: 0.5rem;
   width: 100%;
   font-size: var(--font-sm);
-  color: var(--color-main-dark);
+  color: var(--font-color);
   list-style: none;
   text-decoration: none;
   font-weight: 700;
@@ -73,7 +77,7 @@
 }
 .navbar_content__items li a {
   font-size: var(--font-sm);
-  color: var(--color-main-dark);
+  color: var(--font-color);
   list-style: none;
   text-decoration: none;
 }
@@ -82,6 +86,7 @@
 
 /* Navbar active animations */
 .navbar_box.active {
+  border: 1px solid var(--bg-color-contrast);
   grid-template-rows: 2rem 1fr;
   row-gap: 1rem;
 }
@@ -93,7 +98,6 @@
 @media only screen and (min-width: 920px) {
   .navbar_box {
     position: absolute;
-    z-index: 2;
     grid-template-columns: auto 2fr;
     grid-template-rows: 3.5rem;
     grid-template-areas: 'logo links ';
@@ -113,7 +117,6 @@
     padding: 1.3rem 1.8rem;
     margin: 0;
     border-radius: 0;
-    background-color: var(--color-dark-blue);
   }
   .navbar_main {
     grid-area: logo;

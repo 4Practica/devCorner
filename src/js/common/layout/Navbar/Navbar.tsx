@@ -4,8 +4,8 @@ import { Button } from '../../components'
 import styles from './Navbar.module.css'
 import { NavbarHamburguer } from './components'
 import { useButtonHandler } from './Navbar.hooks'
-import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import { AppContainer } from '..'
+import { BG_STYLES_CLASSES } from '@common/utils/enums'
 
 const Navbar = () => {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
@@ -15,7 +15,7 @@ const Navbar = () => {
     return setHamburguerIsOpen(false)
   }, [])
   return (
-    <AppContainer>
+    <AppContainer elementType='header' bgColor={BG_STYLES_CLASSES.DARK}>
       <nav
         className={`${styles.navbar_box} ${
           hamburguerIsOpen ? styles.active : ''
@@ -28,7 +28,7 @@ const Navbar = () => {
               <source srcSet='' media='' />
               <img src='' alt='' />
             </picture>
-            <h2>{'<Img/>'}Logo</h2>
+            <h2><Link to="/">{'4Practice.'}</Link></h2>
           </div>
           <NavbarHamburguer
             isOpen={hamburguerIsOpen}
@@ -52,12 +52,11 @@ const Navbar = () => {
           <div className={``}>
             <Button
               type='button'
-              bgColor={BG_STYLES_CLASSES.PRIMARY}
-              fontColor={COLOR_STYLES_CLASSES.LIGHT}
+              buttonStyle='primary'
               proportion={'md'}
               onClick={useButtonHandler(navigate)}
             >
-              Subscribe
+            Newsletter
             </Button>
           </div>
         </div>

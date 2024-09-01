@@ -4,7 +4,7 @@
   align-items: center;
   flex-flow: row nowrap;
   gap: 0.3rem;
-  background-color: var(--color-main-dark);
+  background-color: var(--color-white-100);
   border-radius: 2rem;
   height: 3.4rem;
   width: 100%;
@@ -24,7 +24,7 @@
   border: 0;
   border-radius: inherit;
   font-size: var(--font-md);
-  color: var(--color-main-light);
+  color: var(--color-dark-blue);
 }
 .search-bar > input:focus {
   border: none;
@@ -41,6 +41,6 @@
 }
 @media only screen and (min-width: 720px) {
   .search-bar {
-    max-width: 20rem;
+    max-width: 30rem;
   }
 }

@@ -74,14 +74,14 @@ const BlogLandings = () => {
   const [ loading ] = useState<boolean>(false)
   return (
     <React.Fragment>
-      <AppContainer >
+      <AppContainer elementType='div' bgColor={BG_STYLES_CLASSES.DARK}>
         <div className={`${styles['blog-main-box']}`}>
-          <div className={`bg-light padding-x padding-y `}>
+          <div className={`padding-x padding-y `}>
             <Intro search={search} handleSearch={setSearch}/>
           </div>
         </div>
       </AppContainer>
-      <AppContainer bgColor={BG_STYLES_CLASSES.DARK} elementType='section'>
+      <AppContainer bgColor={BG_STYLES_CLASSES.LIGHT} elementType='section'>
         <div className={`padding-x padding-y ${styles['blog-posts']}`}>
           {
             loading ? <LoadState /> : <SearchResult results={data} />

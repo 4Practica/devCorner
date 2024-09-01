@@ -6,6 +6,7 @@
   justify-content: center;
   margin-top: 7rem;
   width: 100%;
+  background-color: var(--color-dark-blue);
 }
 .blog-posts {
   position: relative;
@@ -15,7 +16,7 @@
   place-content: center;
   grid-template-columns: repeat(auto-fill, minmax(290px, 480px));
   gap: 2.5rem;
-  background-color: var(--color-main-dark);
+  background-color: var(--color-white-100);
 }
 
 @media only screen and (min-width: 920px) {

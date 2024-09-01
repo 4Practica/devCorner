@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import styles from './Hero.module.css'
 import { Button } from '@common/components'
-import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 
 const {
   vh_100,
@@ -13,6 +12,7 @@ const {
   flex,
   column,
   hero_container,
+  hero_content,
   section_direction,
   section_padding,
   content_width,
@@ -42,9 +42,8 @@ export const Hero = () => {
   const [data, setData] = useState({ email: '' })
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
-    //Aqui la funcion para el submit
     e.preventDefault()
-    console.log('HOLAAAAA')
+    //Aqui la funcion para el submit
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -61,9 +60,9 @@ export const Hero = () => {
         src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
         className={`${image}`}
       />
-      <div className={`${flex} ${section_direction} ${section_padding} `}>
+      <div className={`${flex} ${hero_content} ${section_direction} ${section_padding} `}>
         <div
-          className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per} ${vh_100}`}
+          className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per}`}
         >
           <div className={`${flex} ${column} ${gap_20_px} ${pt_left_side}`}>
             <h1 className={`${first_text}`}>
@@ -89,8 +88,7 @@ export const Hero = () => {
               </div>
               <Button
                 type={'submit'}
-                bgColor={BG_STYLES_CLASSES.PRIMARY}
-                fontColor={COLOR_STYLES_CLASSES.LIGHT}
+                buttonStyle='primary'
                 proportion={'md'}
               >
                 Subscribe
@@ -100,7 +98,7 @@ export const Hero = () => {
 
           <div className={`${flex} ${gap_10_px} ${pb_arrow}`}>
             <i className={`fa-solid fa-down-long ${arrow}`}></i>
-            <h5 className={`${arrow_text}`}>Lorem ipsum</h5>
+            <h5 className={`${arrow_text}`}>Explore Categories</h5>
           </div>
         </div>
         <div className={`${content_width} ${visible} ${content_height}`}>
