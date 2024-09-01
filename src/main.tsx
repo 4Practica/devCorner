@@ -8,12 +8,18 @@ import '@styles/global.css'
 import './index.css'
 import App from './App.tsx'
 import { BlogLandingView, ErrorPageView, HomeView } from '@views/index.ts'
+import { Navbar } from '@common/layout/index.ts'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <ErrorPageView />,
+    errorElement: (
+      <React.Fragment>
+        <Navbar />
+        <ErrorPageView />
+      </React.Fragment>
+    ),
     children: [
       {
         path: '',
