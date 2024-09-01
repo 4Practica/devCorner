@@ -1,67 +1,74 @@
-.errorViewContainer,
-.leftSide,
-.rightSide {
-  min-height: 100vh;
-  width: 100%;
-}
-
 .errorViewContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.leftSide {
-  display: none;
-  background: url('@assets/ErrorViewDog.webp') no-repeat round;
-}
-
-.leftImage {
-  width: 100%;
-  min-height: 100vh;
-}
-
-.rightSide {
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    'top'
-    'cont'
-    'bottom';
+  grid-template-rows: 7rem .8fr 1fr auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  '  .       . '
+  ' imag   imag'
+  ' cont   cont'
+  'dotTop dotBtm'
+  ;
+  min-height: 100vh;
+  height: 100%;
+  max-height: 64rem;
+  width: 100%;
+}
+.dotsTopDeco {
+  grid-area: dotTop;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-.top {
-  grid-area: top;
-  justify-self: end;
-  margin: 1rem;
+.dotsBottomDeco {
+  grid-area: dotBtm;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-
-.content {
+.leftSide {
+  grid-area: imag;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.5rem;
+  border-radius: 1.5rem;
+  min-height: 5rem;
+  height: 100%;
+}
+.leftSide picture {
+  width: 100%;
+}
+.leftSide img {
+  width: 100%;
+  height: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 1rem;
+  object-position: center 20%;
+}
+.rightSide {
   grid-area: cont;
+  display: flex;
+  align-items: center;
+}
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin: auto;
+  margin: 1.5rem;
   gap: 1rem;
 }
 
 .heading {
   font-size: var(--font-md);
+  color: var(--font-color);
 }
 
 .paragraph {
   color: var(--color-gray-300);
   font-size: var(--font-sm);
-}
-
-.pill {
-  background-color: var(--color-light-green);
-  color: var(--color-main-light);
-  font-size: var(--font-xs);
-  font-weight: 600;
-  border-radius: 40px;
-  padding: 0.3rem 0.5rem;
 }
 
 .buttonContainer {
@@ -76,14 +83,20 @@
   color: white;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .leftButton {
-  background-color: #026b28;
+  background-color: var(--color-primary);
+  color: var(--font-color-contrast);
+  font-weight: 700;
 }
 
 .rightButton {
-  background-color: #4d5f7a;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .bottom {
@@ -93,9 +106,63 @@
 }
 
 @media (min-width: 520px) {
+  .errorViewContainer {
+    grid-template-rows: 10rem .8fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    '   .   .   dotTop'
+    'imag imag  imag '
+    'cont cont   .   '
+    'cont cont dotBtm'
+    ;
+    min-height: 70vh;
+    height: 100%;
+    max-height: 64rem;
+    width: 100%;
+  }
+  .dotsTopDeco {
+    grid-area: dotTop;
+    position: relative;
+    bottom: -60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+  }
 }
 
 @media (min-width: 720px) {
+  .errorViewContainer {
+    grid-template-rows: 5rem .8fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    '  .      .       .        .  '
+    ' imag   imag    cont    cont '
+    ' imag   imag    cont    cont '
+    'dotTop dotTop  dotBtm  dotBtm'
+    ;
+    min-height: 70vh;
+    height: 100%;
+    max-height: 64rem;
+    width: 100%;
+  }
+  .dotsTopDeco {
+    grid-area: dotTop;
+    position: static;
+    bottom:0;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+  }
+  .leftSide {
+    height: 100%;
+  }
+  .leftSide picture {
+    width: 100%;
+    max-width: 560px;
+  }
+  .leftSide img {
+    max-height:420px;
+  }
   .heading {
     font-size: var(--font-lg);
   }
@@ -111,6 +178,27 @@
 }
 
 @media (min-width: 920px) {
+  .errorViewContainer {
+    grid-template-rows: .8fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ' imag   imag    cont    cont '
+    ' imag   imag    cont    cont '
+    'dotTop dotTop  dotBtm  dotBtm'
+    ;
+    min-height: auto;
+    height: 80vh;
+    max-height: 64rem;
+    width: 100%;
+  }
+  .dotsTopDeco {
+    grid-area: dotTop;
+    position: static;
+    bottom:0;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+  }
 }
 
 @media (min-width: 1220px) {
@@ -119,7 +207,14 @@
   }
 
   .leftSide {
-    display: block;
+    height: 100%;
+  }
+  .leftSide picture {
+    width: 100%;
+    max-width: 520px;
+  }
+  .leftSide img {
+    max-height:580px;
   }
 
   .pill {
@@ -136,6 +231,7 @@
 
   .leftButton,
   .rightButton {
-    font-size: var(--font-xs);
+    font-size: var(--font-sm);
+    line-height: 1;
   }
 }
