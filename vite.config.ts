@@ -12,12 +12,12 @@ export default defineConfig(({ command, mode }) => {
     base: '/',
     resolve: {
       alias: {
-        '@utils': path.resolve(projectRootDir, '/src/js/utils'),
-        '@services': path.resolve(projectRootDir, '/src/js/services'),
-        '@views': path.resolve(projectRootDir, '/src/js/views'),
-        '@common': path.resolve(projectRootDir, '/src/js/common'),
-        '@styles': path.resolve(projectRootDir, '/src/styles'),
-        '@assets': path.resolve(projectRootDir, '/src/assets'),
+        '@utils': path.resolve(projectRootDir, './src/js/utils'),
+        '@services': path.resolve(projectRootDir, './src/js/services'),
+        '@views': path.resolve(projectRootDir, './src/js/views'),
+        '@common': path.resolve(projectRootDir, './src/js/common'),
+        '@styles': path.resolve(projectRootDir, './src/styles'),
+        '@assets': path.resolve(projectRootDir, './src/assets'),
       },
     },
   }
