@@ -3,12 +3,11 @@ import styles from './SearchBar.module.css'
 import searchIcon from '@assets/search.svg'
 
 interface SearchBarProps {
-  search: string, 
+  search: string
   handleSearch: React.Dispatch<SetStateAction<string>>
 }
 
-
-const SearchBar: React.FC<SearchBarProps> = ({ search, handleSearch}) => {
+const SearchBar: React.FC<SearchBarProps> = ({ search, handleSearch }) => {
   return (
     <form className={`${styles['search-bar']}`}>
       <label>

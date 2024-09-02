@@ -12,7 +12,7 @@ const ErrorPage = () => {
     <AppContainer bgColor={BG_STYLES_CLASSES.DARK}>
       <div className={`${styles.errorViewContainer}`}>
         <div className={`${styles.dotsTopDeco}`}>
-          <img src={dots} alt='dots' width={"150"} height={"110"} />
+          <img src={dots} alt='dots' width={'150'} height={'110'} />
         </div>
         <div className={`${styles.leftSide}`}>
           <picture>
@@ -30,7 +30,7 @@ const ErrorPage = () => {
               }
               width={320}
               height={180}
-              loading={"eager"}
+              loading={'eager'}
             />
           </picture>
         </div>
@@ -54,7 +54,13 @@ const ErrorPage = () => {
           </div>
         </div>
         <div className={`${styles.dotsBottomDeco}`}>
-          <img src={wave} alt='wave' width={"150"} height={"110"} className={`${styles.bottom}`} />
+          <img
+            src={wave}
+            alt='wave'
+            width={'150'}
+            height={'110'}
+            className={`${styles.bottom}`}
+          />
         </div>
       </div>
     </AppContainer>

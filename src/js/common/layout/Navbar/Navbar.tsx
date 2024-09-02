@@ -28,7 +28,9 @@ const Navbar = () => {
               <source srcSet='' media='' />
               <img src='' alt='' />
             </picture>
-            <h2><Link to="/">{'4Practice.'}</Link></h2>
+            <h2>
+              <Link to='/'>{'4Practice.'}</Link>
+            </h2>
           </div>
           <NavbarHamburguer
             isOpen={hamburguerIsOpen}

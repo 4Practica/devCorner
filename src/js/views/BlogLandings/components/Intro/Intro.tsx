@@ -5,7 +5,7 @@ import { SearchBar } from '..'
 import React, { SetStateAction } from 'react'
 
 interface IntroProps {
-  search: string,
+  search: string
   handleSearch: React.Dispatch<SetStateAction<string>>
 }
 const Intro: React.FC<IntroProps> = ({ search, handleSearch }) => {
@@ -28,7 +28,7 @@ const Intro: React.FC<IntroProps> = ({ search, handleSearch }) => {
         voluptas accusamus distinctio necessitatibus quae sunt voluptates
         deleniti
       </p>
-      <SearchBar handleSearch={handleSearch} search={search}/>
+      <SearchBar handleSearch={handleSearch} search={search} />
     </div>
   )
 }

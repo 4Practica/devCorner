@@ -1,74 +1,71 @@
 .postcard_skeleton_box {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-flow: column nowrap;
-    width: 100%;
-    min-width: 290px;
-    max-width: 480px;
-    gap: 0.7rem;
-    height: auto;
-    animation-name: beat;
-    animation-duration:900ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-    animation-play-state: running;
-    animation-iteration-count: infinite;
-    opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  width: 100%;
+  min-width: 290px;
+  max-width: 480px;
+  gap: 0.7rem;
+  height: auto;
+  animation-name: beat;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  opacity: 1;
 }
 .postcard_skeleton_box > .image {
-    background-color: var(--color-gray-200);
-    width: 100%;
-    height: 312px;
-    border-radius: 0.5rem;
+  background-color: var(--color-gray-200);
+  width: 100%;
+  height: 312px;
+  border-radius: 0.5rem;
 }
 .postcard_skeleton_box > .tags_box {
-    position: relative;
-    width: 10%;
-    background-color: var(--color-gray-200);
-    height: 1.5rem;
-    border-radius: 0.5rem;
+  position: relative;
+  width: 10%;
+  background-color: var(--color-gray-200);
+  height: 1.5rem;
+  border-radius: 0.5rem;
 }
 .postcard_skeleton_box > .tags_box::before {
-    position: absolute;
-    content: "";
-    right: -120%;
-    width: 100%;
-    background-color: var(--color-gray-200);
-    height: 100%;
-    border-radius: 0.5rem;
+  position: absolute;
+  content: '';
+  right: -120%;
+  width: 100%;
+  background-color: var(--color-gray-200);
+  height: 100%;
+  border-radius: 0.5rem;
 }
 .postcard_skeleton_box .large_box {
-    width: 100%;
-    background-color: var(--color-gray-200);
-    height: 1.3rem;
-    border-radius: 0.2rem;
-
+  width: 100%;
+  background-color: var(--color-gray-200);
+  height: 1.3rem;
+  border-radius: 0.2rem;
 }
 .postcard_skeleton_box > div {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 0.8rem;
-    height: auto;
-    width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.8rem;
+  height: auto;
+  width: 100%;
 }
-.postcard_skeleton_box  .medium_box {
-    width: 70%;
-    background-color: var(--color-gray-200);
-    height: 1.3rem;
-    border-radius: 0.2rem;
-
+.postcard_skeleton_box .medium_box {
+  width: 70%;
+  background-color: var(--color-gray-200);
+  height: 1.3rem;
+  border-radius: 0.2rem;
 }
 .postcard_skeleton_box > .small_box {
-    width: 50%;
-    background-color: var(--color-gray-200);
-    height: 1.3rem;
-    border-radius: 0.2rem;
-
+  width: 50%;
+  background-color: var(--color-gray-200);
+  height: 1.3rem;
+  border-radius: 0.2rem;
 }
 
 @keyframes beat {
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
 }

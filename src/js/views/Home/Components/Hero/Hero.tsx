@@ -60,7 +60,9 @@ export const Hero = () => {
         src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
         className={`${image}`}
       />
-      <div className={`${flex} ${hero_content} ${section_direction} ${section_padding} `}>
+      <div
+        className={`${flex} ${hero_content} ${section_direction} ${section_padding} `}
+      >
         <div
           className={`${content_width} ${flex} ${content_direction} ${gap_20_px} ${content_alignment} ${content_height} ${pr_10_per}`}
         >
@@ -86,11 +88,7 @@ export const Hero = () => {
                   onChange={handleChange}
                 />
               </div>
-              <Button
-                type={'submit'}
-                variant='primary'
-                proportion={'md'}
-              >
+              <Button type={'submit'} variant='primary' proportion={'md'}>
                 Subscribe
               </Button>
             </form>

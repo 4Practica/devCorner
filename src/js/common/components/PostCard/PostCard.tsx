@@ -38,4 +38,3 @@ PostCard.Author = Author
 PostCard.Title = Title
 PostCard.Description = Description
 PostCard.CTA = CTA
-

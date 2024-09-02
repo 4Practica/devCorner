@@ -9,7 +9,9 @@ import './index.css'
 import App from './App.tsx'
 import { Navbar } from '@common/layout/index.ts'
 
-export const ErrorPageView = React.lazy(() => import('@views/ErrorPage/ErrorPage.tsx'))
+export const ErrorPageView = React.lazy(
+  () => import('@views/ErrorPage/ErrorPage.tsx')
+)
 
 const router = createBrowserRouter([
   {
@@ -26,32 +28,32 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        async lazy () {
+        async lazy() {
           const { HomeView } = await import('@views/Home')
-          return {Component: HomeView}
-        }
+          return { Component: HomeView }
+        },
       },
       {
         path: 'blog',
-        loader: () =>  {
+        loader: () => {
           /* https://reactrouter.com/en/main/route/route#loader */
-          return "blog data to be fetch for the path"
+          return 'blog data to be fetch for the path'
         },
-        async lazy () {
+        async lazy() {
           const { BlogLandingView } = await import('@views/BlogLandings')
-          return {Component: BlogLandingView}
-        }
+          return { Component: BlogLandingView }
+        },
       },
       {
         path: 'blog/:postPath',
-        loader: ({ params }) =>  {
+        loader: ({ params }) => {
           /* https://reactrouter.com/en/main/route/route#loader */
-          return "blog data to be fetch for the path: " + params.postPath
+          return 'blog data to be fetch for the path: ' + params.postPath
         },
-        async lazy () {
+        async lazy() {
           const { BlogPostView } = await import('@views/BlogPost')
-          return {Component: BlogPostView}
-        }
+          return { Component: BlogPostView }
+        },
       },
     ],
   },

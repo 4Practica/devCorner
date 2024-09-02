@@ -46,4 +46,3 @@ export const Chip: React.FC<ChipsProps> = ({
     </div>
   )
 }
-

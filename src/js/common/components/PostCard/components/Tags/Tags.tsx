@@ -17,12 +17,7 @@ export const Tags: React.FC<TagsProps> = ({ labels }) => {
       {labels.map((item) => {
         return (
           <React.Fragment>
-            <Chip
-              key={item.id}
-              variant='primary'
-              proportion='sm'
-              bold={false}
-            >
+            <Chip key={item.id} variant='primary' proportion='sm' bold={false}>
               {item.label}
             </Chip>
           </React.Fragment>
