@@ -1,4 +1,4 @@
-import { PostCard } from '@common/components'
+import { PostCard } from '@common/components/PostCard'
 import { Label } from '@common/components/PostCard/components/Tags/Tags'
 import { ArrowRightIcon } from '@common/icons'
 import React from 'react'

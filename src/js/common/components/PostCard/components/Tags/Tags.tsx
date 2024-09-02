@@ -1,4 +1,4 @@
-import { Chip } from '@common/components'
+import { Chip } from '@common/components/Chip'
 import React from 'react'
 import styles from './Tags.module.css'
 import { usePostcard } from '../../PostCard.hooks'

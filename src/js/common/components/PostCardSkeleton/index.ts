@@ -1,1 +1,1 @@
-export { default } from './PostCardSkeleton.tsx'
+export * from './PostCardSkeleton.tsx'

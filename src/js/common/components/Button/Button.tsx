@@ -16,7 +16,7 @@ interface ButtonProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   bgColor,
   fontColor,
@@ -41,4 +41,3 @@ const Button: React.FC<ButtonProps> = ({
   )
 }
 
-export default Button

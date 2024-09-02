@@ -1,4 +1,4 @@
-import { PostCardSkeleton } from "@common/components"
+import { PostCardSkeleton } from "@common/components/PostCardSkeleton"
 import { RESPONSIVE_SIZE } from "@common/utils/enums"
 import { useScreenSize } from "@common/utils/hooks"
 import React from "react"

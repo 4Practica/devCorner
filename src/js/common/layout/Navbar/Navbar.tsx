@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { Button } from '../../components'
+import { Button } from '@common/components/Button'
 import styles from './Navbar.module.css'
 import { NavbarHamburguer } from './components'
 import { useButtonHandler } from './Navbar.hooks'

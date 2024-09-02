@@ -24,7 +24,7 @@ interface PostCardCompound extends React.FC<PostCardProps> {
 }
 
 export const PostCardContext = React.createContext<boolean>(false)
-const PostCard: PostCardCompound = ({ children }) => {
+export const PostCard: PostCardCompound = ({ children }) => {
   return (
     <PostCardContext.Provider value={true}>
       <div className={`${styles['card-box']}`}>{children}</div>
@@ -39,4 +39,3 @@ PostCard.Title = Title
 PostCard.Description = Description
 PostCard.CTA = CTA
 
-export default PostCard

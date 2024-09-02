@@ -1,9 +1,12 @@
 import styles from './PostCardSkeleton.module.css'
+
 interface PostCardSkeletonProps {
     opacity?: string
 }
 
-const PostCardSkeleton:React.FC<PostCardSkeletonProps> = ({ opacity=1 }) => {
+const POSTCARD_DEFAULT_OPACITY = 1
+
+export const PostCardSkeleton:React.FC<PostCardSkeletonProps> = ({ opacity=POSTCARD_DEFAULT_OPACITY }) => {
     return (
         <div className={`${styles.postcard_skeleton_box}`} style={{opacity}}>
             <div className={`${styles.image}`}></div>
@@ -21,4 +24,3 @@ const PostCardSkeleton:React.FC<PostCardSkeletonProps> = ({ opacity=1 }) => {
     )
 }
 
-export default PostCardSkeleton

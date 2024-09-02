@@ -1,6 +1,6 @@
 import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import styles from './Intro.module.css'
-import { Chip } from '@common/components'
+import { Chip } from '@common/components/Chip'
 import { SearchBar } from '..'
 import React, { SetStateAction } from 'react'
 

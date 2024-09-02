@@ -1,1 +1,1 @@
-export type TVariants = 'primary' | 'secondary' | 'success' | 'warning' | 'danger'
+export type TVariants = 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info' | 'light' | 'dark'

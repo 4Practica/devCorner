@@ -1,1 +1,1 @@
-export { default } from './BlogLandings'
+export { default as BlogLandingView } from './BlogLandings'

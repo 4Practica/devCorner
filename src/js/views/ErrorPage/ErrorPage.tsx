@@ -3,12 +3,11 @@ import styles from './ErrorPage.module.css'
 import dots from '@assets/dots.svg'
 import wave from '@assets/wave.svg'
 import { Link, useLocation } from 'react-router-dom'
-import { Chip } from '@common/components'
+import { Chip } from '@common/components/Chip'
 import { BG_STYLES_CLASSES } from '@common/utils/enums'
 
 const ErrorPage = () => {
   const location = useLocation()
-  console.log(location)
   return (
     <AppContainer bgColor={BG_STYLES_CLASSES.DARK}>
       <div className={`${styles.errorViewContainer}`}>

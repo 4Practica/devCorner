@@ -16,7 +16,7 @@ interface ChipsProps {
   bold?: boolean
 }
 
-const Chip: React.FC<ChipsProps> = ({
+export const Chip: React.FC<ChipsProps> = ({
   bgColor,
   fontColor,
   variant = 'primary',
@@ -47,4 +47,3 @@ const Chip: React.FC<ChipsProps> = ({
   )
 }
 
-export default Chip

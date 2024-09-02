@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './Hero.module.css'
-import { Button } from '@common/components'
+import { Button } from '@common/components/Button'
 
 const {
   vh_100,
