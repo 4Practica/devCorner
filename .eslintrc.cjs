@@ -34,7 +34,6 @@ module.exports = {
     'no-empty-function': 'error',
     'no-magic-numbers': 'error',
     'no-duplicate-imports': 'error',
-    'arrow-body-style': ['error', 'always'],
     'eqeqeq': ['error', 'always'],
     'react-refresh/only-export-components': [
       'warn',
