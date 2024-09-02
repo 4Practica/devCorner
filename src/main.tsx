@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import '@styles/fonts.css'
@@ -7,8 +7,9 @@ import '@styles/responsive.css'
 import '@styles/global.css'
 import './index.css'
 import App from './App.tsx'
-import { BlogLandingView, ErrorPageView, HomeView } from '@views/index.ts'
 import { Navbar } from '@common/layout/index.ts'
+
+export const ErrorPageView = React.lazy(() => import('@views/ErrorPage/ErrorPage.tsx'))
 
 const router = createBrowserRouter([
   {
@@ -17,17 +18,40 @@ const router = createBrowserRouter([
     errorElement: (
       <React.Fragment>
         <Navbar />
-        <ErrorPageView />
+        <Suspense fallback={<span />}>
+          <ErrorPageView />
+        </Suspense>
       </React.Fragment>
     ),
     children: [
       {
         path: '',
-        element: <HomeView />,
+        async lazy () {
+          const { HomeView } = await import('@views/Home')
+          return {Component: HomeView}
+        }
       },
       {
         path: 'blog',
-        element: <BlogLandingView />,
+        loader: () =>  {
+          /* https://reactrouter.com/en/main/route/route#loader */
+          return "blog data to be fetch for the path"
+        },
+        async lazy () {
+          const { BlogLandingView } = await import('@views/BlogLandings')
+          return {Component: BlogLandingView}
+        }
+      },
+      {
+        path: 'blog/:postPath',
+        loader: ({ params }) =>  {
+          /* https://reactrouter.com/en/main/route/route#loader */
+          return "blog data to be fetch for the path: " + params.postPath
+        },
+        async lazy () {
+          const { BlogPostView } = await import('@views/BlogPost')
+          return {Component: BlogPostView}
+        }
       },
     ],
   },
