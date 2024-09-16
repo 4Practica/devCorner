@@ -126,7 +126,15 @@
     width: 60%;
   }
 
-  .arrow {
+  .hero_text__title {
+    font-size: var(--font-xl);
+  }
+
+  .hero_text__subtitle {
+    font-size: var(--font-md);
+  }
+
+  .hero_bottom {
     font-size: var(--font-md);
   }
 }
@@ -135,6 +143,7 @@
   .hero_bg_image {
     display: none;
   }
+
   .hero_top {
     grid-template-columns: 1fr 0.6fr;
   }
@@ -179,6 +188,17 @@
 }
 
 @media (min-width: 1220px) {
+  .hero_text__title {
+    font-size: var(--font-2xl);
+  }
+
+  .hero_text__subtitle {
+    font-size: var(--font-md);
+  }
+
+  .hero_bottom {
+    font-size: var(--font-md);
+  }
 }
 
 @keyframes floating {
