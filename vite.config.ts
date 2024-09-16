@@ -10,6 +10,7 @@ export default defineConfig(({ command, mode }) => {
   const globalConfig = {
     plugins: [react()],
     base: '/',
+    assetsInclude: ['**/*.md'],
     resolve: {
       alias: {
         '@utils': path.resolve(projectRootDir, '/src/js/utils'),
