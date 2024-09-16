@@ -25,8 +25,8 @@ export const Hero = () => {
         className={`${styles.hero_bg_image}`}
       />
       <div className={`${styles.hero_content}`}>
-        <div className={`${styles.left_side}`}>
-          <div className={`${styles.left_side__top}`}>
+        <div className={`${styles.hero_top}`}>
+          <div className={`${styles.hero_left}`}>
             <div className={`${styles.hero_text}`}>
               <h1 className={`${styles.hero_text__title}`}>
                 Explore the dynamics of software development
@@ -35,7 +35,7 @@ export const Hero = () => {
                 Subscribe now to explore, learn and grow with each post
               </p>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={`${styles.form}`}>
               <input
                 className={`${styles.form_input}`}
                 type='text'
@@ -56,25 +56,26 @@ export const Hero = () => {
             </form>
           </div>
 
-          <div className={`${styles.left_side__bottom}`}>
-            <i className={`fa-solid fa-down-long ${styles.arrow}`}></i>
-            <h5 className={``}>Explore Categories</h5>
+          <div className={`${styles.hero_right}`}>
+            <div className={`${styles.images_container}`}>
+              <img
+                src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                className={`${styles.left_image}`}
+              />
+              <img
+                src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                className={`${styles.middle_image}`}
+              />
+              <img
+                src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                className={`${styles.right_image}`}
+              />
+            </div>
           </div>
-        </div>
-        <div className={`${styles.right_side}`}>
-          <div className={``}>
-            <img
-              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
-              className={``}
-            />
-            <img
-              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
-              className={``}
-            />
-            <img
-              src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
-              className={``}
-            />
+
+          <div className={`${styles.hero_bottom}`}>
+            <i className={`fa-solid fa-down-long ${styles.arrow}`}></i>
+            <h5>Explore Categories</h5>
           </div>
         </div>
       </div>

@@ -18,21 +18,23 @@
   height: 100%;
 }
 
-.left_side {
+.hero_top {
   color: var(--color-main-light);
   padding: 2rem;
   height: 100%;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  column-gap: 5rem;
+  grid-template-columns: 1fr 0fr;
   grid-template-rows: 3fr 1fr;
   grid-template-areas:
-    'top'
-    'bottom';
+    'left right'
+    'bottom .';
 }
 
-.left_side__top {
+.hero_left {
   width: 100%;
-  grid-area: top;
+  grid-area: left;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -67,7 +69,7 @@
   border-radius: 4px;
 }
 
-.left_side__bottom {
+.hero_bottom {
   grid-area: bottom;
   display: flex;
   align-items: end;
@@ -81,23 +83,99 @@
   animation: floating 1s linear infinite;
 }
 
-.right_side {
+.hero_right {
+  grid-area: right;
+  display: none;
+  height: 100%;
+}
+
+.images_container {
+  background: linear-gradient(
+    var(--color-dark-blue) 10%,
+    var(--color-purple) 50%,
+    var(--color-dark-blue) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4.2rem;
+  height: 90%;
+  width: 100%;
+  border-radius: 10px;
+  overflow-x: hidden;
+  padding: 100px 0;
+}
+
+.left_image,
+.middle_image,
+.right_image {
+  border-radius: 10px;
+  width: 60%;
+  height: 75%;
+  box-shadow: 0 10px 13px rgba(0, 0, 0, 0.65);
   display: none;
 }
 
+.middle_image {
+  height: 85%;
+  display: block;
+}
+
 @media (min-width: 520px) {
+  .form_input {
+    width: 60%;
+  }
+
   .arrow {
     font-size: var(--font-md);
   }
 }
 
 @media (min-width: 720px) {
+  .hero_bg_image {
+    display: none;
+  }
+  .hero_top {
+    grid-template-columns: 1fr 0.6fr;
+  }
+
+  .hero_right {
+    display: flex;
+    align-items: center;
+  }
+
+  .middle_image {
+    width: 80%;
+  }
+
   .arrow {
     font-size: var(--font-md);
   }
 }
 
 @media (min-width: 920px) {
+  .middle_image {
+    width: 60%;
+  }
+
+  .form {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .form_input {
+    width: 60%;
+  }
+
+  .form_button {
+    margin: 0;
+  }
+
+  .left_image,
+  .middle_image,
+  .right_image {
+    display: block;
+  }
 }
 
 @media (min-width: 1220px) {
