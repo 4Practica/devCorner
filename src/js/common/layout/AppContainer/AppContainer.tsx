@@ -4,6 +4,7 @@ import { BG_STYLES_CLASSES } from '@common/utils/enums'
 
 type PropsType = {
   bgColor?: BG_STYLES_CLASSES
+  className?: string
   children: React.ReactNode | React.ReactNode[]
   elementType?: string
 }
@@ -11,12 +12,13 @@ type PropsType = {
 const AppContainer = ({
   bgColor = BG_STYLES_CLASSES.LIGHT,
   elementType = 'main',
+  className = "",
   children,
 }: PropsType) => {
   const element = createElement(
     elementType,
     {
-      className: `${styles.app_container}`,
+      className: `${className} ${styles.app_container}`,
     },
     children
   )
