@@ -35,7 +35,7 @@ const SearchResult: React.FC<SearchResultProps> = ({ results }) => {
               and insight tools, and scrambling for the right data at the right
               time.
             </PostCard.Description>
-            <PostCard.CTA to={'/home'}>
+            <PostCard.CTA to={'/blog/aaaa'}>
               {'Read post'}
               <ArrowRightIcon />
             </PostCard.CTA>

@@ -31,6 +31,6 @@
       "@assets/*": ["./src/assets/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "src/js/common/utils/declaration"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
