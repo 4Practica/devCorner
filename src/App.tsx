@@ -1,12 +1,15 @@
-import { Navbar } from '@common/layout'
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router'
+
 
 function App() {
   return (
     <React.Fragment>
-      <Navbar />
-      <Outlet />
+      <RouterProvider 
+        router={router} 
+        fallbackElement={<h1>Loadinggggggg. Remember to make the global {"<LoadingView />"}</h1>} 
+      />
     </React.Fragment>
   )
 }
