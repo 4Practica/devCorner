@@ -1,7 +1,7 @@
-import { createBrowserRouter, Outlet, RouteObject} from 'react-router-dom'
+import { createBrowserRouter, Outlet, RouteObject } from 'react-router-dom'
 import { Layout } from './Layout'
 
-const paths:RouteObject[] = [
+const paths: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
@@ -18,7 +18,7 @@ const paths:RouteObject[] = [
             index: true,
             async lazy() {
               const { HomeView } = await import('@views/Home')
-              return { Component: HomeView  }
+              return { Component: HomeView }
             },
           },
           {
@@ -50,10 +50,10 @@ const paths:RouteObject[] = [
               return { element: <ErrorPageView /> }
             },
           },
-        ]
+        ],
       },
-    ]
-  },  
+    ],
+  },
 ]
 
 export const router = createBrowserRouter(paths)

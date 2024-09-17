@@ -1,1 +1,1 @@
-export {default as ErrorPageView } from './ErrorPage'
+export { default as ErrorPageView } from './ErrorPage'

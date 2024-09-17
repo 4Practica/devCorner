@@ -26,9 +26,10 @@ export interface BlogPostArticle {
   tags: string[]
 }
 
-export const dummyData: BlogPostArticle= {
+export const dummyData: BlogPostArticle = {
   title: 'Essential TypeScript Best Practices for Clean Code',
-  shortDescription: "Learn how to leverage TypeScript's features to improve your development workflow.",
+  shortDescription:
+    "Learn how to leverage TypeScript's features to improve your development workflow.",
   author: {
     name: 'Bryan García',
     webAddress: 'https://bryanstgarcia.com',

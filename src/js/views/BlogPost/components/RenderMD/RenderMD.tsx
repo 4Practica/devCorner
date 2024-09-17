@@ -1,22 +1,28 @@
 import Markdown from 'markdown-to-jsx'
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import nightOwl from 'react-syntax-highlighter/dist/esm/styles/prism/night-owl'
 
 import React from 'react'
 import styles from './RenderMD.module.css'
-import { CodeBlockProps, languages, registerPrismLanguajes, RenderMDProps } from './RenderMD.utils'
-
-
+import {
+  CodeBlockProps,
+  languages,
+  registerPrismLanguajes,
+  RenderMDProps,
+} from './RenderMD.utils'
 
 /*** 
  Docs:
  Renders code properly highlight: https://www.npmjs.com/package/react-syntax-highlighter
  Renders markdown: 
  */
-registerPrismLanguajes({PrismInstance: SyntaxHighlighter, languages: languages})
+registerPrismLanguajes({
+  PrismInstance: SyntaxHighlighter,
+  languages: languages,
+})
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
-  const language = className ? className.replace(/lang-/, '') : 'javascript';
+  const language = className ? className.replace(/lang-/, '') : 'javascript'
   const code = children
   const codeIsInline = !code.includes('\n')
   return (
@@ -47,9 +53,9 @@ export const RenderMD: React.FC<RenderMDProps> = ({ MD }) => {
             },
             img: {
               props: {
-                loading: "lazy"
-              }
-            }
+                loading: 'lazy',
+              },
+            },
           },
         }}
       >
