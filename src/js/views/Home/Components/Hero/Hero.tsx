@@ -7,7 +7,10 @@ export const Hero = () => {
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
     e.preventDefault()
+    if (data.email.trim() == '') return alert('Use a valid email')
     //Aqui la funcion para el submit
+    alert('Nice')
+    setData({ email: '' })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -38,7 +41,7 @@ export const Hero = () => {
             <form onSubmit={handleSubmit} className={`${styles.form}`}>
               <input
                 className={`${styles.form_input}`}
-                type='text'
+                type='email'
                 name='email'
                 id='email'
                 value={data.email}
