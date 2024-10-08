@@ -11,7 +11,7 @@ SEO involves optimizing your website to rank higher in search engine results pag
 When your eCommerce site ranks higher in search results, it gets more visibility. Higher visibility leads to more organic traffic, which translates into more potential customers.
 
 ![Increased Visibility](https://example.com/increased-visibility.png)
-*Image Source: Example.com*
+_Image Source: Example.com_
 
 ### Better User Experience
 
@@ -27,10 +27,10 @@ Websites that are optimized for SEO generally see higher conversion rates. This 
 
 Choosing the right keywords is crucial. Targeting keywords that your potential customers are searching for can lead to higher visibility and more relevant traffic.
 
-| Keyword Type      | Impact on Sales                         |
-|-------------------|------------------------------------------|
-| Short-Tail Keywords | High competition, high search volume     |
-| Long-Tail Keywords | Lower competition, more specific searches |
+| Keyword Type        | Impact on Sales                           |
+| ------------------- | ----------------------------------------- |
+| Short-Tail Keywords | High competition, high search volume      |
+| Long-Tail Keywords  | Lower competition, more specific searches |
 
 **Example:**
 If you sell handmade jewelry, targeting a keyword like “handmade silver bracelets” might attract more interested buyers than a broad term like “bracelets.”
@@ -40,7 +40,7 @@ If you sell handmade jewelry, targeting a keyword like “handmade silver bracel
 High-quality content not only helps with SEO but also builds trust with your customers. Product descriptions, blog posts, and reviews that are well-written and informative can enhance user experience and drive more sales.
 
 ![High-Quality Content](https://example.com/high-quality-content.png)
-*Image Source: Example.com*
+_Image Source: Example.com_
 
 ### 3. **On-Page SEO**
 
@@ -59,29 +59,33 @@ Technical SEO involves improving the backend structure of your website. This inc
 
 ### Case Study 1: E-Shop X
 
-**Before SEO:**  
-- Monthly visitors: 5,000  
-- Conversion rate: 1.5%  
+**Before SEO:**
+
+- Monthly visitors: 5,000
+- Conversion rate: 1.5%
 - Monthly sales: $7,500
 
-**After SEO:**  
-- Monthly visitors: 15,000  
-- Conversion rate: 2.5%  
+**After SEO:**
+
+- Monthly visitors: 15,000
+- Conversion rate: 2.5%
 - Monthly sales: $37,500
 
-*Source: [E-Shop X Case Study](https://example.com/case-study-x)*
+_Source: [E-Shop X Case Study](https://example.com/case-study-x)_
 
 ### Case Study 2: Store Y
 
-**Before SEO:**  
-- Organic search traffic: 1,000 visits per month  
+**Before SEO:**
+
+- Organic search traffic: 1,000 visits per month
 - Sales conversion: 0.8%
 
-**After SEO:**  
-- Organic search traffic: 5,000 visits per month  
+**After SEO:**
+
+- Organic search traffic: 5,000 visits per month
 - Sales conversion: 2.2%
 
-*Source: [Store Y Success Story](https://example.com/case-study-y)*
+_Source: [Store Y Success Story](https://example.com/case-study-y)_
 
 ## Tips for Improving Your eCommerce SEO
 

@@ -14,15 +14,13 @@ const Navbar = () => {
   useEffect(() => {
     return setHamburguerIsOpen(false)
   }, [])
-  
+
   return (
     <AppContainer elementType='header' bgColor={BG_STYLES_CLASSES.DARK}>
       <nav
         className={`${styles.navbar_box} ${
-          hamburguerIsOpen 
-            ? styles.active 
-            : ''
-          }
+          hamburguerIsOpen ? styles.active : ''
+        }
         `}
       >
         <div className={`${styles.navbar_main}`}>

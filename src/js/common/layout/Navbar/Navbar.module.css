@@ -26,7 +26,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-
 }
 .navbar_logo {
   display: flex;
@@ -43,7 +42,7 @@
 }
 .navbar_content {
   --content-transition-time: 200ms;
-  
+
   grid-area: cont;
   display: flex;
   flex-flow: column nowrap;
@@ -81,7 +80,7 @@
   text-decoration: none;
   width: 100%;
 }
-.navbar_content__items > li:has( > a[aria-current="page"] ) {
+.navbar_content__items > li:has(> a[aria-current='page']) {
   border-bottom: 3px solid var(--color-dark-green);
 }
 

@@ -12,7 +12,7 @@ type PropsType = {
 const AppContainer = ({
   bgColor = BG_STYLES_CLASSES.LIGHT,
   elementType = 'main',
-  className = "",
+  className = '',
   children,
 }: PropsType) => {
   const element = createElement(
