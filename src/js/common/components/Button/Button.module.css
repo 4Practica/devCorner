@@ -11,11 +11,11 @@
   cursor: pointer;
 }
 .button.sm {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   padding: 0.7rem 1.5rem;
 }
 .button.md {
-  font-size: var(--font-sm);
+  font-size: var(--font-base);
   padding: 0.7rem 1.8rem;
 }
 .button.lg {
