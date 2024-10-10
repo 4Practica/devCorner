@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { Button } from '@common/components/Button'
 import styles from './Navbar.module.css'
 import { NavbarHamburguer } from './components'
@@ -10,16 +10,17 @@ import { BG_STYLES_CLASSES } from '@common/utils/enums'
 const Navbar = () => {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
   const navigate = useNavigate()
-  const location = useLocation()
+
   useEffect(() => {
     return setHamburguerIsOpen(false)
   }, [])
+
   return (
     <AppContainer elementType='header' bgColor={BG_STYLES_CLASSES.DARK}>
       <nav
         className={`${styles.navbar_box} ${
           hamburguerIsOpen ? styles.active : ''
-        } ${location.pathname === '/' ? styles.home_nav : styles.regular_nav}
+        }
         `}
       >
         <div className={`${styles.navbar_main}`}>
@@ -29,7 +30,7 @@ const Navbar = () => {
               <img src='' alt='' />
             </picture>
             <h2>
-              <Link to='/'>{'4Practice.'}</Link>
+              <NavLink to='/'>{'4Practice.'}</NavLink>
             </h2>
           </div>
           <NavbarHamburguer
@@ -42,13 +43,13 @@ const Navbar = () => {
           <ul className={`${styles.navbar_content__items}`}>
             {/* <NavbarLink /> */}
             <li className={``}>
-              <Link to='/'>Home</Link>
+              <NavLink to='/'>Home</NavLink>
             </li>
             <li className={``}>
-              <Link to='/blog'>Blog</Link>
+              <NavLink to='/blog'>Blog</NavLink>
             </li>
             <li className={``}>
-              <Link to='/about'>About us</Link>
+              <NavLink to='/about'>About us</NavLink>
             </li>
           </ul>
           <div className={``}>
