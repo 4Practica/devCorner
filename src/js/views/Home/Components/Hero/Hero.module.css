@@ -1,6 +1,6 @@
 .hero_container {
-  min-height: 37rem;
-  height: 100vh;
+  min-height: 35rem;
+  height: calc(100vh - 75px);
   max-height: var(--responsive-device-lg);
 }
 
@@ -29,7 +29,7 @@
   grid-template-rows: 3fr 1fr;
   grid-template-areas:
     'left right'
-    'bottom .';
+    'bottom bottom';
 }
 
 .hero_left {
@@ -163,6 +163,10 @@
 }
 
 @media (min-width: 920px) {
+  .hero_container {
+    height: calc(100vh - 115px);
+  }
+
   .middle_image {
     width: 60%;
   }
@@ -188,6 +192,10 @@
 }
 
 @media (min-width: 1220px) {
+  .images_container {
+    padding: 60px 40px;
+  }
+
   .hero_text__title {
     font-size: var(--font-2xl);
   }
