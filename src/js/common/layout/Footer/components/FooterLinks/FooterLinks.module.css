@@ -1,0 +1,14 @@
+.list_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  /* padding: 1rem 0; */
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-gray-400);
+  cursor: pointer;
+}
