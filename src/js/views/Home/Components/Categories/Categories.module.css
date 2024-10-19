@@ -1,0 +1,306 @@
+/* Utility classes */
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.align_end {
+  align-items: end;
+}
+
+.visible {
+  display: none;
+}
+
+.vh_100 {
+  min-height: 100vh;
+}
+
+.full_height {
+  height: 100%;
+}
+
+/* Absolute sizes */
+.pt_20 {
+  padding-top: 20rem;
+}
+
+.pb_20 {
+  padding-bottom: 20px;
+}
+
+.pl_2 {
+  padding-left: 2px;
+}
+
+.gap_20_px {
+  gap: 20px;
+}
+
+.gap_10_px {
+  gap: 10px;
+}
+
+/* Section classes */
+.hero_container {
+  min-height: 37rem;
+  height: 100vh;
+  max-height: 720px;
+}
+.hero_content {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+}
+.section_padding {
+  padding: 15vh 5vw;
+  padding-bottom: 0;
+}
+
+/* Content classes */
+.content_direction {
+  flex-direction: column;
+}
+
+.content_width {
+  width: 100%;
+}
+
+.content_alignment {
+  justify-content: center;
+  gap: 5rem;
+}
+
+.content_height {
+  height: 100%;
+}
+
+.first_text {
+  font-size: var(--font-xl);
+  color: var(--font-color);
+}
+
+.second_text,
+.email_icon {
+  font-size: var(--font-md);
+  color: var(--color-gray-400);
+}
+
+/* Form classes */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 55%;
+}
+
+.input_border {
+  border: 0;
+  /* border-bottom: 2px solid var(--color-purple); */
+}
+
+.input {
+  width: 100%;
+  padding-left: 5px;
+  outline: none;
+  background-color: transparent;
+}
+
+.input::placeholder {
+  font-size: var(--font-sm);
+  color: var(--color-gray-500);
+}
+
+.arrow {
+  position: relative;
+  color: var(--color-purple);
+  animation: floating 1s linear infinite;
+}
+
+.arrow_text {
+  color: var(--font-color);
+}
+
+.form_border {
+  border-bottom: 2px solid var(--color-purple);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  object-fit: cover;
+  filter: brightness(0.2);
+}
+
+.pt_left_side {
+  padding-top: 0;
+}
+
+@media (min-width: 520px) {
+  .section_direction {
+    align-items: column;
+  }
+
+  .second_text,
+  .email_icon,
+  .arrow_text,
+  .arrow {
+    font-size: var(--font-md);
+  }
+
+  .input {
+    font-size: var(--font-md);
+  }
+
+  .input::placeholder {
+    font-size: var(--font-md);
+  }
+
+  .form {
+    width: 45%;
+  }
+}
+
+@media (min-width: 720px) {
+  .first_text {
+    font-size: var(--font-2xl);
+  }
+
+  .second_text,
+  .email_icon,
+  .arrow_text,
+  .arrow {
+    font-size: var(--font-md);
+  }
+
+  .input {
+    font-size: var(--font-md);
+  }
+
+  .input::placeholder {
+    font-size: var(--font-md);
+  }
+
+  .form {
+    width: 40%;
+  }
+}
+
+@media (min-width: 920px) {
+  .hero_container {
+    background-color: var(--color-dark-blue);
+    max-height: 920px;
+  }
+  .first_text {
+    font-size: var(--font-xl);
+  }
+  .content_alignment {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .section_direction {
+    flex-direction: row;
+  }
+
+  .pt_left_side {
+    padding-top: 0;
+  }
+
+  .form {
+    width: 70%;
+  }
+
+  .input {
+    font-size: var(--font-sm);
+  }
+
+  .input::placeholder {
+    font-size: var(--font-sm);
+  }
+
+  .section_padding {
+    padding: 5vh 5vw;
+  }
+
+  .pt_10_per {
+    padding-top: 15%;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .content_width {
+    width: 50%;
+  }
+
+  .pb_arrow {
+    padding-bottom: 0;
+  }
+
+  .pr_10_per {
+    padding-right: 10%;
+  }
+
+  .right_side {
+    background: linear-gradient(
+      var(--color-dark-blue) 0%,
+      var(--color-purple) 50%,
+      var(--color-dark-blue) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 4.2rem;
+    height: 100%;
+    border-radius: 10px;
+    overflow-x: hidden;
+    padding: 5vh 0;
+  }
+
+  .left_image,
+  .middle_image,
+  .right_image {
+    border-radius: 10px;
+    width: 60%;
+    height: 70%;
+    box-shadow: 0 10px 13px rgba(0, 0, 0, 0.65);
+  }
+
+  .middle_image {
+    height: 85%;
+  }
+}
+
+@media (min-width: 1220px) {
+  .form {
+    width: 55%;
+  }
+  .first_text {
+    font-size: var(--font-2xl);
+  }
+}
+
+@keyframes floating {
+  0% {
+    bottom: 0px;
+  }
+
+  50% {
+    bottom: 10px;
+  }
+
+  100% {
+    bottom: 0px;
+  }
+}
