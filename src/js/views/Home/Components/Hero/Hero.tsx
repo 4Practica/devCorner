@@ -23,7 +23,7 @@ export const Hero = () => {
   }
 
   return (
-    <section id='hero-cta' className={`${styles.hero_container}`}>
+    <div id='hero-cta' className={`${styles.hero_container}`}>
       <img
         src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
         className={`${styles.hero_bg_image}`}
@@ -83,7 +83,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
