@@ -1,5 +1,6 @@
 .top_section_right {
   display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -13,4 +14,35 @@
 
 .form_button {
   border-radius: 4px;
+}
+
+@media (min-width: 520px) {
+}
+
+@media (min-width: 720px) {
+  .top_section_right {
+    width: 55%;
+    justify-content: end;
+  }
+
+  .input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 920px) {
+  .top_section_right {
+    width: 50%;
+    justify-content: end;
+  }
+
+  .input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1220px) {
+  .input {
+    width: 50%;
+  }
 }
