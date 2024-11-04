@@ -14,9 +14,7 @@ const Categories = () => {
         every level. Discover topics, gain insights, and keep your projects
         sharp and future-ready!
       </p>
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   )
 }
