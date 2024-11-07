@@ -11,3 +11,17 @@
   color: var(--color-dark-green);
   font-weight: bolder;
 }
+
+@media (min-width: 520px) {
+}
+
+@media (min-width: 720px) {
+  .card_info {
+  }
+}
+
+@media (min-width: 920px) {
+}
+
+@media (min-width: 1220px) {
+}

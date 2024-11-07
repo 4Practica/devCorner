@@ -11,3 +11,18 @@
   flex-direction: column;
   gap: 2rem;
 }
+
+@media (min-width: 520px) {
+}
+
+@media (min-width: 720px) {
+  .cards_container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 920px) {
+}
+
+@media (min-width: 1220px) {
+}
