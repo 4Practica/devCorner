@@ -1,0 +1,13 @@
+.card_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card_name {
+}
+
+.card_position {
+  color: var(--color-dark-green);
+  font-weight: bolder;
+}
