@@ -1,0 +1,68 @@
+:root {
+    --app-padding: 1.4rem 1.8rem;
+    --app-padding-y: 1.4rem 0;
+    --app-padding-x: 0 1.8rem;
+    --app-padding-top: 1.4rem;
+    --app-padding-bottom: 1.4rem;
+    --app-padding-left: 1.8rem;
+    --app-padding-right: 1.8rem;
+}
+@media (min-width: 520px) and (max-width: 719px) {
+    :root {
+        --app-padding: 1.8rem 2.2rem;
+        --app-padding-y: 1.8rem 0;
+        --app-padding-x: 0 2.2rem;
+        --app-padding-top: 1.8rem;
+        --app-padding-bottom: 1.8rem;
+        --app-padding-left: 2.2rem;
+        --app-padding-right: 2.2rem;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 919px){
+    :root {
+        --app-padding: 2.2rem 2.6rem;
+        --app-padding-y: 2.2rem 0;
+        --app-padding-x: 0 2.6rem;
+        --app-padding-top: 2.2rem;
+        --app-padding-bottom: 2.2rem;
+        --app-padding-left: 2.6rem;
+        --app-padding-right: 2.6rem;
+    }
+}
+
+@media (min-width: 920px) and (max-width: 1219px) {
+    :root {
+        --app-padding: 2.6rem 3rem;
+        --app-padding-y: 2.6rem 0;
+        --app-padding-x: 0 3rem;
+        --app-padding-top: 2.6rem;
+        --app-padding-bottom: 2.6rem;
+        --app-padding-left: 3rem;
+        --app-padding-right: 3rem;
+    }
+}
+
+@media (min-width: 1220px) and (max-width: 1419px) {
+    :root {
+        --app-padding: 3rem 3.4rem;
+        --app-padding-y: 3rem 0;
+        --app-padding-x: 0 3.4rem;
+        --app-padding-top: 3rem;
+        --app-padding-bottom: 3rem;
+        --app-padding-left: 3.4rem;
+        --app-padding-right: 3.4rem;
+    }
+}
+
+@media (min-width: 1420px) {
+    :root {
+        --app-padding: 3.4rem 3.8rem;
+        --app-padding-y: 3.4rem 0;
+        --app-padding-x: 0 3.8rem;
+        --app-padding-top: 3.4rem;
+        --app-padding-bottom: 3.4rem;
+        --app-padding-left: 3.8rem;
+        --app-padding-right: 3.8rem;
+    }
+}

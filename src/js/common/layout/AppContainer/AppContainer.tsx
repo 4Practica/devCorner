@@ -7,18 +7,20 @@ type PropsType = {
   className?: string
   children: React.ReactNode | React.ReactNode[]
   elementType?: string
+  padding?: boolean
 }
 
 const AppContainer = ({
   bgColor = BG_STYLES_CLASSES.LIGHT,
   elementType = 'main',
   className = '',
+  padding=false,
   children,
 }: PropsType) => {
   const element = createElement(
     elementType,
     {
-      className: `${className} ${styles.app_container}`,
+      className: `${className} ${styles.app_container} ${padding ? styles.padding : ''}`,
     },
     children
   )
