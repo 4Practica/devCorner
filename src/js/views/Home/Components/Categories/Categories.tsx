@@ -2,6 +2,7 @@ import styles from './Categories.module.css'
 import { Chip } from '@common/components/Chip'
 import { categories } from './Categories.utils'
 import { Category } from '../Category/Category'
+
 const CategoryBackground = () => {
   return (
     <svg
@@ -207,6 +208,7 @@ const CategoryBackground = () => {
     </svg>
   )
 }
+
 const PatternCircle = () => {
   return (
     <svg
@@ -347,6 +349,7 @@ const PatternCircle = () => {
     </svg>
   )
 }
+
 const PatternSquare = () => {
   return (
     <svg
@@ -506,8 +509,8 @@ const PatternSquare = () => {
     </svg>
   )
 }
+
 const Categories = () => {
-  
   return (
     <div className={styles['categories-box']}>
       <div className={styles.categories}>

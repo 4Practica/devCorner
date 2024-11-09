@@ -1,28 +1,18 @@
 export const footerTopLinks = [
   {
     id: crypto.randomUUID(),
-    text: 'Product',
+    text: 'Home',
     route: '/',
   },
   {
     id: crypto.randomUUID(),
-    text: 'Features',
-    route: '/',
+    text: 'Blog',
+    route: '/blog',
   },
   {
     id: crypto.randomUUID(),
-    text: 'Pricing',
-    route: '/',
-  },
-  {
-    id: crypto.randomUUID(),
-    text: 'Resources',
-    route: '/',
-  },
-  {
-    id: crypto.randomUUID(),
-    text: 'Careers',
-    route: '/',
+    text: 'About us',
+    route: '/about',
   },
 ]
 

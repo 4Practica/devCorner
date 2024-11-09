@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './Hero.module.css'
 import { Button } from '@common/components/Button'
 
-export const Hero = () => {
+const Hero = () => {
   const [data, setData] = useState({ email: '' })
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
