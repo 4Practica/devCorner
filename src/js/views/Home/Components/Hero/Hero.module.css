@@ -2,25 +2,26 @@
   min-height: 35rem;
   height: calc(100vh - 75px);
   max-height: var(--responsive-device-lg);
+  position: relative;
 }
 
 .hero_bg_image {
+  position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
   filter: brightness(50%);
-  position: absolute;
   z-index: 0;
 }
 
 .hero_content {
+  padding: var(--app-padding);
   position: relative;
   height: 100%;
 }
 
 .hero_top {
   color: var(--color-main-light);
-  padding: 2rem;
   height: 100%;
   width: 100%;
   display: grid;
