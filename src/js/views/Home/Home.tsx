@@ -7,16 +7,10 @@ import React from 'react'
 export const Home = () => {
   return (
     <React.Fragment>
-      <AppContainer 
-        elementType='section' 
-        bgColor={BG_STYLES_CLASSES.DARK}
-      >
+      <AppContainer elementType='section' bgColor={BG_STYLES_CLASSES.DARK}>
         <Hero />
       </AppContainer>
-      <AppContainer 
-        elementType='section' 
-        bgColor={BG_STYLES_CLASSES.LIGHT}
-      >
+      <AppContainer padding={true} elementType='section' bgColor={BG_STYLES_CLASSES.LIGHT}>
         <Categories />
       </AppContainer>
     </React.Fragment>
