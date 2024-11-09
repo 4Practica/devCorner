@@ -16,7 +16,11 @@ const Navbar = () => {
   }, [])
 
   return (
-    <AppContainer padding={false} elementType='header' bgColor={BG_STYLES_CLASSES.DARK}>
+    <AppContainer
+      padding={false}
+      elementType='header'
+      bgColor={BG_STYLES_CLASSES.DARK}
+    >
       <nav
         className={`${styles.navbar_box} ${
           hamburguerIsOpen ? styles.active : ''

@@ -14,13 +14,15 @@ const AppContainer = ({
   bgColor = BG_STYLES_CLASSES.LIGHT,
   elementType = 'main',
   className = '',
-  padding=false,
+  padding = false,
   children,
 }: PropsType) => {
   const element = createElement(
     elementType,
     {
-      className: `${className} ${styles.app_container} ${padding ? styles.padding : ''}`,
+      className: `${className} ${styles.app_container} ${
+        padding ? styles.padding : ''
+      }`,
     },
     children
   )

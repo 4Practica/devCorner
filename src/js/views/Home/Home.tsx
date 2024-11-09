@@ -10,7 +10,11 @@ export const Home = () => {
       <AppContainer elementType='section' bgColor={BG_STYLES_CLASSES.DARK}>
         <Hero />
       </AppContainer>
-      <AppContainer padding={true} elementType='section' bgColor={BG_STYLES_CLASSES.LIGHT}>
+      <AppContainer
+        padding={true}
+        elementType='section'
+        bgColor={BG_STYLES_CLASSES.LIGHT}
+      >
         <Categories />
       </AppContainer>
 
