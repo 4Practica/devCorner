@@ -7,7 +7,7 @@ import { footerTopLinks, footerBottomLinks } from './footerData.ts'
 
 const Footer = () => {
   return (
-    <AppContainer elementType='footer' bgColor={BG_STYLES_CLASSES.DARK}>
+    <AppContainer padding elementType='footer' bgColor={BG_STYLES_CLASSES.DARK}>
       <div className={`${styles.footer_container}`}>
         <div className={`${styles.top_section}`}>
           <div className={`${styles.top_section_left}`}>

@@ -11,14 +11,14 @@ export const Home = () => {
         <Hero />
       </AppContainer>
       <AppContainer
-        padding={true}
+        padding
         elementType='section'
         bgColor={BG_STYLES_CLASSES.LIGHT}
       >
         <Categories />
       </AppContainer>
 
-      <AppContainer elementType='section' bgColor={BG_STYLES_CLASSES.LIGHT}>
+      <AppContainer padding elementType='section' bgColor={BG_STYLES_CLASSES.LIGHT}>
         <Team />
       </AppContainer>
     </React.Fragment>
