@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './Hero.module.css'
 import { Button } from '@common/components/Button'
+import { Chip } from '@common/components'
 
 const Hero = () => {
   const [data, setData] = useState({ email: '' })
@@ -32,6 +33,9 @@ const Hero = () => {
         <div className={`${styles.hero_top}`}>
           <div className={`${styles.hero_left}`}>
             <div className={`${styles.hero_text}`}>
+              <Chip proportion='md' variant='secondary' bold>
+                WELCOME
+              </Chip>
               <h1 className={`${styles.hero_text__title}`}>
                 Explore the dynamics of software development
               </h1>
@@ -52,7 +56,7 @@ const Hero = () => {
               <Button
                 type={'submit'}
                 variant='primary'
-                proportion={'md'}
+                proportion={'sm'}
                 customClasses={`${styles.form_button}`}
               >
                 Subscribe
