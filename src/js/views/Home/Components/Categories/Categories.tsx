@@ -13,9 +13,9 @@ const CategoryBackground = () => {
       fill='none'
     >
       <g clipPath='url(#clip0_268_1298)'>
-        <rect width='1727' height='1006' fill='#F7F8F9' />
+        <rect width='1727' height='1006' fill='#f5f5f5' />
         <g opacity='0.4'>
-          <rect width='1727' height='1008' fill='#F7F8F9' />
+          <rect width='1727' height='1008' fill='#f5f5f5' />
           <line x1='1464' y1='672.5' x2='-24' y2='672.5' stroke='#D5DAE1' />
           <line x1='1464' y1='696.5' x2='-24' y2='696.5' stroke='#D5DAE1' />
           <line x1='1464' y1='720.5' x2='-24' y2='720.5' stroke='#D5DAE1' />
@@ -198,11 +198,11 @@ const CategoryBackground = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(863.5 505) rotate(90) scale(503 863.5)'
         >
-          <stop stopColor='#F7F8F9' stopOpacity='0' />
-          <stop offset='1' stop-color='#F7F8F9' />
+          <stop stopColor='#f5f5f5' stopOpacity='0' />
+          <stop offset='1' stop-color='#f5f5f5' />
         </radialGradient>
         <clipPath id='clip0_268_1298'>
-          <rect width='1727' height='1006' fill='white' />
+          <rect width='1727' height='1006' fill='#f5f5f5' />
         </clipPath>
       </defs>
     </svg>
@@ -541,11 +541,41 @@ const Categories = () => {
             <PatternCircle />
           </div>
           <picture>
-            <source width='380' height='380' media='(min-width: 520px)' />
+            <source
+              width='450'
+              height='450'
+              media='(min-width: 1220px)'
+              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+            />
+            <source
+              width='420'
+              height='420'
+              media='(min-width: 1020px)'
+              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+            />
+            <source
+              width='380'
+              height='380'
+              media='(min-width: 920px)'
+              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+            />
+            <source
+              width='380'
+              height='380'
+              media='(min-width: 720px)'
+              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+            />
+            <source
+              width='380'
+              height='380'
+              media='(min-width: 520px)'
+              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+            />
             <img
               width='320'
               height='320'
-              src='https://picsum.photos/320'
+              loading='lazy'
+              src='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
               alt=''
               className={styles['categories__img--pic']}
             />
