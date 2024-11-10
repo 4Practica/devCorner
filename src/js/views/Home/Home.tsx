@@ -18,7 +18,11 @@ export const Home = () => {
         <Categories />
       </AppContainer>
 
-      <AppContainer padding elementType='section' bgColor={BG_STYLES_CLASSES.LIGHT}>
+      <AppContainer
+        padding
+        elementType='section'
+        bgColor={BG_STYLES_CLASSES.LIGHT}
+      >
         <Team />
       </AppContainer>
     </React.Fragment>
