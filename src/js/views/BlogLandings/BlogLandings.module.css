@@ -2,9 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin-top: 7rem;
   width: 100%;
   background-color: var(--color-dark-blue);
 }
@@ -14,7 +13,7 @@
   height: auto;
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 480px));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 400px));
   gap: 2.5rem;
   background-color: var(--color-white-100);
 }
