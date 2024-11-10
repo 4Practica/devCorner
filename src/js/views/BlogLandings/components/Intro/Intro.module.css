@@ -5,13 +5,13 @@
   align-items: flex-start;
   gap: 1.2rem;
 }
-.intro > h2 {
+.intro > h1 {
   font-family: var(--font-primary);
-  font-size: var(--font-lg);
+  font-size: var(--font-xl);
   color: var(--color-white-100);
 }
 .intro > p {
-  font-size: var(--font-md);
+  font-size: var(--font-base);
   color: var(--color-gray-100);
   font-family: var(--font-secondary);
   line-height: 1.8rem;
