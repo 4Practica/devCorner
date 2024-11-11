@@ -199,7 +199,7 @@ const CategoryBackground = () => {
           gradientTransform='translate(863.5 505) rotate(90) scale(503 863.5)'
         >
           <stop stopColor='#f5f5f5' stopOpacity='0' />
-          <stop offset='1' stop-color='#f5f5f5' />
+          <stop offset='1' stopColor='#f5f5f5' />
         </radialGradient>
         <clipPath id='clip0_268_1298'>
           <rect width='1727' height='1006' fill='#f5f5f5' />
@@ -359,7 +359,7 @@ const PatternSquare = () => {
       viewBox='0 0 149 91'
       fill='none'
     >
-      <g clip-path='url(#clip0_268_1529)'>
+      <g clipPath='url(#clip0_268_1529)'>
         <path
           d='M146.249 90.9099C147.707 90.9099 148.889 89.7279 148.889 88.2699C148.889 86.8119 147.707 85.6299 146.249 85.6299C144.791 85.6299 143.609 86.8119 143.609 88.2699C143.609 89.7279 144.791 90.9099 146.249 90.9099Z'
           fill='#2AD167'
