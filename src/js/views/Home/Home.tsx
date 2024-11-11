@@ -21,7 +21,7 @@ export const Home = () => {
       <AppContainer
         padding
         elementType='section'
-        bgColor={BG_STYLES_CLASSES.LIGHT}
+        bgColor={BG_STYLES_CLASSES.DARK}
       >
         <Team />
       </AppContainer>

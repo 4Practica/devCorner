@@ -1,10 +1,19 @@
 .card_info {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 1rem;
+  height: 100%;
+}
+
+.card_name,
+.card_description {
+  color: var(--color-main-light);
 }
 
 .card_name {
+  font-size: var(--font-lg);
+  font-family: var(--font-primary);
 }
 
 .card_position {
@@ -12,11 +21,27 @@
   font-weight: bolder;
 }
 
+.card_position,
+.card_description {
+  font-size: var(--font-base);
+  font-family: var(--font-secondary);
+}
+
+.card_description {
+  text-wrap: pretty;
+}
+
+.card_social {
+  display: flex;
+  gap: 1rem;
+}
+
 @media (min-width: 520px) {
 }
 
 @media (min-width: 720px) {
   .card_info {
+    width: 75%;
   }
 }
 

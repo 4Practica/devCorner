@@ -15,6 +15,9 @@ export const Card: React.FC<CardProps> = ({ member }) => {
         name={member.name}
         position={member.position}
         description={member.description}
+        github={member.github}
+        linkedin={member.linkedin}
+        portfolio={member.portfolio}
       />
     </div>
   )

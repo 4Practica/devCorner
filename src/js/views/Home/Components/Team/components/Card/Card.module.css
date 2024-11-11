@@ -6,7 +6,7 @@
   gap: 1rem;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 1rem #ccc;
+  box-shadow: 0 0 1rem #000000;
 }
 
 @media (min-width: 520px) {
@@ -16,6 +16,10 @@
   .card {
     flex-direction: row;
     align-items: start;
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+    justify-content: start;
   }
 }
 

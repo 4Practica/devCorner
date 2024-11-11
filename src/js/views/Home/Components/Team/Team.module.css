@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: start;
   gap: 1rem;
+  color: var(--color-main-light);
 }
 
 .cards_container {
@@ -17,6 +18,7 @@
 @media (min-width: 720px) {
   .cards_container {
     width: 100%;
+    margin-top: 1rem;
   }
 }
 

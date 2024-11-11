@@ -1,5 +1,4 @@
 import { Chip } from '@common/components'
-import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import { Header, Card } from './components'
 import styles from './Team.module.css'
 
@@ -9,6 +8,9 @@ export interface Member {
   name: string
   position: string
   description: string
+  github?: string
+  linkedin?: string
+  portfolio?: string
 }
 
 const Team = () => {
@@ -19,7 +21,10 @@ const Team = () => {
       name: 'Bryan García',
       position: 'Cuidador de gatos',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate sunt quae, aliquid velit',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis pariatur velit error eveniet possimus? Ex ipsum corporis vel officia necessitatibus excepturi aperiam esse reiciendis, praesentium distinctio consectetur perspiciatis accusantium.',
+      github: 'https://github.com/bryanstgarcia',
+      linkedin: 'https://www.linkedin.com/in/bryanstgarcia/',
+      portfolio: 'http://bryanstgarcia.com',
     },
     {
       id: crypto.randomUUID(),
@@ -27,21 +32,19 @@ const Team = () => {
       name: 'José Velásquez',
       position: 'Chambaless',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate sunt quae, aliquid velit',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis pariatur velit error eveniet possimus? Ex ipsum corporis vel officia necessitatibus excepturi aperiam esse reiciendis, praesentium distinctio consectetur perspiciatis accusantium.',
+      github: 'https://github.com/Jdvd01',
+      linkedin: 'https://www.linkedin.com/in/jdvd01/',
+      portfolio: 'https://portfolio-jdvd01.vercel.app/',
     },
   ]
 
   return (
     <div className={`${styles.container}`}>
-      <Chip
-        bgColor={BG_STYLES_CLASSES.PRIMARY}
-        fontColor={COLOR_STYLES_CLASSES.LIGHT}
-        shape='rounded'
-        proportion='md'
-        bold={true}
-      >
-        Team
+      <Chip variant='secondary' shape='rounded' proportion='md' bold={true}>
+        TEAM
       </Chip>
+
       <Header />
 
       <div className={`${styles.cards_container}`}>
