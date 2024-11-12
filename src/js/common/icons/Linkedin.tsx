@@ -1,12 +1,16 @@
 import React from 'react'
 import { IconProps } from './icons.utils'
 
-const Linkedin: React.FC<IconProps> = ({ color = 'black' }) => {
+const Linkedin: React.FC<IconProps> = ({
+  color = 'black',
+  width = '24',
+  height = '24',
+}) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width='24'
-      height='24'
+      width={width}
+      height={height}
       viewBox='0 0 24 24'
       fill='none'
     >
