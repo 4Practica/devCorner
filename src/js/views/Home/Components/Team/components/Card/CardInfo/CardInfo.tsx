@@ -27,19 +27,19 @@ export const CardInfo: React.FC<CardInfoProps> = ({
       <div className={`${styles.card_social}`}>
         {github ?
           <a href={github} rel='noopener noreferrer' target='_blank'>
-            <GithubIcon color='white' />
+            <GithubIcon color='white' width='40' height='40' />
           </a>
         : null}
 
         {linkedin ?
           <a href={linkedin} rel='noopener noreferrer' target='_blank'>
-            <LinkedinIcon color='white' />
+            <LinkedinIcon color='white' width='40' height='40' />
           </a>
         : null}
 
         {portfolio ?
           <a href={portfolio} rel='noopener noreferrer' target='_blank'>
-            <BrowserIcon color='white' />
+            <BrowserIcon color='white' width='40' height='40' />
           </a>
         : null}
       </div>
