@@ -6,7 +6,7 @@
   gap: 1rem;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 1rem #000000;
+  /* box-shadow: 0 0 1rem #000000; */
 }
 
 @media (min-width: 520px) {

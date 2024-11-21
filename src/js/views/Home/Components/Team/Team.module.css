@@ -12,6 +12,12 @@
   gap: 2rem;
 }
 
+.line {
+  align-self: center;
+  border-color: #404f65;
+  width: 100%;
+}
+
 @media (min-width: 520px) {
 }
 

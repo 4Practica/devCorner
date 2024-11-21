@@ -10,7 +10,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ member }) => {
   return (
     <div className={`${styles.card}`}>
-      <CardImage image={member.image} shape='square' shadow={false} />
+      <CardImage image={member.image} shape='rounded' shadow={false} />
       <CardInfo
         name={member.name}
         position={member.position}

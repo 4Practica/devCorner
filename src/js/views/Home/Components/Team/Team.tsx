@@ -47,9 +47,14 @@ const Team = () => {
 
       <Header />
 
+      <hr className={`${styles.line}`} />
+
       <div className={`${styles.cards_container}`}>
         {info.map((item) => (
-          <Card member={item} key={item.id} />
+          <>
+            <Card member={item} key={item.id} />
+            <hr className={`${styles.line}`} />
+          </>
         ))}
       </div>
     </div>
