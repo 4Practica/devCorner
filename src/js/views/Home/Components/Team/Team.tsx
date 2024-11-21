@@ -53,7 +53,6 @@ const Team = () => {
         {info.map((item) => (
           <>
             <Card member={item} key={item.id} />
-            <hr className={`${styles.line}`} />
           </>
         ))}
       </div>

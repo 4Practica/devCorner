@@ -23,8 +23,11 @@
 
 @media (min-width: 720px) {
   .cards_container {
+    flex-direction: row;
+    justify-content: space-around;
     width: 100%;
     margin-top: 1rem;
+    gap: 3rem;
   }
 }
 

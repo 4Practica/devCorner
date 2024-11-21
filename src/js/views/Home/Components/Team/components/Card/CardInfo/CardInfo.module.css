@@ -3,7 +3,6 @@
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  height: 100%;
 }
 
 .card_name,
@@ -41,7 +40,7 @@
 
 @media (min-width: 720px) {
   .card_info {
-    width: 75%;
+    max-width: 500px;
   }
 }
 
