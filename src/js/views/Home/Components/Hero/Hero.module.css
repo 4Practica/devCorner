@@ -179,14 +179,6 @@
     display: flex;
     align-items: center;
   }
-  .images_container {
-    background: radial-gradient(
-        ellipse at left,
-        var(--color-dark-blue),
-        transparent
-      ),
-      radial-gradient(ellipse at right, var(--color-purple), transparent);
-  }
   .middle_image {
     width: 80%;
     height: 100%;
