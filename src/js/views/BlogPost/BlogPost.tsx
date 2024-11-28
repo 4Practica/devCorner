@@ -1,30 +1,32 @@
 import styles from './BlogPost.module.css'
-/* import remarkGfm from 'remark-gfm'; // For GitHub Flavored Markdown
-import rehypePrism from 'rehype-prism'; */
-//import dummyMd from './blogPost.placeholder.md?raw'
-//import dummyPost from './ecommerce.placeholder.md?raw'
-import dummyPostTS from './typescript.placeholder.md?raw'
 import React from 'react'
-import { dummyData } from './components/Article/Article.utils'
-import { Article, RenderMD } from './components'
+import { Article } from './components'
+import { useBlogPost } from './BlogPost.hooks'
+import { useParams } from 'react-router-dom'
 
 const BlogPost: React.FC = () => {
-  const { title, shortDescription, author, date, img, tags } = dummyData
-
-  return (
-    <main className={styles[`blog-post`]}>
-      <Article
-        title={title}
-        date={date}
-        author={author}
-        shortDescription={shortDescription}
-        tags={tags}
-        img={img}
-      >
-        <RenderMD MD={dummyPostTS} />
-      </Article>
-    </main>
-  )
+  const params = useParams()
+  const { blogPost } = useBlogPost(params.postSlug ? params.postSlug : "")
+  if (blogPost === undefined) {
+    return <div>Loading</div>
+  }
+  if (blogPost.title) {
+    return (
+      <main className={styles[`blog-post`]}>
+        <Article
+          title={blogPost.title}
+          date={blogPost.date}
+          author={blogPost.author}
+          shortDescription={blogPost.shortDescription}
+          tags={blogPost.tags}
+          img={blogPost.img}
+          blogMd={blogPost.blogMd}
+          id={blogPost.id}
+          slug={blogPost.slug}
+        />
+      </main>
+    )
+  }
 }
 
 export default BlogPost

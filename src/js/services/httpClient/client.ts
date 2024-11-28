@@ -50,9 +50,9 @@ export class HttpClient implements IHttpClient {
         method,
     }: RequestParams<TRequest>): Promise<RequestResponse<TResponse> | RequestResponse<string>> {
         const headers = new Headers({
-        'Content-Type': 'application/json', // default for our use case
+            'Content-Type': 'application/json', // default for our use case
         })
-            const requestBody = {}
+        const requestBody = {}
         if (authentication) {
             headers.append('Authorization', authentication)
         }
@@ -113,4 +113,3 @@ export class HttpClient implements IHttpClient {
         }
     }
 }
-
