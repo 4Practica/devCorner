@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './Article.module.css'
-import { BlogPostArticle } from './Article.utils'
 import { Chip } from '@common/components/Chip'
 import { AppContainer } from '@common/layout'
 import { BG_STYLES_CLASSES } from '@common/utils/enums'
-interface ArticleProps extends BlogPostArticle {
-  children: React.ReactNode
-}
+import { BlogPost } from '@common/utils/types/blogPost'
+import { RenderMD } from '../RenderMD'
+
+interface ArticleProps extends BlogPost {}
+
 export const Article: React.FC<ArticleProps> = ({
   title,
   author,
@@ -14,11 +15,11 @@ export const Article: React.FC<ArticleProps> = ({
   img,
   date,
   tags,
-  children,
+  blogMd,
 }) => {
-  const tagChips = tags.map((data) => (
-    <Chip proportion={'sm'} variant='primary'>
-      {data}
+  const tagChips = tags.map((tag) => (
+    <Chip proportion={'sm'} variant='primary' key={tag.id}>
+      {tag.name}
     </Chip>
   ))
 
@@ -78,7 +79,7 @@ export const Article: React.FC<ArticleProps> = ({
         bgColor={BG_STYLES_CLASSES.LIGHT}
         elementType='div'
       >
-        {children}
+        <RenderMD MD={blogMd} />
       </AppContainer>
     </article>
   )
