@@ -22,9 +22,9 @@ const BlogLandings = () => {
         elementType='section'
       >
         <div className={`${styles['blog-posts']}`}>
-          {blogPosts 
-            ? <SearchResult results={blogPosts} />
-            : <LoadState />}
+          {blogPosts ?
+            <SearchResult results={blogPosts} />
+          : <LoadState />}
         </div>
       </AppContainer>
     </React.Fragment>

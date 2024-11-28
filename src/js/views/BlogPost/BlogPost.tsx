@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 
 const BlogPost: React.FC = () => {
   const params = useParams()
-  const { blogPost } = useBlogPost(params.postSlug ? params.postSlug : "")
+  const { blogPost } = useBlogPost(params.postSlug ? params.postSlug : '')
   if (blogPost === undefined) {
     return <div>Loading</div>
   }

@@ -12,13 +12,12 @@ import { BlogPost } from '@common/utils/types/blogPost'
 const CMS_TOKEN = import.meta.env.VITE_CMS_TOKEN || 'Error al extraer el otken'
 
 export class StrapiCmsService implements CmsBlogService {
-  
   readonly client: HttpClient
-  
+
   constructor(client: HttpClient) {
     this.client = client
   }
-  
+
   async getBlogPosts(): Promise<
     CmsRequestResult<BlogPost[]> | CmsRequestError
   > {

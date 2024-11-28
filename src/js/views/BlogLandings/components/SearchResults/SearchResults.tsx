@@ -19,14 +19,14 @@ const SearchResult: React.FC<SearchResultProps> = ({ results }) => {
               position='bottom right'
             />
             <PostCard.Tags tags={blogPost.tags} />
-            <PostCard.Author>{blogPost.author.name} • {blogPost.date}</PostCard.Author>
-            <PostCard.Title headerType={'h3'}>
-              {blogPost.title}
-            </PostCard.Title>
+            <PostCard.Author>
+              {blogPost.author.name} • {blogPost.date}
+            </PostCard.Author>
+            <PostCard.Title headerType={'h3'}>{blogPost.title}</PostCard.Title>
             <PostCard.Description>
               {blogPost.shortDescription}
             </PostCard.Description>
-            <PostCard.CTA to={"/blog/" + blogPost.slug}>
+            <PostCard.CTA to={'/blog/' + blogPost.slug}>
               {'Read post'}
               <ArrowRightIcon />
             </PostCard.CTA>
