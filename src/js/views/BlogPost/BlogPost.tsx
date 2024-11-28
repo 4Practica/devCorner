@@ -2,14 +2,17 @@ import styles from './BlogPost.module.css'
 import React from 'react'
 import { Article } from './components'
 import { useBlogPost } from './BlogPost.hooks'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const BlogPost: React.FC = () => {
   const params = useParams()
-  const { blogPost } = useBlogPost(params.postSlug ? params.postSlug : '')
+  const navigate = useNavigate()
+  const { blogPost } = useBlogPost(params.postSlug ?? '', navigate)
+
   if (blogPost === undefined) {
     return <div>Loading</div>
   }
+
   if (blogPost.title) {
     return (
       <main className={styles[`blog-post`]}>
