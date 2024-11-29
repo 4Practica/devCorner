@@ -74,7 +74,6 @@ export class StrapiCmsService implements CmsBlogService {
       const { body, status } = await this.client.get<
         StrapiResponse<StrapiBlogPost> | StrapiErrorResponse
       >({ path: `/blogs/${slug}`, authentication: `Bearer ${CMS_TOKEN}` })
-      console.log('body', body)
 
       if (typeof body === 'string') {
         // Server error
