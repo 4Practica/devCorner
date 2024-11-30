@@ -4,12 +4,17 @@ import searchIcon from '@assets/search.svg'
 
 interface SearchBarProps {
   search: string
-  handleSearch: React.Dispatch<SetStateAction<string>>
+  setSearch: React.Dispatch<SetStateAction<string>>
+  handleSearch: React.FormEventHandler<HTMLFormElement>
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ search, handleSearch }) => {
+const SearchBar: React.FC<SearchBarProps> = ({
+  search,
+  setSearch,
+  handleSearch,
+}) => {
   return (
-    <form className={`${styles['search-bar']}`}>
+    <form onSubmit={handleSearch} className={`${styles['search-bar']}`}>
       <label>
         <img alt='Buscar' src={searchIcon} />
       </label>
@@ -18,7 +23,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ search, handleSearch }) => {
         placeholder={'Search'}
         value={search}
         onChange={(e) => {
-          handleSearch(e.target.value)
+          setSearch(e.target.value)
         }}
       />
     </form>

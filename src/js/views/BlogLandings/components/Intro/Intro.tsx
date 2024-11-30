@@ -5,9 +5,10 @@ import React, { SetStateAction } from 'react'
 
 interface IntroProps {
   search: string
-  handleSearch: React.Dispatch<SetStateAction<string>>
+  setSearch: React.Dispatch<SetStateAction<string>>
+  handleSearch: React.FormEventHandler<HTMLFormElement>
 }
-const Intro: React.FC<IntroProps> = ({ search, handleSearch }) => {
+const Intro: React.FC<IntroProps> = ({ search, setSearch, handleSearch }) => {
   return (
     <div className={styles.intro}>
       <Chip shape='rounded' proportion='sm' variant='primary' bold>
@@ -18,7 +19,11 @@ const Intro: React.FC<IntroProps> = ({ search, handleSearch }) => {
         Need help with a specific tech topic? Search our blog to find articles,
         best practices, and resources on software development.
       </p>
-      <SearchBar handleSearch={handleSearch} search={search} />
+      <SearchBar
+        setSearch={setSearch}
+        search={search}
+        handleSearch={handleSearch}
+      />
     </div>
   )
 }

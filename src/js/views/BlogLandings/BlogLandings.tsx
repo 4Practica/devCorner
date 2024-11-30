@@ -9,12 +9,21 @@ import { useBlogs } from './BlogLandings.hooks'
 
 const BlogLandings = () => {
   const [search, setSearch] = useState<string>('')
-  const { blogPosts } = useBlogs()
+  const { blogPosts, handleFilter } = useBlogs()
+
+  function handleSearch(e: React.FormEvent) {
+    e.preventDefault()
+    handleFilter(search)
+  }
 
   return (
     <React.Fragment>
       <AppContainer padding elementType='div' bgColor={BG_STYLES_CLASSES.DARK}>
-        <Intro search={search} handleSearch={setSearch} />
+        <Intro
+          search={search}
+          handleSearch={handleSearch}
+          setSearch={setSearch}
+        />
       </AppContainer>
       <AppContainer
         padding
