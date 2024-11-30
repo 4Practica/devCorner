@@ -1,6 +1,9 @@
 import { BlogPost } from '@common/utils/types/blogPost'
 import { strapiCmsService } from './strapi/service'
-import { BlogPostParameters } from './strapi/types/requestParameters'
+import {
+  BlogPostBySearchParameters,
+  BlogPostParameters,
+} from './strapi/types/requestParameters'
 /*  
     Using adapter pattern to be able to switch between differents services if required
     More about adapter pattern: https://refactoring.guru/design-patterns/adapter
@@ -27,4 +30,9 @@ export interface CmsBlogService {
   getBlogPost({
     slug,
   }: BlogPostParameters): Promise<CmsRequestResult<BlogPost> | CmsRequestError>
+  getBlogPostsBySearch({
+    search,
+  }: BlogPostBySearchParameters): Promise<
+    CmsRequestResult<BlogPost[]> | CmsRequestError
+  >
 }
