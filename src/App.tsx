@@ -1,17 +1,14 @@
 import React from 'react'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router'
+import { Loading } from '@views/Loading/Loading.tsx'
 
 function App() {
   return (
     <React.Fragment>
       <RouterProvider
         router={router}
-        fallbackElement={
-          <h1>
-            Loadinggggggg. Remember to make the global {'<LoadingView />'}
-          </h1>
-        }
+        fallbackElement={<Loading />}
       />
     </React.Fragment>
   )
