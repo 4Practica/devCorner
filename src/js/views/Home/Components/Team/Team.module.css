@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  color: var(--color-main-light);
+}
+
+.cards_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.line {
+  align-self: center;
+  border-color: #404f65;
+  width: 100%;
+}
+
+@media (min-width: 520px) {
+}
+
+@media (min-width: 720px) {
+  .cards_container {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 920px) {
+}
+
+@media (min-width: 1220px) {
+}

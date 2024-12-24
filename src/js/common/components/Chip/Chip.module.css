@@ -41,6 +41,10 @@
   background-color: var(--color-secondary);
   color: var(--font-color-contrast);
 }
+.chip.success {
+  background-color: var(--color-dark-green);
+  color: var(--color-dark-blue);
+}
 
 @media (prefers-color-scheme: dark) {
   .chip.primary {

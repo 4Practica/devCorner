@@ -2,23 +2,20 @@ import { Chip } from '@common/components/Chip'
 import React from 'react'
 import styles from './Tags.module.css'
 import { usePostcard } from '../../PostCard.hooks'
-export type Label = {
-  id: string
-  value: string
-  label: string
-}
+import { Tag } from '@common/utils/types/tag'
+
 export interface TagsProps {
-  labels: Label[]
+  tags: Tag[]
 }
-export const Tags: React.FC<TagsProps> = ({ labels }) => {
+export const Tags: React.FC<TagsProps> = ({ tags }) => {
   usePostcard('Tags')
   return (
     <div className={` ${styles['tags-box']}`}>
-      {labels.map((item) => {
+      {tags.map((item) => {
         return (
           <React.Fragment>
             <Chip key={item.id} variant='primary' proportion='sm' bold={false}>
-              {item.label}
+              {item.name}
             </Chip>
           </React.Fragment>
         )

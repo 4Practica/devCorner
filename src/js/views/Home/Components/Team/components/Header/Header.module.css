@@ -1,0 +1,15 @@
+.header_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & > h2 {
+    font-size: var(--font-xl);
+    font-family: var(--font-primary);
+  }
+
+  & > p {
+    font-size: var(--font-base);
+    font-family: var(--font-secondary);
+  }
+}
