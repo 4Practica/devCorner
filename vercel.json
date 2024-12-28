@@ -4,5 +4,5 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "trailingSlash": false,
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
