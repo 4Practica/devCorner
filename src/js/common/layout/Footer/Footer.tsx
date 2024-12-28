@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={`${styles.footer_container}`}>
         <div className={`${styles.top_section}`}>
           <div className={`${styles.top_section_left}`}>
-            <span className={`${styles.logo}`}>4Practice.</span>
+            <span className={`${styles.logo}`}>DevCorner</span>
             <FooterLinks arrayOfLinks={footerTopLinks} />
           </div>
           <FooterForm />
