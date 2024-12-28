@@ -27,6 +27,7 @@ const Hero = () => {
     <div id='hero-cta' className={`${styles.hero_container}`}>
       <img
         src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+        alt='hero background'
         className={`${styles.hero_bg_image}`}
       />
       <div className={`${styles.hero_content}`}>
@@ -52,6 +53,7 @@ const Hero = () => {
                 value={data.email}
                 placeholder='Email'
                 onChange={handleChange}
+                aria-labelledby='Email'
               />
               <Button
                 type={'submit'}
@@ -68,14 +70,17 @@ const Hero = () => {
             <div className={`${styles.images_container}`}>
               <img
                 src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                alt='hero right image'
                 className={`${styles.left_image}`}
               />
               <img
                 src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                alt='hero right image'
                 className={`${styles.middle_image}`}
               />
               <img
                 src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                alt='hero right image'
                 className={`${styles.right_image}`}
               />
             </div>
@@ -83,7 +88,7 @@ const Hero = () => {
 
           <div className={`${styles.hero_bottom}`}>
             <i className={`fa-solid fa-down-long ${styles.arrow}`}></i>
-            <h5>Explore Categories</h5>
+            <h2 className={`${styles.hero_footer}`}>Explore Categories</h2>
           </div>
         </div>
       </div>

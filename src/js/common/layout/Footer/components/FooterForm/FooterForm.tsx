@@ -8,7 +8,13 @@ const FooterForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={`${styles.top_section_right}`}>
-      <input type='text' className={`${styles.input}`} />
+      <input
+        type='text'
+        name='email'
+        placeholder='Email'
+        className={`${styles.input}`}
+        aria-labelledby='Email'
+      />
       <Button
         type='submit'
         proportion='sm'

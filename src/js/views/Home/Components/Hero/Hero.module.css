@@ -60,12 +60,14 @@
   font-size: var(--font-md);
   text-wrap: pretty;
 }
+
 .form {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
+
 .form_input {
   background-color: white;
   color: var(--color-main-dark);
@@ -132,15 +134,21 @@
   display: block;
 }
 
+.hero_footer {
+  font-size: var(--font-md);
+}
+
 @media (min-width: 520px) {
   .hero_top {
     grid-template-areas:
       'left right'
       'bottom bottom';
   }
+
   .form {
     justify-content: flex-start;
   }
+
   .form_input {
     width: 60%;
   }
@@ -172,13 +180,16 @@
     height: 100%;
     width: 100%;
   }
+
   .hero_text {
     align-items: flex-start;
   }
+
   .hero_right {
     display: flex;
     align-items: center;
   }
+
   .middle_image {
     width: 80%;
     height: 100%;
