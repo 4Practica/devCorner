@@ -51,9 +51,7 @@ const Team = () => {
 
       <div className={`${styles.cards_container}`}>
         {info.map((item) => (
-          <>
-            <Card member={item} key={item.id} />
-          </>
+          <Card member={item} key={item.id} />
         ))}
       </div>
     </div>
