@@ -12,6 +12,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "localforage": "^1.10.0",
     "markdown-to-jsx": "^7.5.0",
     "match-sorter": "^6.3.1",
