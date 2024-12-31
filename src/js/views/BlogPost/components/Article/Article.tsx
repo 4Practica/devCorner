@@ -5,6 +5,7 @@ import { AppContainer } from '@common/layout'
 import { BG_STYLES_CLASSES } from '@common/utils/enums'
 import { BlogPost } from '@common/utils/types/blogPost'
 import { RenderMD } from '../RenderMD'
+import { Author } from '../Author'
 
 interface ArticleProps extends BlogPost {}
 
@@ -27,12 +28,16 @@ export const Article: React.FC<ArticleProps> = ({
     <article className={styles[`article-box`]}>
       <AppContainer
         className={styles['article__intro']}
-        elementType='div'
+        elementType='header'
         bgColor={BG_STYLES_CLASSES.DARK}
       >
         <div className={styles[`article__intro--creative`]}>
           <address className={styles[``]}>
-            <a href={author.webAddress} target='_blank'>
+            <a
+              href={author.webAddress}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               {author.name}
             </a>
           </address>{' '}
@@ -80,6 +85,21 @@ export const Article: React.FC<ArticleProps> = ({
         elementType='div'
       >
         <RenderMD MD={blogMd} />
+      </AppContainer>
+      <AppContainer
+        className={styles['article__footer']}
+        bgColor={BG_STYLES_CLASSES.LIGHT}
+        elementType='footer'
+      >
+        <hr />
+        <Author
+          name={author.name}
+          role={author.role}
+          avatar={author.avatar}
+          github={author.githubUrl}
+          linkedIn={author.linkedinUrl}
+          webAddress={author.webAddress}
+        />
       </AppContainer>
     </article>
   )

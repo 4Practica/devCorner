@@ -83,3 +83,8 @@
   flex-flow: column nowrap;
   padding: var(--article-padding);
 }
+.article__footer {
+  width: 100%;
+  max-width: 46.875rem;
+  padding: var(--article-padding);
+}
