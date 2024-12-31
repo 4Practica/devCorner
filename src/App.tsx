@@ -6,10 +6,7 @@ import { Loading } from '@views/Loading/Loading.tsx'
 function App() {
   return (
     <React.Fragment>
-      <RouterProvider
-        router={router}
-        fallbackElement={<Loading />}
-      />
+      <RouterProvider router={router} fallbackElement={<Loading />} />
     </React.Fragment>
   )
 }
