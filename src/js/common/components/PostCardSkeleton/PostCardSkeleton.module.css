@@ -14,7 +14,7 @@
   animation-fill-mode: both;
   animation-play-state: running;
   animation-iteration-count: infinite;
-  opacity:0.8;
+  opacity: 0.8;
 }
 .postcard_skeleton_box > .image {
   background-color: var(--color-gray-200);
@@ -65,10 +65,10 @@
 }
 
 @keyframes beat {
-  from  {
+  from {
     opacity: 0.8;
   }
-  50%  {
+  50% {
     opacity: 0.25;
   }
   to {
