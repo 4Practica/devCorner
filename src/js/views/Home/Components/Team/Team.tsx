@@ -41,7 +41,7 @@ const Team = () => {
 
   return (
     <div className={`${styles.container}`}>
-      <Chip variant='secondary' shape='rounded' proportion='md' bold={true}>
+      <Chip variant='secondary-dark' shape='rounded' proportion='md' bold={true}>
         TEAM
       </Chip>
 

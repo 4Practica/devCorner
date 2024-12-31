@@ -34,7 +34,7 @@ const Hero = () => {
         <div className={`${styles.hero_top}`}>
           <div className={`${styles.hero_left}`}>
             <div className={`${styles.hero_text}`}>
-              <Chip proportion='md' variant='secondary' bold>
+              <Chip proportion='md' variant='secondary-dark' bold>
                 WELCOME
               </Chip>
               <h1 className={`${styles.hero_text__title}`}>

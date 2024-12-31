@@ -4,7 +4,7 @@ interface PostCardSkeletonProps {
   opacity?: string
 }
 
-const POSTCARD_DEFAULT_OPACITY = 1
+const POSTCARD_DEFAULT_OPACITY = 0.8
 
 export const PostCardSkeleton: React.FC<PostCardSkeletonProps> = ({
   opacity = POSTCARD_DEFAULT_OPACITY,

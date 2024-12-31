@@ -1,16 +1,21 @@
 import styles from './BlogPost.module.css'
 import React from 'react'
-import { Article } from './components'
+import { Article, ArticleSkeleton } from './components'
 import { useBlogPost } from './BlogPost.hooks'
 import { useNavigate, useParams } from 'react-router-dom'
+import { useScrollToTop } from '@common/utils/hooks/useScrollToTop'
 
 const BlogPost: React.FC = () => {
   const params = useParams()
   const navigate = useNavigate()
   const { blogPost } = useBlogPost(params.postSlug ?? '', navigate)
-
+  useScrollToTop()
   if (blogPost === undefined) {
-    return <div>Loading</div>
+    return (
+      <main className={styles[`blog-post`]}>
+        <ArticleSkeleton />
+      </main>
+    )
   }
 
   if (blogPost.title) {
