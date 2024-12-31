@@ -9,12 +9,12 @@
   gap: 0.7rem;
   height: auto;
   animation-name: beat;
-  animation-duration: 900ms;
+  animation-duration: 1800ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   animation-play-state: running;
   animation-iteration-count: infinite;
-  opacity: 1;
+  opacity:0.8;
 }
 .postcard_skeleton_box > .image {
   background-color: var(--color-gray-200);
@@ -65,7 +65,13 @@
 }
 
 @keyframes beat {
+  from  {
+    opacity: 0.8;
+  }
+  50%  {
+    opacity: 0.25;
+  }
   to {
-    opacity: 0;
+    opacity: 0.8;
   }
 }
