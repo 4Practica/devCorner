@@ -1,0 +1,48 @@
+.author-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.author__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-secondary);
+  border: 0.5rem solid var(--color-dark-green);
+  font-size: var(--font-xs);
+  object-position: center;
+  object-fit: cover;
+}
+
+.author__desc {
+  font-family: var(--font-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+.author__desc--title {
+  font-size: var(--font-base);
+}
+.author__desc--role {
+  font-size: var(--font-sm);
+  color: var(--color-dark-green);
+  font-weight: bold;
+}
+.author__desc--icons {
+  display: flex;
+  gap: 0.5rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
