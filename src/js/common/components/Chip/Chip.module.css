@@ -37,9 +37,17 @@
   background-color: var(--color-primary);
   color: var(--font-color);
 }
+.chip.primary-dark {
+  background-color: var(--color-dark-green);
+  color: var(--font-color);
+}
 .chip.secondary {
   background-color: var(--color-secondary);
   color: var(--font-color-contrast);
+}
+.chip.secondary-dark {
+  background-color: var(--color-dark-purple);
+  color: var(--font-color);
 }
 .chip.success {
   background-color: var(--color-dark-green);
