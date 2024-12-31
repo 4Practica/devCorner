@@ -1,0 +1,21 @@
+.search-card-link,
+.search-card-link * {
+  text-decoration: none;
+}
+.search-card-link {
+  scale: 1;
+  transition: scale 250ms ease-in-out;
+}
+.search-card-link:-webkit-any-link {
+  text-decoration: none;
+}
+.search-card-link:visited {
+  text-decoration: none;
+  color: none;
+}
+.search-card-link:hover {
+  scale: 1.025;
+}
+.search-card-link:hover h3 {
+  text-decoration: underline var(--color-purple);
+}
