@@ -92,7 +92,7 @@ export const Article: React.FC<ArticleProps> = ({
         elementType='footer'
       >
         <hr />
-       {/*  <Author
+        {/*  <Author
           name={author.name}
           role={author.role}
           avatar={author.avatar}
