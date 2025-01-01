@@ -13,7 +13,7 @@ jobs:
         run: git remote add upstream https://github.com/4Practica/devCorner.git
       - name: Fetch upstream
         run: git fetch upstream
-      - name: Merge upstream/main
-        run: git merge upstream/main
+      - name: Merge upstream/development
+        run: git merge upstream/development
       - name: Push to origin
         run: git push
