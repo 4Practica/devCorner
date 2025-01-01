@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from './Article.module.css'
-import { BlogPostArticle } from './Article.utils'
 import { Chip } from '@common/components/Chip'
 import { AppContainer } from '@common/layout'
 import { BG_STYLES_CLASSES } from '@common/utils/enums'
-interface ArticleProps extends BlogPostArticle {
-  children: React.ReactNode
-}
+import { BlogPost } from '@common/utils/types/blogPost'
+import { RenderMD } from '../RenderMD'
+//import { Author } from '../Author'
+
+interface ArticleProps extends BlogPost {}
+
 export const Article: React.FC<ArticleProps> = ({
   title,
   author,
@@ -14,11 +16,11 @@ export const Article: React.FC<ArticleProps> = ({
   img,
   date,
   tags,
-  children,
+  blogMd,
 }) => {
-  const tagChips = tags.map((data) => (
-    <Chip proportion={'sm'} variant='primary'>
-      {data}
+  const tagChips = tags.map((tag) => (
+    <Chip proportion={'sm'} variant='primary' key={tag.id}>
+      {tag.name}
     </Chip>
   ))
 
@@ -26,12 +28,16 @@ export const Article: React.FC<ArticleProps> = ({
     <article className={styles[`article-box`]}>
       <AppContainer
         className={styles['article__intro']}
-        elementType='div'
+        elementType='header'
         bgColor={BG_STYLES_CLASSES.DARK}
       >
         <div className={styles[`article__intro--creative`]}>
           <address className={styles[``]}>
-            <a href={author.webAddress} target='_blank'>
+            <a
+              href={author.webAddress}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               {author.name}
             </a>
           </address>{' '}
@@ -78,7 +84,22 @@ export const Article: React.FC<ArticleProps> = ({
         bgColor={BG_STYLES_CLASSES.LIGHT}
         elementType='div'
       >
-        {children}
+        <RenderMD MD={blogMd} />
+      </AppContainer>
+      <AppContainer
+        className={styles['article__footer']}
+        bgColor={BG_STYLES_CLASSES.LIGHT}
+        elementType='footer'
+      >
+        <hr />
+       {/*  <Author
+          name={author.name}
+          role={author.role}
+          avatar={author.avatar}
+          github={author.githubUrl}
+          linkedIn={author.linkedinUrl}
+          webAddress={author.webAddress}
+        /> */}
       </AppContainer>
     </article>
   )

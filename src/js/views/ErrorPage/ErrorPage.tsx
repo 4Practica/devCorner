@@ -28,6 +28,7 @@ const ErrorPage = () => {
               src={
                 'https://res.cloudinary.com/bryancloudinary/image/upload/v1725157271/errorCode404.webp'
               }
+              alt='Error not found'
               width={320}
               height={180}
               loading={'eager'}

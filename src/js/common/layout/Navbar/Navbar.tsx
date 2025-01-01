@@ -16,7 +16,11 @@ const Navbar = () => {
   }, [])
 
   return (
-    <AppContainer elementType='header' bgColor={BG_STYLES_CLASSES.DARK}>
+    <AppContainer
+      padding={false}
+      elementType='header'
+      bgColor={BG_STYLES_CLASSES.DARK}
+    >
       <nav
         className={`${styles.navbar_box} ${
           hamburguerIsOpen ? styles.active : ''
@@ -30,7 +34,7 @@ const Navbar = () => {
               <img src='' alt='' />
             </picture>
             <h2>
-              <NavLink to='/'>{'4Practice.'}</NavLink>
+              <NavLink to='/'>{'DevCorner'}</NavLink>
             </h2>
           </div>
           <NavbarHamburguer

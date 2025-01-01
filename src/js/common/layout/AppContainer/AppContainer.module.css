@@ -11,3 +11,6 @@
   width: 100%;
   max-width: var(--responsive-max-device);
 }
+.app_container.padding {
+  padding: var(--app-padding);
+}

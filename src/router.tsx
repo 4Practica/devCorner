@@ -23,20 +23,16 @@ const paths: RouteObject[] = [
           },
           {
             path: 'blog',
-            loader: () => {
-              /* https://reactrouter.com/en/main/route/route#loader */
-              return 'blog data to be fetch for the path'
-            },
             async lazy() {
               const { BlogLandingView } = await import('@views/BlogLandings')
               return { Component: BlogLandingView }
             },
           },
           {
-            path: 'blog/:postPath',
+            path: 'blog/:postSlug',
             loader: ({ params }) => {
               /* https://reactrouter.com/en/main/route/route#loader */
-              return 'blog data to be fetch for the path: ' + params.postPath
+              return 'blog data to be fetch for the path: ' + params.postSlug
             },
             async lazy() {
               const { BlogPostView } = await import('@views/BlogPost')

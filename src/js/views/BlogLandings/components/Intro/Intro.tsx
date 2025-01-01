@@ -1,4 +1,3 @@
-import { BG_STYLES_CLASSES, COLOR_STYLES_CLASSES } from '@common/utils/enums'
 import styles from './Intro.module.css'
 import { Chip } from '@common/components/Chip'
 import { SearchBar } from '..'
@@ -6,29 +5,25 @@ import React, { SetStateAction } from 'react'
 
 interface IntroProps {
   search: string
-  handleSearch: React.Dispatch<SetStateAction<string>>
+  setSearch: React.Dispatch<SetStateAction<string>>
+  handleSearch: React.FormEventHandler<HTMLFormElement>
 }
-const Intro: React.FC<IntroProps> = ({ search, handleSearch }) => {
+const Intro: React.FC<IntroProps> = ({ search, setSearch, handleSearch }) => {
   return (
     <div className={styles.intro}>
-      <Chip
-        bgColor={BG_STYLES_CLASSES.PRIMARY}
-        fontColor={COLOR_STYLES_CLASSES.LIGHT}
-        shape='rounded'
-        proportion='sm'
-        bold={true}
-      >
-        BLOG
+      <Chip shape='rounded' proportion='sm' variant='primary' bold>
+        <h2>BLOG POSTS</h2>
       </Chip>
-      <h2>
-        Our mission is to make knowledge and news accessible for everyone.
-      </h2>
+      <h1>Unlock Software Development Knowledge</h1>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit esse
-        voluptas accusamus distinctio necessitatibus quae sunt voluptates
-        deleniti
+        Need help with a specific tech topic? Search our blog to find articles,
+        best practices, and resources on software development.
       </p>
-      <SearchBar handleSearch={handleSearch} search={search} />
+      <SearchBar
+        setSearch={setSearch}
+        search={search}
+        handleSearch={handleSearch}
+      />
     </div>
   )
 }
