@@ -16,6 +16,10 @@ jobs:
         run: git remote add upstream https://github.com/4Practica/devCorner.git
       - name: Fetch upstream
         run: git fetch upstream
+      - name: Add git credentials
+        run: |
+          git config --global user.email "velasquezdenorajose@gmail.com"
+          git config --global user.name "Jose Velasquez"
       - name: Merge upstream/main
         run: git merge upstream/main --allow-unrelated-histories
         env:
