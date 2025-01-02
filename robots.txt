@@ -1,0 +1,23 @@
+# Allows all robots to index your site
+User-agent: *
+
+# Allows indexing of all pages
+Allow: /
+
+# Disable unnecessary file tracking
+Disallow: /sitemap.xml
+Disallow: /robots.txt
+
+# Disable cache or temporary directories crawling
+Disallow: /cache/
+Disallow: /tmp/
+
+# Disable crawling of old page versions
+Disallow: /assets/old/
+
+# Disable tracking of development directories
+Disallow: /src/
+Disallow: /node_modules/
+
+# Disable tracing of anything starting with an underscore (common convention for temporary or configuration files).
+Disallow: /_/
