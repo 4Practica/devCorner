@@ -18,6 +18,8 @@ jobs:
         run: git fetch upstream
       - name: Merge upstream/main
         run: git merge upstream/main --allow-unrelated-histories
+        env:
+          GIT_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
       - name: Push to origin
         run: git push
         env:
@@ -35,6 +37,8 @@ jobs:
         run: git fetch upstream
       - name: Merge upstream/development
         run: git merge upstream/development --allow-unrelated-histories
+        env:
+          GIT_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
       - name: Push to origin
         run: git push
         env:
