@@ -29,10 +29,10 @@ const Navbar = () => {
       >
         <div className={`${styles.navbar_main}`}>
           <div className={styles.navbar_logo}>
-            <picture>
+            {/* <picture>
               <source srcSet='' media='' />
               <img src='' alt='' />
-            </picture>
+            </picture> */}
             <h2>
               <NavLink to='/'>{'DevCorner'}</NavLink>
             </h2>
