@@ -20,7 +20,7 @@ export const CardImage: React.FC<CardImageProps> = ({
       }`}
     >
       <img
-        className={`${styles.card_image} ${styles[shape]}`}
+        className={`${styles[shape]}`}
         src={image}
         alt={alt}
         width={300}
