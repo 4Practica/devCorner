@@ -2,12 +2,14 @@ import styles from './CardImage.module.css'
 
 interface CardImageProps {
   image: string
+  alt: string
   shape?: 'rounded' | 'square'
   shadow?: boolean
 }
 
 export const CardImage: React.FC<CardImageProps> = ({
   image,
+  alt,
   shape = 'square',
   shadow = false,
 }) => {
@@ -16,15 +18,15 @@ export const CardImage: React.FC<CardImageProps> = ({
       className={`${styles.img_container} ${styles[shape]} ${
         shadow ? styles.shadow : ''
       }`}
-      style={{
-        backgroundImage: `url(${image})`,
-      }}
     >
-      {/*    <img
-         className={`${styles.card_image} ${styles[shape]}`}
-         src={image}
-         alt='Team member'
-       /> */}
+      <img
+        className={`${styles.card_image} ${styles[shape]}`}
+        src={image}
+        alt={alt}
+        width={300}
+        height={300}
+        loading='lazy'
+      />
     </div>
   )
 }

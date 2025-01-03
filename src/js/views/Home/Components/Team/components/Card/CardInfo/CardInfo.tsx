@@ -4,7 +4,7 @@ import { BrowserIcon, GithubIcon, LinkedinIcon } from '@common/icons'
 interface CardInfoProps {
   name: string
   position: string
-  description: string
+  description?: string
   github?: string
   linkedin?: string
   portfolio?: string

@@ -3,12 +3,14 @@
   min-height: 200px;
   max-width: 300px;
   max-height: 300px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   border: 0;
 }
-
+.img_container img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+}
 .shadow {
   box-shadow: inset 0 0 1.5rem 0.5rem var(--color-main-light);
 }
