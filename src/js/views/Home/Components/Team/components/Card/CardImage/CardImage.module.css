@@ -23,7 +23,8 @@
   border-radius: 10px;
 }
 
-@media (min-width: 520px) {}
+@media (min-width: 520px) {
+}
 
 @media (min-width: 720px) {
   .img_container {
@@ -39,4 +40,5 @@
   }
 }
 
-@media (min-width: 1220px) {}
+@media (min-width: 1220px) {
+}

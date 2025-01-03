@@ -1,5 +1,5 @@
 import { Chip } from '@common/components'
-import { Header, Card } from './components'
+import { Header, Card, CardSkeleton } from './components'
 import styles from './Team.module.css'
 import { useAuthors } from './Team.hooks'
 
@@ -16,6 +16,7 @@ export interface Member {
 
 const Team = () => {
   const authors = useAuthors()
+  const noAuthorsLength = 0
 
   return (
     <div className={`${styles.container}`}>
@@ -33,9 +34,12 @@ const Team = () => {
       <hr className={`${styles.line}`} />
 
       <div className={`${styles.cards_container}`}>
-        {authors.map((item) => (
-          <Card member={item} key={item.id} />
-        ))}
+        {authors.length === noAuthorsLength ?
+          <>
+            <CardSkeleton />
+            <CardSkeleton />
+          </>
+        : authors.map((item) => <Card member={item} key={item.id} />)}
       </div>
     </div>
   )

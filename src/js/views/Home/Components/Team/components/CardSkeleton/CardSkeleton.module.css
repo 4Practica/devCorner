@@ -1,0 +1,125 @@
+.animate-beat {
+  animation-name: beat;
+  animation-duration: 1800ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  opacity: 0.8;
+}
+
+.card-skeleton-box {
+  --skeleton-color: var(--color-gray-200);
+  width: 100%;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 20px;
+}
+
+.card_image_container,
+.card_info,
+.card_name,
+.card_social,
+.card_position,
+.card_social > div,
+.card_description > div {
+  border-radius: 0.35rem;
+}
+
+.card_image_container {
+  background-color: var(--skeleton-color);
+  height: 200px;
+}
+
+.card_info {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card_name {
+  width: 80%;
+  height: 2rem;
+  background-color: var(--skeleton-color);
+}
+
+.card_position {
+  width: 40%;
+  height: 1.5rem;
+  background-color: var(--skeleton-color);
+}
+
+.card_description {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.card_description > div {
+  background-color: var(--skeleton-color);
+  height: 1rem;
+
+  &:first-child {
+    width: 80%;
+  }
+
+  &:nth-child(2) {
+    width: 100%;
+  }
+
+  &:nth-child(3) {
+    width: 90%;
+  }
+
+  &:nth-child(4) {
+    width: 85%;
+  }
+
+  &:last-child {
+    width: 70%;
+  }
+}
+
+.card_social {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card_social > div {
+  background-color: var(--skeleton-color);
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 520px) {
+  .card-skeleton-box {
+    width: 80%;
+  }
+}
+
+@media (min-width: 720px) {
+}
+
+@media (min-width: 920px) {
+}
+
+@media (min-width: 1220px) {
+}
+
+@keyframes beat {
+  from {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
