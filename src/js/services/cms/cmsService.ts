@@ -4,6 +4,7 @@ import {
   BlogPostBySearchParameters,
   BlogPostParameters,
 } from './strapi/types/requestParameters'
+import { Author } from '@common/utils/types/author'
 /*  
     Using adapter pattern to be able to switch between differents services if required
     More about adapter pattern: https://refactoring.guru/design-patterns/adapter
@@ -35,4 +36,5 @@ export interface CmsBlogService {
   }: BlogPostBySearchParameters): Promise<
     CmsRequestResult<BlogPost[]> | CmsRequestError
   >
+  getAuthors(): Promise<CmsRequestResult<Author[]> | CmsRequestError>
 }

@@ -13,6 +13,9 @@ import {
   BlogPostParameters,
 } from './types/requestParameters'
 import { errorHandler } from './utils/errorHandler'
+import { Author } from '@common/utils/types/author'
+import { StrapiAuthor } from './types/author'
+import { authorAdapter } from './adapters/authorAdapter'
 
 const CMS_TOKEN = import.meta.env.VITE_CMS_TOKEN || 'Error al extraer el otken'
 
@@ -127,6 +130,27 @@ export class StrapiCmsService implements CmsBlogService {
         status: 500,
       }
       return serverError
+    }
+  }
+
+  async getAuthors(): Promise<CmsRequestResult<Author[]> | CmsRequestError> {
+    const { body, status } = await this.client.get<
+      StrapiResponse<StrapiAuthor[]> | StrapiErrorResponse
+    >({
+      path: `/authors`,
+      authentication: `Bearer ${CMS_TOKEN}`,
+    })
+    if (typeof body === 'string' || body.data === null) {
+      const error = errorHandler({ body, status })
+      return error
+    }
+    const authors: Author[] = body.data.map(
+      (strapiAuthor: StrapiAuthor): Author => authorAdapter(strapiAuthor)
+    )
+    return {
+      data: authors,
+      success: true,
+      status: 200,
     }
   }
 }
