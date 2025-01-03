@@ -5,12 +5,14 @@
   max-height: 300px;
   border: 0;
 }
+
 .img_container img {
   width: 100%;
   height: 100%;
   object-position: center;
-  object-fit: contain;
+  object-fit: cover;
 }
+
 .shadow {
   box-shadow: inset 0 0 1.5rem 0.5rem var(--color-main-light);
 }
@@ -18,12 +20,12 @@
 .rounded {
   border-radius: 0 50% 0 50%;
 }
+
 .square {
   border-radius: 10px;
 }
 
-@media (min-width: 520px) {
-}
+@media (min-width: 520px) {}
 
 @media (min-width: 720px) {
   .img_container {
@@ -39,5 +41,4 @@
   }
 }
 
-@media (min-width: 1220px) {
-}
+@media (min-width: 1220px) {}
