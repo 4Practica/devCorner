@@ -16,6 +16,7 @@ import { errorHandler } from './utils/errorHandler'
 import { Author } from '@common/utils/types/author'
 import { StrapiAuthor } from './types/author'
 import { authorAdapter } from './adapters/authorAdapter'
+import { Newsletter, NewsletterAttributes } from './types/newsletter'
 
 const CMS_TOKEN = import.meta.env.VITE_CMS_TOKEN || 'Error al extraer el otken'
 
@@ -149,6 +150,32 @@ export class StrapiCmsService implements CmsBlogService {
     )
     return {
       data: authors,
+      success: true,
+      status: 200,
+    }
+  }
+
+  async subscribeToNewsletter({
+    email,
+  }: NewsletterAttributes): Promise<
+    CmsRequestResult<Newsletter> | CmsRequestError
+  > {
+    const { body, status } = await this.client.request<
+      StrapiResponse<Newsletter> | StrapiErrorResponse,
+      NewsletterAttributes
+    >({
+      method: 'POST',
+      path: `/newsletter`,
+      authentication: `Bearer ${CMS_TOKEN}`,
+      payload: { email },
+    })
+    if (typeof body === 'string' || body.data === null) {
+      const error = errorHandler({ body, status })
+      return error
+    }
+
+    return {
+      data: body.data,
       success: true,
       status: 200,
     }
