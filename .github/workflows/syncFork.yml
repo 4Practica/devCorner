@@ -21,7 +21,7 @@ jobs:
           git config --global user.email "velasquezdenorajose@gmail.com"
           git config --global user.name "Jose Velasquez"
       - name: Merge upstream/main
-        run: git merge upstream/main --allow-unrelated-histories
+        run: git merge upstream/main
         env:
           GIT_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
       - name: Push to origin
@@ -44,7 +44,7 @@ jobs:
           git config --global user.email "velasquezdenorajose@gmail.com"
           git config --global user.name "Jose Velasquez"
       - name: Merge upstream/development
-        run: git merge upstream/development --allow-unrelated-histories
+        run: git merge upstream/development
         env:
           GIT_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
       - name: Push to origin
