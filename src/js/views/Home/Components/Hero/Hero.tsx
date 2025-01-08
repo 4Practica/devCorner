@@ -1,27 +1,10 @@
-import { useState } from 'react'
 import styles from './Hero.module.css'
 import { Button } from '@common/components/Button'
 import { Chip } from '@common/components'
+import { useNewsletter } from './Hero.hooks'
 
 const Hero = () => {
-  const [data, setData] = useState({ email: '' })
-
-  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
-    e.preventDefault()
-    if (data.email.trim() === '') {
-      return
-    }
-    //Aqui la funcion para el submit
-    setData({ email: '' })
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const { value, name } = e.target
-    setData({
-      ...data,
-      [name]: value,
-    })
-  }
+  const { handleChange, handleSubmit, data } = useNewsletter()
 
   return (
     <div id='hero-cta' className={`${styles.hero_container}`}>

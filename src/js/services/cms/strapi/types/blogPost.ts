@@ -1,3 +1,5 @@
+import { StrapiAuthorDataStructure } from './author'
+
 export interface StrapiBlogPost {
   id: number
   attributes: StrapiBlogPostAttributes
@@ -13,27 +15,10 @@ interface StrapiBlogPostAttributes {
   slug: string
   publishedAt: string
   updatedAt: string
-  author: AuthorData
+  author: StrapiAuthorDataStructure
   tags: TagData
 }
-interface AuthorAttributes {
-  name: string
-  shortDescription: string
-  imageUrl: string
-  createAt: string
-  updatedAt: string
-  publishedAt: string
-  webAddress: string
-  githubUrl: string
-  linkedInUrl: string
-}
-interface AuthorBase {
-  id: number
-  attributes: AuthorAttributes
-}
-interface AuthorData {
-  data: AuthorBase
-}
+
 interface TagAttributes {
   name: string
   createdAt: string

@@ -1,6 +1,7 @@
 import { formatDate } from '@common/utils/tools/formatDate'
 import { StrapiBlogPost } from '../types/blogPost'
 import { BlogPost } from '@common/utils/types/blogPost'
+import { authorAdapter } from './authorAdapter'
 
 export function blogPostAdapter(data: StrapiBlogPost): BlogPost {
   const { attributes } = data
@@ -15,7 +16,6 @@ export function blogPostAdapter(data: StrapiBlogPost): BlogPost {
     author,
     tags,
   } = attributes
-  const { name: authorName, webAddress } = author.data.attributes
 
   const tagsData = tags.data.map((tagBase) => {
     return {
@@ -25,15 +25,13 @@ export function blogPostAdapter(data: StrapiBlogPost): BlogPost {
     }
   })
 
+  const authorData = authorAdapter(author.data)
+
   return {
     id: data.id,
     title: title,
     shortDescription: shortDescription,
-    author: {
-      id: author.data.id,
-      name: authorName,
-      webAddress: webAddress,
-    },
+    author: authorData,
     blogMd: blogData,
     img: {
       src: {

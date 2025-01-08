@@ -1,23 +1,28 @@
 import { CardImage } from './CardImage'
 import styles from './Card.module.css'
 import { CardInfo } from './CardInfo'
-import { Member } from '../../Team'
+import { Author } from '@common/utils/types/author'
 
 interface CardProps {
-  member: Member
+  member: Author
 }
 
 export const Card: React.FC<CardProps> = ({ member }) => {
   return (
     <div className={`${styles.card}`}>
-      <CardImage image={member.image} shape='rounded' shadow={false} />
+      <CardImage
+        image={member.avatar}
+        shape='rounded'
+        shadow={false}
+        alt={`DevCorner author ${member.name}`}
+      />
       <CardInfo
         name={member.name}
-        position={member.position}
+        position={member.role}
         description={member.description}
-        github={member.github}
-        linkedin={member.linkedin}
-        portfolio={member.portfolio}
+        github={member.githubUrl}
+        linkedin={member.linkedinUrl}
+        portfolio={member.webAddress}
       />
     </div>
   )
