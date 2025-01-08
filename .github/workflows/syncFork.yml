@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${GITHUB_REF##*/}
+          ref: ${{ github.ref }}
       - name: Add remote
         run: git remote add fork https://github.com/Jdvd01/devCorner-deploy.git
       - name: Push to fork
