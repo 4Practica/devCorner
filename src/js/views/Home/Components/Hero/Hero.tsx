@@ -2,9 +2,16 @@ import styles from './Hero.module.css'
 import { Button } from '@common/components/Button'
 import { Chip } from '@common/components'
 import { useNewsletter } from './Hero.hooks'
+import { preload } from 'react-dom'
 
 const Hero = () => {
   const { handleChange, handleSubmit, data } = useNewsletter()
+  preload(
+    'https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp',
+    {
+      as: 'image',
+    }
+  )
 
   return (
     <div id='hero-cta' className={`${styles.hero_container}`}>
