@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../assets/fonts/BricolageGrotesque.ttf') format('truetype');
+}
+
 :root {
   --font-primary: 'Bricolage Grotesque', sans-serif;
   --font-secondary: 'Roboto', sans-serif;
