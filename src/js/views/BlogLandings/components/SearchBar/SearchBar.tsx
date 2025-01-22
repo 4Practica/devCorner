@@ -1,6 +1,6 @@
 import React, { SetStateAction } from 'react'
 import styles from './SearchBar.module.css'
-import searchIcon from '@assets/search.svg'
+import { MagnifierIcon } from '@common/icons'
 
 interface SearchBarProps {
   search: string
@@ -15,10 +15,11 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   return (
     <form onSubmit={handleSearch} className={`${styles['search-bar']}`}>
-      <label>
-        <img alt='Buscar' src={searchIcon} />
+      <label htmlFor='search'>
+        <MagnifierIcon width={26} height={26} />
       </label>
       <input
+        id='search'
         type='search'
         placeholder={'Search'}
         value={search}
