@@ -3,6 +3,7 @@ import { Button } from '@common/components/Button'
 import { Chip } from '@common/components'
 import { useNewsletter } from './Hero.hooks'
 import { preload } from 'react-dom'
+import { ArrowDownIcon } from '@common/icons'
 
 const Hero = () => {
   const { handleChange, handleSubmit, data } = useNewsletter()
@@ -77,7 +78,12 @@ const Hero = () => {
           </div>
 
           <div className={`${styles.hero_bottom}`}>
-            <i className={`fa-solid fa-down-long ${styles.arrow}`}></i>
+            <ArrowDownIcon
+              width={30}
+              height={30}
+              color='#8971fe'
+              className={styles.arrow}
+            />
             <h2 className={`${styles.hero_footer}`}>Explore Categories</h2>
           </div>
         </div>
