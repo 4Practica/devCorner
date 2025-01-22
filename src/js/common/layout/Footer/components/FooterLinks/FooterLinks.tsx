@@ -19,6 +19,16 @@ const FooterLinks = ({ arrayOfLinks }: FooterLinkProps) => {
           </Link>
         </li>
       ))}
+      <li>
+        <a
+          href='https://api.devcorner.top/api/sitemap/index.xml'
+          rel='noopener noreferrer'
+          target='_blank'
+          className={`${styles.link}`}
+        >
+          Sitemap
+        </a>
+      </li>
     </ul>
   )
 }

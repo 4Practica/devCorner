@@ -21,3 +21,7 @@ Disallow: /node_modules/
 
 # Disable tracing of anything starting with an underscore (common convention for temporary or configuration files).
 Disallow: /_/
+
+# Add sitemap(s) here
+
+Sitemap: https://api.devcorner.top/api/sitemap/index.xml
