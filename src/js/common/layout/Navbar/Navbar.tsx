@@ -59,7 +59,7 @@ const Navbar = () => {
           <div className={``}>
             <Button
               type='button'
-              variant='primary'
+              variant='secondary-dark'
               proportion={'md'}
               onClick={useButtonHandler(navigate)}
             >

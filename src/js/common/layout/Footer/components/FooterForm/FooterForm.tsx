@@ -18,6 +18,7 @@ const FooterForm = () => {
       />
       <Button
         type='submit'
+        variant='secondary-dark'
         proportion='sm'
         children='Subscribe'
         customClasses={`${styles.form_button}`}

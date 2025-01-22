@@ -47,7 +47,7 @@ const Hero = () => {
               />
               <Button
                 type={'submit'}
-                variant='primary'
+                variant='secondary-dark'
                 proportion={'sm'}
                 customClasses={`${styles.form_button}`}
               >

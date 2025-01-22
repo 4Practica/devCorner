@@ -10,7 +10,7 @@ const Categories = () => {
     <div className={styles['categories-box']}>
       <div className={styles.categories}>
         <div className={styles.categories__desc}>
-          <Chip variant='primary' proportion='md' bold={true}>
+          <Chip variant='secondary-dark' proportion='md' bold={true}>
             CATEGORIES
           </Chip>
           <h2>Development Insights and Resources</h2>
