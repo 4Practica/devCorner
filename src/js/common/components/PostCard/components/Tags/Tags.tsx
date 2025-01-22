@@ -13,11 +13,9 @@ export const Tags: React.FC<TagsProps> = ({ tags }) => {
     <div className={` ${styles['tags-box']}`}>
       {tags.map((item) => {
         return (
-          <React.Fragment>
-            <Chip key={item.id} variant='primary' proportion='sm' bold={false}>
-              {item.name}
-            </Chip>
-          </React.Fragment>
+          <Chip key={item.id} variant='primary' proportion='sm' bold={false}>
+            {item.name}
+          </Chip>
         )
       })}
     </div>

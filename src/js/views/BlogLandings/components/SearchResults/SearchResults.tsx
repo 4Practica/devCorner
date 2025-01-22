@@ -10,13 +10,14 @@ interface SearchResultProps {
 const SearchResult: React.FC<SearchResultProps> = ({ results }) => {
   return (
     <React.Fragment>
-      {results.map((blogPost, index) => {
+      {results.map((blogPost) => {
         return (
           <Link
+            key={blogPost.slug}
             to={'/blog/' + blogPost.slug}
             className={styles['search-card-link']}
           >
-            <PostCard key={index}>
+            <PostCard>
               <PostCard.Image
                 src={blogPost.img.src.lg}
                 alt={blogPost.img.alt}
