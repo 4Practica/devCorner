@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className={`${styles.bottom_section}`}>
           <p className={`${styles.paragraph}`}>2024 All rights reserved.</p>
-          <FooterLinks arrayOfLinks={footerBottomLinks} />
+          <FooterLinks arrayOfLinks={footerBottomLinks} showSitemap={true} />
         </div>
       </div>
     </AppContainer>

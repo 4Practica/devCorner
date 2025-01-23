@@ -7,9 +7,13 @@ type FooterLinkProps = {
     route: string
     text: string
   }[]
+  showSitemap?: boolean
 }
 
-const FooterLinks = ({ arrayOfLinks }: FooterLinkProps) => {
+const FooterLinks = ({
+  arrayOfLinks,
+  showSitemap = false,
+}: FooterLinkProps) => {
   return (
     <ul className={`${styles.list_container}`}>
       {arrayOfLinks.map((link) => (
@@ -19,16 +23,19 @@ const FooterLinks = ({ arrayOfLinks }: FooterLinkProps) => {
           </Link>
         </li>
       ))}
-      <li>
-        <a
-          href='https://api.devcorner.top/api/sitemap/index.xml'
-          rel='noopener noreferrer'
-          target='_blank'
-          className={`${styles.link}`}
-        >
-          Sitemap
-        </a>
-      </li>
+
+      {showSitemap && (
+        <li>
+          <a
+            href='https://api.devcorner.top/api/sitemap/index.xml'
+            rel='noopener noreferrer'
+            target='_blank'
+            className={`${styles.link}`}
+          >
+            Sitemap
+          </a>
+        </li>
+      )}
     </ul>
   )
 }
