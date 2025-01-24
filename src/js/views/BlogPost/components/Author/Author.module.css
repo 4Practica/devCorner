@@ -15,7 +15,7 @@
   align-items: center;
   text-align: center;
   font-family: var(--font-secondary);
-  border: 0.5rem solid var(--color-dark-green);
+  border: 0.2rem solid var(--color-light-purple);
   font-size: var(--font-xs);
   object-position: center;
   object-fit: cover;
@@ -34,7 +34,7 @@
 }
 .author__desc--role {
   font-size: var(--font-sm);
-  color: var(--color-dark-green);
+  color: var(--color-dark-purple);
   font-weight: bold;
 }
 .author__desc--icons {
