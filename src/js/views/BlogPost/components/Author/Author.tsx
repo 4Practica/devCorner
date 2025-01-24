@@ -29,16 +29,16 @@ export const Author: React.FC<AuthorProps> = ({
         loading='lazy'
       />
       <figcaption className={styles['author__desc']}>
-        <h4 className={styles['author__desc--title']}>{name}</h4>
+        <h2 className={styles['author__desc--title']}>{name}</h2>
         <p className={styles['author__desc--role']}>{role}</p>
         <div className={styles['author__desc--icons']}>
-          <a href={github} rel='noopener noreferrer' target='_blank'>
+          <a href={github} aria-label={"Github of " + name} rel='noopener noreferrer' target='_blank'>
             <GithubIcon color='#2a3342' width='30' height='30' />
           </a>
-          <a href={webAddress} rel='noopener noreferrer' target='_blank'>
+          <a href={webAddress} aria-label={"Portfolio of " + name} rel='noopener noreferrer' target='_blank'>
             <BrowserIcon color='#2a3342' width='30' height='30' />
           </a>
-          <a href={linkedIn} rel='noopener noreferrer' target='_blank'>
+          <a href={linkedIn} aria-label={"Linkedin of " + name} rel='noopener noreferrer' target='_blank'>
             <LinkedinIcon color='#2a3342' width='30' height='30' />
           </a>
         </div>
