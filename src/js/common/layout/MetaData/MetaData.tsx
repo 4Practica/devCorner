@@ -13,7 +13,6 @@ export const MetaData: React.FC<MetaDataProps> = ({meta, og, tw}: MetaDataProps)
             {meta.title && <title>{meta.title}</title>}
             {meta.description && <meta name="description" content={meta.description} />}
             {meta.author && <meta name="author" content={meta.author} />}
-            {meta.keywords && <meta name="keywords" content={meta.keywords.join(", ")} />}
             
             {og.title && <meta name="og:title" content={og.title} />}
             {og.type && <meta name="og:type" content={og.type} />}
