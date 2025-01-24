@@ -1,3 +1,4 @@
+import { ViewMetaData } from '@common/layout/MetaData/MetaData.types'
 import { Author } from './author'
 import { Tag } from './tag'
 
@@ -11,6 +12,7 @@ export interface BlogPost {
   date: string
   tags: Tag[]
   slug: string
+  meta?: ViewMetaData
 }
 
 interface BlogPostImg {

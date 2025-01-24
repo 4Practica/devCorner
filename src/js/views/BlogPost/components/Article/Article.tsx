@@ -7,7 +7,7 @@ import { BlogPost } from '@common/utils/types/blogPost'
 import { RenderMD } from '../RenderMD'
 //import { Author } from '../Author'
 
-interface ArticleProps extends BlogPost {}
+interface ArticleProps extends Omit<BlogPost, 'meta'> {}
 
 export const Article: React.FC<ArticleProps> = ({
   title,

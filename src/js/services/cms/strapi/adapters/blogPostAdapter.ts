@@ -1,9 +1,10 @@
 import { formatDate } from '@common/utils/tools/formatDate'
 import { StrapiBlogPost } from '../types/blogPost'
 import { BlogPost } from '@common/utils/types/blogPost'
-import { authorAdapter } from './authorAdapter'
+import { Author } from '@common/utils/types/author'
+import { ViewMetaData } from '@common/layout/MetaData/MetaData.types'
 
-export function blogPostAdapter(data: StrapiBlogPost): BlogPost {
+export function blogPostAdapter(data: StrapiBlogPost, author: Author, metaData?: ViewMetaData): BlogPost {
   const { attributes } = data
   const {
     blogData,
@@ -13,7 +14,6 @@ export function blogPostAdapter(data: StrapiBlogPost): BlogPost {
     title,
     slug,
     publishedAt,
-    author,
     tags,
   } = attributes
 
@@ -25,8 +25,8 @@ export function blogPostAdapter(data: StrapiBlogPost): BlogPost {
     }
   })
 
-  const authorData = authorAdapter(author.data)
-
+  const authorData = author;
+  const viewMetaData = metaData
   return {
     id: data.id,
     title: title,
@@ -45,5 +45,6 @@ export function blogPostAdapter(data: StrapiBlogPost): BlogPost {
     date: formatDate(publishedAt),
     tags: tagsData,
     slug: slug,
+    meta: viewMetaData
   }
 }
