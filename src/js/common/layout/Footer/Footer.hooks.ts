@@ -1,3 +1,4 @@
+import { verifyEmail } from '@common/utils/validations/newsletter'
 import { cmsClient } from '@services/cms/cmsService'
 import { NewsletterAttributes } from '@services/cms/strapi/types/newsletter'
 import { useState } from 'react'
@@ -15,7 +16,10 @@ export function useNewsletter() {
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
     e.preventDefault()
-    if (data.email.trim() === '') {
+
+    const validEmail = verifyEmail(data.email)
+
+    if (data.email.trim() === '' || !validEmail) {
       return
     }
 

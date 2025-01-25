@@ -38,7 +38,7 @@ const Hero = () => {
             <form onSubmit={handleSubmit} className={`${styles.form}`}>
               <input
                 className={`${styles.form_input}`}
-                type='email'
+                type='text'
                 name='email'
                 id='email'
                 value={data.email}
