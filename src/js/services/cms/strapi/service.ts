@@ -17,6 +17,7 @@ import { Author } from '@common/utils/types/author'
 import { StrapiAuthor } from './types/author'
 import { authorAdapter } from './adapters/authorAdapter'
 import { Newsletter, NewsletterAttributes } from './types/newsletter'
+import { metaDataAdapter } from './adapters/metaDataAdapter'
 
 const CMS_TOKEN = import.meta.env.VITE_CMS_TOKEN || 'Error al extraer el otken'
 
@@ -42,8 +43,9 @@ export class StrapiCmsService implements CmsBlogService {
 
       const blogPosts: BlogPost[] = []
       for (const blog of body.data) {
-        const blogPostAdapted = blogPostAdapter(blog)
-        blogPosts.push(blogPostAdapted)
+        const blogPostAuthor = authorAdapter(blog.attributes.author.data)
+        const blogPostAdapted = blogPostAdapter(blog, blogPostAuthor)
+        blogPosts.push(blogPostAdapted) 
       }
       const result: CmsRequestResult<BlogPost[]> = {
         data: blogPosts,
@@ -75,8 +77,9 @@ export class StrapiCmsService implements CmsBlogService {
         const error = errorHandler({ body, status })
         return error
       }
-
-      const blogPostAdapted = blogPostAdapter(body.data)
+      const blogPostMetaData = metaDataAdapter(body.data.attributes.meta_datum.data)
+      const blogPostAuthor = authorAdapter(body.data.attributes.author.data)
+      const blogPostAdapted = blogPostAdapter(body.data, blogPostAuthor, blogPostMetaData)
 
       const result: CmsRequestResult<BlogPost> = {
         data: blogPostAdapted,
@@ -115,8 +118,9 @@ export class StrapiCmsService implements CmsBlogService {
 
       const blogPosts: BlogPost[] = []
       for (const blog of body.data) {
-        const blogPostAdapted = blogPostAdapter(blog)
-        blogPosts.push(blogPostAdapted)
+        const blogPostAuthor = authorAdapter(blog.attributes.author.data)
+        const blogPostAdapted = blogPostAdapter(blog, blogPostAuthor)
+        blogPosts.push(blogPostAdapted) 
       }
       const result: CmsRequestResult<BlogPost[]> = {
         data: blogPosts,

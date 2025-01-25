@@ -5,9 +5,10 @@ import { AppContainer } from '@common/layout'
 import { BG_STYLES_CLASSES } from '@common/utils/enums'
 import { BlogPost } from '@common/utils/types/blogPost'
 import { RenderMD } from '../RenderMD'
+import { Author } from '../Author'
 //import { Author } from '../Author'
 
-interface ArticleProps extends BlogPost {}
+interface ArticleProps extends Omit<BlogPost, 'meta'> {}
 
 export const Article: React.FC<ArticleProps> = ({
   title,
@@ -92,14 +93,14 @@ export const Article: React.FC<ArticleProps> = ({
         elementType='footer'
       >
         <hr />
-        {/*  <Author
+        <Author
           name={author.name}
           role={author.role}
           avatar={author.avatar}
           github={author.githubUrl}
           linkedIn={author.linkedinUrl}
           webAddress={author.webAddress}
-        /> */}
+        />
       </AppContainer>
     </article>
   )

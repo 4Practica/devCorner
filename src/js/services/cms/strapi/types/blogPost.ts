@@ -1,4 +1,5 @@
 import { StrapiAuthorDataStructure } from './author'
+import { StrapiMetaDataStructure } from './metaData'
 
 export interface StrapiBlogPost {
   id: number
@@ -17,6 +18,7 @@ interface StrapiBlogPostAttributes {
   updatedAt: string
   author: StrapiAuthorDataStructure
   tags: TagData
+  meta_datum: StrapiMetaDataStructure
 }
 
 interface TagAttributes {

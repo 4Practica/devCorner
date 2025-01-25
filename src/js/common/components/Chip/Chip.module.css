@@ -34,8 +34,10 @@
   border-radius: 0.2rem;
 }
 .chip.primary {
-  background-color: var(--color-primary);
-  color: var(--font-color);
+  /* background-color: var(--color-primary);
+  color: var(--font-color); */
+  background-color: var(--color-light-green);
+  color: var(--color-black-900);
 }
 .chip.primary-dark {
   background-color: var(--color-dark-green);
