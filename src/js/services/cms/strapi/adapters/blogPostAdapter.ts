@@ -4,7 +4,11 @@ import { BlogPost } from '@common/utils/types/blogPost'
 import { Author } from '@common/utils/types/author'
 import { ViewMetaData } from '@common/layout/MetaData/MetaData.types'
 
-export function blogPostAdapter(data: StrapiBlogPost, author: Author, metaData?: ViewMetaData): BlogPost {
+export function blogPostAdapter(
+  data: StrapiBlogPost,
+  author: Author,
+  metaData?: ViewMetaData
+): BlogPost {
   const { attributes } = data
   const {
     blogData,
@@ -25,7 +29,7 @@ export function blogPostAdapter(data: StrapiBlogPost, author: Author, metaData?:
     }
   })
 
-  const authorData = author;
+  const authorData = author
   const viewMetaData = metaData
   return {
     id: data.id,
@@ -45,6 +49,6 @@ export function blogPostAdapter(data: StrapiBlogPost, author: Author, metaData?:
     date: formatDate(publishedAt),
     tags: tagsData,
     slug: slug,
-    meta: viewMetaData
+    meta: viewMetaData,
   }
 }

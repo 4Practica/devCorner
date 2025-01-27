@@ -22,15 +22,13 @@ const BlogPost: React.FC = () => {
   if (blogPost.title) {
     return (
       <React.Fragment>
-        {
-          blogPost.meta ? (
-            <MetaData
-              meta={blogPost.meta.meta}
-              og={blogPost.meta.og}
-              tw={blogPost.meta.tw}
-            />
-          ) : null
-        }
+        {blogPost.meta ?
+          <MetaData
+            meta={blogPost.meta.meta}
+            og={blogPost.meta.og}
+            tw={blogPost.meta.tw}
+          />
+        : null}
         <main className={styles[`blog-post`]}>
           <Article
             title={blogPost.title}

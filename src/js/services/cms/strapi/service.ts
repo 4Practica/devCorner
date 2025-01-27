@@ -45,7 +45,7 @@ export class StrapiCmsService implements CmsBlogService {
       for (const blog of body.data) {
         const blogPostAuthor = authorAdapter(blog.attributes.author.data)
         const blogPostAdapted = blogPostAdapter(blog, blogPostAuthor)
-        blogPosts.push(blogPostAdapted) 
+        blogPosts.push(blogPostAdapted)
       }
       const result: CmsRequestResult<BlogPost[]> = {
         data: blogPosts,
@@ -77,9 +77,15 @@ export class StrapiCmsService implements CmsBlogService {
         const error = errorHandler({ body, status })
         return error
       }
-      const blogPostMetaData = metaDataAdapter(body.data.attributes.meta_datum.data)
+      const blogPostMetaData = metaDataAdapter(
+        body.data.attributes.meta_datum.data
+      )
       const blogPostAuthor = authorAdapter(body.data.attributes.author.data)
-      const blogPostAdapted = blogPostAdapter(body.data, blogPostAuthor, blogPostMetaData)
+      const blogPostAdapted = blogPostAdapter(
+        body.data,
+        blogPostAuthor,
+        blogPostMetaData
+      )
 
       const result: CmsRequestResult<BlogPost> = {
         data: blogPostAdapted,
@@ -120,7 +126,7 @@ export class StrapiCmsService implements CmsBlogService {
       for (const blog of body.data) {
         const blogPostAuthor = authorAdapter(blog.attributes.author.data)
         const blogPostAdapted = blogPostAdapter(blog, blogPostAuthor)
-        blogPosts.push(blogPostAdapted) 
+        blogPosts.push(blogPostAdapted)
       }
       const result: CmsRequestResult<BlogPost[]> = {
         data: blogPosts,
