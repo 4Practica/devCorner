@@ -7,5 +7,5 @@ export interface AuthorProps {
 
 export const Author: React.FC<AuthorProps> = ({ children }) => {
   usePostcard('Author')
-  return <h5 className={styles.postcard_author}>{children}</h5>
+  return <h2 className={styles.postcard_author}>{children}</h2>
 }
