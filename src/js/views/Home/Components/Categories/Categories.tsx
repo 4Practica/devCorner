@@ -40,37 +40,37 @@ const Categories = () => {
               width='450'
               height='450'
               media='(min-width: 1220px)'
-              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories.webp'
             />
             <source
               width='420'
               height='420'
               media='(min-width: 1020px)'
-              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories.webp'
             />
             <source
               width='380'
               height='380'
               media='(min-width: 920px)'
-              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories.webp'
             />
             <source
               width='380'
               height='380'
               media='(min-width: 720px)'
-              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories.webp'
             />
             <source
               width='380'
               height='380'
               media='(min-width: 520px)'
-              srcSet='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories.webp'
             />
             <img
               width='320'
               height='320'
               loading='lazy'
-              src='https://4practice-blog.s3.us-east-1.amazonaws.com/landing/categories.webp'
+              src='https://img.devcorner.top/landing/categories.webp'
               alt=''
               className={styles['categories__img--pic']}
             />

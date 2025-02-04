@@ -7,17 +7,14 @@ import { ArrowDownIcon } from '@common/icons'
 
 const Hero = () => {
   const { handleChange, handleSubmit, data } = useNewsletter()
-  preload(
-    'https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp',
-    {
-      as: 'image',
-    }
-  )
+  preload('https://img.devcorner.top/landing/hero.webp', {
+    as: 'image',
+  })
 
   return (
     <div id='hero-cta' className={`${styles.hero_container}`}>
       <img
-        src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+        src='https://img.devcorner.top/landing/hero.webp'
         alt='hero background'
         className={`${styles.hero_bg_image}`}
       />
@@ -60,17 +57,17 @@ const Hero = () => {
           <div className={`${styles.hero_right}`}>
             <div className={`${styles.images_container}`}>
               <img
-                src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                src='https://img.devcorner.top/landing/hero.webp'
                 alt='hero right image'
                 className={`${styles.left_image}`}
               />
               <img
-                src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                src='https://img.devcorner.top/landing/hero.webp'
                 alt='hero right image'
                 className={`${styles.middle_image}`}
               />
               <img
-                src='https://res.cloudinary.com/bryancloudinary/image/upload/v1701837965/hero_wwa4xm.webp'
+                src='https://img.devcorner.top/landing/hero.webp'
                 alt='hero right image'
                 className={`${styles.right_image}`}
               />
