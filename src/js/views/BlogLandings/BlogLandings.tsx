@@ -1,5 +1,5 @@
 import styles from './BlogLandings.module.css'
-import { Intro } from './components'
+import { Intro, Pagination } from './components'
 import { AppContainer } from '@common/layout'
 import React, { useState } from 'react'
 import { BG_STYLES_CLASSES } from '@common/utils/enums'
@@ -9,7 +9,14 @@ import { useBlogs } from './BlogLandings.hooks'
 
 const BlogLandings = () => {
   const [search, setSearch] = useState<string>('')
-  const { blogPosts, handleFilter } = useBlogs()
+  const {
+    blogPosts,
+    page,
+    metaBlogs,
+    DEFAULT_PAGE,
+    handleFilter,
+    handlePagination,
+  } = useBlogs()
 
   function handleSearch(e: React.FormEvent) {
     e.preventDefault()
@@ -35,6 +42,18 @@ const BlogLandings = () => {
             <SearchResult results={blogPosts} />
           : <LoadState />}
         </div>
+      </AppContainer>
+      <AppContainer
+        padding
+        bgColor={BG_STYLES_CLASSES.LIGHT}
+        elementType='section'
+      >
+        <Pagination
+          page={page}
+          metaBlogs={metaBlogs}
+          handlePagination={handlePagination}
+          DEFAULT_PAGE={DEFAULT_PAGE}
+        />
       </AppContainer>
     </React.Fragment>
   )
