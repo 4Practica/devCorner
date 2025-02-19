@@ -6,7 +6,7 @@ interface PaginationMetaData {
   total: number
 }
 
-interface StrapiMetaData {
+export interface StrapiMetaData {
   pagination: PaginationMetaData
 }
 export interface StrapiResponse<T> {

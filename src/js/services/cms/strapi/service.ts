@@ -11,6 +11,7 @@ import { BlogPost } from '@common/utils/types/blogPost'
 import {
   BlogPostBySearchParameters,
   BlogPostParameters,
+  BlogPostsParameters,
 } from './types/requestParameters'
 import { errorHandler } from './utils/errorHandler'
 import { Author } from '@common/utils/types/author'
@@ -28,13 +29,23 @@ export class StrapiCmsService implements CmsBlogService {
     this.client = client
   }
 
-  async getBlogPosts(): Promise<
+  async getBlogPosts({
+    page,
+  }: BlogPostsParameters): Promise<
     CmsRequestResult<BlogPost[]> | CmsRequestError
   > {
     try {
+      const DEFAULT_PAGE = 1
+      let requestPath = `/blogs?populate=*`
+
+      // Adds query params for pagination
+      if (page !== undefined && page >= DEFAULT_PAGE) {
+        requestPath += `&pagination[page]=${page}&pagination[pageSize]=9`
+      }
+
       const { body, status } = await this.client.get<
         StrapiResponse<StrapiBlogPost[]> | StrapiErrorResponse
-      >({ path: '/blogs', authentication: `Bearer ${CMS_TOKEN}` })
+      >({ path: requestPath, authentication: `Bearer ${CMS_TOKEN}` })
 
       if (typeof body === 'string' || body.data === null) {
         const error = errorHandler({ body, status })
@@ -47,8 +58,10 @@ export class StrapiCmsService implements CmsBlogService {
         const blogPostAdapted = blogPostAdapter(blog, blogPostAuthor)
         blogPosts.push(blogPostAdapted)
       }
+
       const result: CmsRequestResult<BlogPost[]> = {
         data: blogPosts,
+        meta: body.meta,
         success: true,
         status: status,
       }

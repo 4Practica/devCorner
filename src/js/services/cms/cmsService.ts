@@ -3,9 +3,11 @@ import { strapiCmsService } from './strapi/service'
 import {
   BlogPostBySearchParameters,
   BlogPostParameters,
+  BlogPostsParameters,
 } from './strapi/types/requestParameters'
 import { Author } from '@common/utils/types/author'
 import { Newsletter, NewsletterAttributes } from './strapi/types/newsletter'
+import { StrapiMetaData } from './strapi/types/strapiResponse'
 /*  
     Using adapter pattern to be able to switch between differents services if required
     More about adapter pattern: https://refactoring.guru/design-patterns/adapter
@@ -20,6 +22,7 @@ export interface CmsRequestResult<T> {
   data: T
   success: true
   status: number
+  meta?: StrapiMetaData | Record<never, never> // REcord<never, never> Representa un objeto vacío que no tiene llaves ni valores = {}
 }
 
 export interface CmsRequestError {
@@ -28,7 +31,11 @@ export interface CmsRequestError {
   status: number
 }
 export interface CmsBlogService {
-  getBlogPosts(): Promise<CmsRequestResult<BlogPost[]> | CmsRequestError>
+  getBlogPosts({
+    page,
+  }: BlogPostsParameters): Promise<
+    CmsRequestResult<BlogPost[]> | CmsRequestError
+  >
   getBlogPost({
     slug,
   }: BlogPostParameters): Promise<CmsRequestResult<BlogPost> | CmsRequestError>
