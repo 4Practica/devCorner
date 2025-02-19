@@ -41,6 +41,11 @@
   color: var(--font-color);
 }
 
+.button.disabled {
+  background-color: var(--color-gray-300);
+  cursor: default;
+}
+
 @media (prefers-color-scheme: dark) {
   .button.primary {
     background-color: var(--color-primary);
@@ -56,5 +61,10 @@
   .button.secondary-dark {
     background-color: var(--color-primary);
     color: var(--font-color-contrast);
+  }
+
+  .button.disabled {
+    background-color: var(--color-gray-300);
+    cursor: default;
   }
 }

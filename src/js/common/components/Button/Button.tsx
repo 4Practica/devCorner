@@ -14,6 +14,7 @@ interface ButtonProps {
   customClasses?: string
   children: React.ReactNode
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+  disabled?: boolean
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -25,6 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   children,
   onClick,
+  disabled = false,
 }) => {
   const buttonClasses = [
     styles.button,
@@ -33,9 +35,16 @@ export const Button: React.FC<ButtonProps> = ({
     fontColor,
     customClasses,
     styles[variant],
+    disabled ? styles.disabled : '',
   ]
   return (
-    <button type={type} className={buttonClasses.join(' ')} onClick={onClick}>
+    <button
+      disabled={disabled}
+      aria-disabled={disabled}
+      type={type}
+      className={buttonClasses.join(' ')}
+      onClick={onClick}
+    >
       {children}
     </button>
   )
