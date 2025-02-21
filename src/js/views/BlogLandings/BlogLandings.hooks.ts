@@ -8,9 +8,7 @@ export function useBlogs() {
 
   const [blogPosts, setBlogPosts] = useState<BlogPost[] | undefined>()
   const [page, setPage] = useState<number>(DEFAULT_PAGE)
-  const [metaBlogs, setMetaBlogs] = useState<
-    StrapiMetaData | Record<never, never>
-  >({})
+  const [metaBlogs, setMetaBlogs] = useState<StrapiMetaData | undefined>()
 
   const handleRequest = async () => {
     const response = await cmsClient.getBlogPosts({ page })

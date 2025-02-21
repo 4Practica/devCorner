@@ -43,18 +43,20 @@ const BlogLandings = () => {
           : <LoadState />}
         </div>
       </AppContainer>
-      <AppContainer
-        padding
-        bgColor={BG_STYLES_CLASSES.LIGHT}
-        elementType='section'
-      >
-        <Pagination
-          page={page}
-          metaBlogs={metaBlogs}
-          handlePagination={handlePagination}
-          DEFAULT_PAGE={DEFAULT_PAGE}
-        />
-      </AppContainer>
+      {metaBlogs === undefined ? null : (
+        <AppContainer
+          padding
+          bgColor={BG_STYLES_CLASSES.LIGHT}
+          elementType='section'
+        >
+          <Pagination
+            page={page}
+            metaBlogs={metaBlogs}
+            handlePagination={handlePagination}
+            DEFAULT_PAGE={DEFAULT_PAGE}
+          />
+        </AppContainer>
+      )}
     </React.Fragment>
   )
 }

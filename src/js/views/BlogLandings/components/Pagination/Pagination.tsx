@@ -3,7 +3,7 @@ import { StrapiMetaData } from '@services/cms/strapi/types/strapiResponse'
 import styles from './Pagination.module.css'
 
 interface PaginationProps {
-  metaBlogs: Record<never, never> | StrapiMetaData
+  metaBlogs: StrapiMetaData
   page: number
   handlePagination: (direction: string) => void
   DEFAULT_PAGE: number
@@ -15,7 +15,7 @@ const Pagination: React.FC<PaginationProps> = ({
   handlePagination,
   DEFAULT_PAGE,
 }) => {
-  if ('pagination' in metaBlogs === false) {
+  if (metaBlogs === undefined) {
     return null
   }
 
