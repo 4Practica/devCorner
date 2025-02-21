@@ -3,6 +3,7 @@ import {
   CmsBlogService,
   CmsRequestError,
   CmsRequestResult,
+  CmsRequestResultWithPagination,
 } from '../cmsService'
 import { StrapiErrorResponse, StrapiResponse } from './types/strapiResponse'
 import { StrapiBlogPost } from './types/blogPost'
@@ -32,7 +33,7 @@ export class StrapiCmsService implements CmsBlogService {
   async getBlogPosts({
     page,
   }: BlogPostsParameters): Promise<
-    CmsRequestResult<BlogPost[]> | CmsRequestError
+    CmsRequestResultWithPagination<BlogPost[]> | CmsRequestError
   > {
     try {
       const DEFAULT_PAGE = 1
@@ -59,9 +60,9 @@ export class StrapiCmsService implements CmsBlogService {
         blogPosts.push(blogPostAdapted)
       }
 
-      const result: CmsRequestResult<BlogPost[]> = {
+      const result: CmsRequestResultWithPagination<BlogPost[]> = {
         data: blogPosts,
-        meta: body.meta,
+        meta: 'pagination' in body.meta ? body.meta : undefined,
         success: true,
         status: status,
       }

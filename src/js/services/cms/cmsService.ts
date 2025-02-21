@@ -22,7 +22,13 @@ export interface CmsRequestResult<T> {
   data: T
   success: true
   status: number
-  meta?: StrapiMetaData | Record<never, never> // REcord<never, never> Representa un objeto vacío que no tiene llaves ni valores = {}
+}
+
+export interface CmsRequestResultWithPagination<T> {
+  data: T
+  success: true
+  status: number
+  meta: StrapiMetaData | undefined
 }
 
 export interface CmsRequestError {
@@ -34,7 +40,7 @@ export interface CmsBlogService {
   getBlogPosts({
     page,
   }: BlogPostsParameters): Promise<
-    CmsRequestResult<BlogPost[]> | CmsRequestError
+    CmsRequestResultWithPagination<BlogPost[]> | CmsRequestError
   >
   getBlogPost({
     slug,
