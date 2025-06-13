@@ -2,15 +2,10 @@ import styles from './Hero.module.css'
 import { Button } from '@common/components/Button'
 import { Chip } from '@common/components/Chip'
 import { useNewsletter } from './Hero.hooks'
-import { preload } from 'react-dom'
 import { ArrowDownIcon } from '@common/icons'
 
 const Hero = () => {
   const { handleChange, handleSubmit, data } = useNewsletter()
-  preload('https://img.devcorner.top/landing/hero.webp', {
-    as: 'image',
-    fetchPriority: 'high'
-  })
 
   return (
     <div id='hero-cta' className={`${styles.hero_container}`}>
@@ -19,6 +14,7 @@ const Hero = () => {
         alt='hero background'
         className={`${styles.hero_bg_image}`}
         loading='eager'
+        fetchPriority="high"
       />
       <div className={`${styles.hero_content}`}>
         <div className={`${styles.hero_top}`}>
