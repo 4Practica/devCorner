@@ -1,4 +1,4 @@
-import { Chip } from '@common/components'
+import { Chip } from '@common/components/Chip'
 import { Header, Card, CardSkeleton } from './components'
 import styles from './Team.module.css'
 import { useAuthors } from './Team.hooks'

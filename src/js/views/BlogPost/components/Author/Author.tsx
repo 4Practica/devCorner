@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './Author.module.css'
-import { BrowserIcon, GithubIcon, LinkedinIcon } from '@common/icons'
+import LinkedInIcon from '@common/icons/Linkedin.tsx'
+import GithubIcon from '@common/icons/Github.tsx'
+import BrowserIcon from '@common/icons/Browser.tsx'
 
 interface AuthorProps {
   name: string
@@ -54,7 +56,7 @@ export const Author: React.FC<AuthorProps> = ({
             rel='noopener noreferrer'
             target='_blank'
           >
-            <LinkedinIcon color='#2a3342' width='30' height='30' />
+            <LinkedInIcon color='#2a3342' width='30' height='30' />
           </a>
         </div>
       </figcaption>

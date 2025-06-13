@@ -1,5 +1,7 @@
 import styles from './CardInfo.module.css'
-import { BrowserIcon, GithubIcon, LinkedinIcon } from '@common/icons'
+import LinkedInIcon from '@common/icons/Linkedin.tsx'
+import GithubIcon from '@common/icons/Github.tsx'
+import BrowserIcon from '@common/icons/Browser.tsx'
 
 interface CardInfoProps {
   name: string
@@ -43,7 +45,7 @@ export const CardInfo: React.FC<CardInfoProps> = ({
             target='_blank'
             aria-label={`Linkedin of ${name}`}
           >
-            <LinkedinIcon color='white' width='40' height='40' />
+            <LinkedInIcon color='white' width='40' height='40' />
           </a>
         : null}
 

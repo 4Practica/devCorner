@@ -1,6 +1,6 @@
 import styles from './Hero.module.css'
 import { Button } from '@common/components/Button'
-import { Chip } from '@common/components'
+import { Chip } from '@common/components/Chip'
 import { useNewsletter } from './Hero.hooks'
 import { preload } from 'react-dom'
 import { ArrowDownIcon } from '@common/icons'
