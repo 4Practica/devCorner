@@ -9,7 +9,7 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const projectRootDir = path.resolve(__dirname)
   const globalConfig = {
-    plugins: [react()
+    plugins: [react(),
       /* visualizer({
         filename: 'dist/stats.html',
         open: true,
@@ -54,48 +54,7 @@ export default defineConfig(({ command, mode }) => {
         rollupOptions: {
           output: {
             dir: 'dist',
-            chunkFileNames: (chunkInfo) => {
-              const facadeModuleId = chunkInfo.facadeModuleId
-
-              if (facadeModuleId) {
-                // Chunk específico para icons
-                if (facadeModuleId.includes('src/js/common/icons')) {
-                  return 'app/js/icons/[name]-[hash].js'
-                }
-
-                if (facadeModuleId.includes('src/js/common/components')) {
-                  return 'app/js/components/[name]-[hash].js'
-                }
-
-                if (facadeModuleId.includes('src/js/common/patterns')) {
-                  return 'app/js/patterns/[name]-[hash].js'
-                }
-
-                if (facadeModuleId.includes('src/js/common/layout')) {
-                  return 'app/js/layout/[name]-[hash].js'
-                }
-
-                if (facadeModuleId.includes('src/js/common/utils')) {
-                  return 'app/js/utils/[name]-[hash].js'
-                }
-
-                if (facadeModuleId.includes('src/js/common')) {
-                  return 'app/js/common/[name]-[hash].js'
-                }
-
-                // Handle views/components as separate chunks
-                if (facadeModuleId.includes('src/js/views')) {
-                  return 'app/js/views/[name]-[hash].js'
-                }
-
-                // Vendor chunks
-                if (facadeModuleId.includes('node_modules')) {
-                  return 'app/js/vendor/[name]-[hash].js'
-                }
-              }
-
-              return 'app/js/[name]-[hash].js'
-            },
+            chunkFileNames: 'app/js/[name]-[hash].js',
             manualChunks: (id) => {
               // Create separate chunks for each component
               if (id.includes('src/js/views/')) {
@@ -114,9 +73,9 @@ export default defineConfig(({ command, mode }) => {
               }
               // Vendor chunks
               if (id.includes('node_modules')) {
-                if (id.includes('markdown-to-jsx')) return 'md-vendor'
-                if (id.includes('react-syntax-highlighter')) return 'md-highlight-vendor'
-                if (id.includes('refractor')) return 'md-refractor-vendor'
+                //if (id.includes('markdown-to-jsx')) return 'md-vendor'
+                //if (id.includes('react-syntax-highlighter')) return 'md-highlight-vendor'
+                //if (id.includes('refractor')) return 'md-refractor-vendor'
                 if (id.includes('react')) return 'react-vendor'
                 return 'vendor'
                 return 'vendor/vendor-' + Math.floor(Math.random() * 10000000)
