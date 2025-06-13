@@ -106,9 +106,11 @@ export default defineConfig(({ command, mode }) => {
                 const componentName = id.split('/').pop()?.split('.')[0]
                 return `service-${componentName.toLowerCase()}`
               }
-              if (id.includes('src/js/')) {
+              if (id.includes('src/js/common/utils')) return `utils`
+              if (id.includes('src/js/common/layout')) return `layout`
+              if (id.includes('src/js/common/icons') || id.includes('src/js/common/patterns')) {
                 const componentName = id.split('/').pop()?.split('.')[0]
-                return `app-${componentName.toLowerCase()}`
+                return `icons-${componentName}`
               }
               // Vendor chunks
               if (id.includes('node_modules')) {
