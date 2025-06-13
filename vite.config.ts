@@ -108,8 +108,8 @@ export default defineConfig(({ command, mode }) => {
               }
               // Vendor chunks
               if (id.includes('node_modules')) {
-                if (id.includes('react-router-dom')) return 'react-router-vendor'
-                if (id.includes('react-dom')) return 'react-dom-vendor'
+                //if (id.includes('react-router-dom')) return 'react-router-vendor'
+                //if (id.includes('react-dom')) return 'react-dom-vendor'
                 if (id.includes('react')) return 'react-vendor'
                 return 'vendor/vendor-' + Math.floor(Math.random() * 10000000)
               }
