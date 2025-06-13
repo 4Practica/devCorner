@@ -43,7 +43,103 @@ export default defineConfig(({ command, mode }) => {
         emptyOutDir: true,
         reportCompressedSize: true,
         chunkSizeWarningLimit: 520,
+        rollupOptions: {
+          output: {
+            chunkFileNames: (chunkInfo) => {
+              const facadeModuleId = chunkInfo.facadeModuleId
+              
+              if (facadeModuleId) {
+                // Chunk específico para icons
+                if (facadeModuleId.includes('src/js/common/icons')) {
+                  return 'assets/js/icons/[name]-[hash].js'
+                }
+
+                if (facadeModuleId.includes('src/js/common/components')) {
+                  return 'assets/js/components/[name]-[hash].js'
+                }
+
+                if (facadeModuleId.includes('src/js/common/patterns')) {
+                  return 'assets/js/patterns/[name]-[hash].js'
+                }
+                
+                if (facadeModuleId.includes('src/js/common/layout')) {
+                  return 'assets/js/layout/[name]-[hash].js'
+                }
+                
+                if (facadeModuleId.includes('src/js/common/utils')) {
+                  return 'assets/js/utils/[name]-[hash].js'
+                }
+
+                if (facadeModuleId.includes('src/js/common')) {
+                  return 'assets/js/common/[name]-[hash].js'
+                }
+                // Vendor chunks
+                if (facadeModuleId.includes('node_modules')) {
+                  return 'assets/js/vendor/[name]-[hash].js'
+                }
+              }
+              
+              return 'assets/js/[name]-[hash].js'
+            },
+            
+            manualChunks: (id) => {
+              // Chunk específico para todos los iconos
+              if (id.includes('src/js/common/icons')) {
+                return 'icons-bundle'
+              }
+
+              // Chunk para componentes comunes
+              if (id.includes('src/js/common/components')) {
+                return 'common-components'
+              }
+              
+              // Chunk para layout
+              if (id.includes('src/js/common/layout')) {
+                return 'layout-components'
+              }
+              
+              // Chunk para utilidades
+              if (id.includes('src/js/common/utils')) {
+                return 'utils'
+              }
+              
+              // Chunk para patrones
+              if (id.includes('src/js/common/patterns')) {
+                return 'patterns-components'
+              }
+              
+              // Vendors
+              if (id.includes('node_modules')) {
+                if (id.includes('react-dom')) {
+                  return 'react-dom-vendor'
+                }
+                if (id.includes('react-router-dom')) {
+                  return 'react-router-vendor'
+                }
+                if (id.includes('react')) {
+                  return 'react-vendor'
+                }
+                const chunks = id.split('node_modules/')
+                const chunk = chunks[chunks.length -1]
+                const packageName = chunk.split('/')[0]
+
+            
+                const cleanName = chunk
+                  .replace("/", "-")
+                  .replace(".", "-")
+                  .replace("js", "")
+                  .replace(/[^a-zA-Z0-9-]/g, '-') // caracteres especiales
+                  .toLowerCase()
+                
+                return `${cleanName}-vendor`
+              }
+            }
+          }
+        }
       },
+      esbuild: {
+        treeShaking: true
+      }
     }
   }
 })
