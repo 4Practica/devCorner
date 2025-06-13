@@ -7,7 +7,7 @@ import { CircleMadeOfDots } from '@common/patterns/CircleMadeOfDots'
 import { preload } from 'react-dom'
 
 const Categories = () => {
-  preload('https://img.devcorner.top/landing/categories.webp', {
+  preload('https://img.devcorner.top/landing/categories-1.webp', {
     as: 'image',
     fetchPriority: 'low'
   })
@@ -45,37 +45,37 @@ const Categories = () => {
               width='450'
               height='450'
               media='(min-width: 1220px)'
-              srcSet='https://img.devcorner.top/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories-1.webp'
             />
             <source
               width='420'
               height='420'
               media='(min-width: 1020px)'
-              srcSet='https://img.devcorner.top/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories-1.webp'
             />
             <source
               width='380'
               height='380'
               media='(min-width: 920px)'
-              srcSet='https://img.devcorner.top/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories-1.webp'
             />
             <source
               width='380'
               height='380'
               media='(min-width: 720px)'
-              srcSet='https://img.devcorner.top/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories-1.webp'
             />
             <source
               width='380'
               height='380'
               media='(min-width: 520px)'
-              srcSet='https://img.devcorner.top/landing/categories.webp'
+              srcSet='https://img.devcorner.top/landing/categories-1.webp'
             />
             <img
               width='320'
               height='320'
               loading='lazy'
-              src='https://img.devcorner.top/landing/categories.webp'
+              src='https://img.devcorner.top/landing/categories-1.webp'
               alt=''
               className={styles['categories__img--pic']}
             />
