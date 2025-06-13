@@ -95,9 +95,6 @@ export default defineConfig(({ command, mode }) => {
                 ) {
                   return 'react-router-dom-vendor'
                 }
-                if (id.includes('react-router')) {
-                  return 'react-router-vendor'
-                }
                 if (
                   id.includes('react/') ||
                   id.endsWith('react') ||
