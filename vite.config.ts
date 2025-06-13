@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 /* import alias from '@rollup/plugin-alias'; */
 import react from '@vitejs/plugin-react'
-import { visualizer } from 'rollup-plugin-visualizer'
+/* import { visualizer } from 'rollup-plugin-visualizer' */
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -9,7 +9,7 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const projectRootDir = path.resolve(__dirname)
   const globalConfig = {
-    plugins: [react(), 
+    plugins: [react()
       /* visualizer({
         filename: 'dist/stats.html',
         open: true,
