@@ -98,6 +98,14 @@ export default defineConfig(({ command, mode }) => {
                 const componentName = id.split('/').pop()?.split('.')[0]
                 return `component-${componentName.toLowerCase()}`
               }
+              if (id.includes('src/js/services')) {
+                const componentName = id.split('/').pop()?.split('.')[0]
+                return `service-${componentName.toLowerCase()}`
+              }
+              if (id.includes('src/js/')) {
+                const componentName = id.split('/').pop()?.split('.')[0]
+                return `app-${componentName.toLowerCase()}`
+              }
               // Vendor chunks
               if (id.includes('node_modules')) {
                 if (id.includes('react-router-dom')) return 'react-router-vendor'
@@ -105,6 +113,7 @@ export default defineConfig(({ command, mode }) => {
                 if (id.includes('react')) return 'react-vendor'
                 return 'vendor/vendor-' + Math.floor(Math.random() * 10000000)
               }
+              console.log(id)
             },
           },
         },
