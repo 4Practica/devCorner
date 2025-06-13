@@ -8,12 +8,7 @@ export const footerTopLinks = [
     id: crypto.randomUUID(),
     text: 'Blog',
     route: '/blog',
-  },
-  {
-    id: crypto.randomUUID(),
-    text: 'About us',
-    route: '/about',
-  },
+  }
 ]
 
 export const footerBottomLinks = [
