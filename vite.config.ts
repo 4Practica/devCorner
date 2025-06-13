@@ -47,7 +47,7 @@ export default defineConfig(({ command, mode }) => {
           output: {
             chunkFileNames: (chunkInfo) => {
               const facadeModuleId = chunkInfo.facadeModuleId
-              
+
               if (facadeModuleId) {
                 // Chunk específico para icons
                 if (facadeModuleId.includes('src/js/common/icons')) {
@@ -61,11 +61,11 @@ export default defineConfig(({ command, mode }) => {
                 if (facadeModuleId.includes('src/js/common/patterns')) {
                   return 'assets/js/patterns/[name]-[hash].js'
                 }
-                
+
                 if (facadeModuleId.includes('src/js/common/layout')) {
                   return 'assets/js/layout/[name]-[hash].js'
                 }
-                
+
                 if (facadeModuleId.includes('src/js/common/utils')) {
                   return 'assets/js/utils/[name]-[hash].js'
                 }
@@ -78,68 +78,41 @@ export default defineConfig(({ command, mode }) => {
                   return 'assets/js/vendor/[name]-[hash].js'
                 }
               }
-              
+
               return 'assets/js/[name]-[hash].js'
             },
-            
-            manualChunks: (id) => {
-              // Chunk específico para todos los iconos
-              if (id.includes('src/js/common/icons')) {
-                return 'icons-bundle'
-              }
 
-              // Chunk para componentes comunes
-              if (id.includes('src/js/common/components')) {
-                return 'common-components'
-              }
-              
-              // Chunk para layout
-              if (id.includes('src/js/common/layout')) {
-                return 'layout-components'
-              }
-              
-              // Chunk para utilidades
-              if (id.includes('src/js/common/utils')) {
-                return 'utils'
-              }
-              
-              // Chunk para patrones
-              if (id.includes('src/js/common/patterns')) {
-                return 'patterns-components'
-              }
-              
+            manualChunks: (id) => {
               // Vendors
               if (id.includes('node_modules')) {
+                // Orden MUY importante: más específico primero
                 if (id.includes('react-dom')) {
                   return 'react-dom-vendor'
                 }
-                if (id.includes('react-router-dom')) {
+                if (
+                  id.includes('react-router-dom') ||
+                  id.includes('react-router/dom')
+                ) {
+                  return 'react-router-dom-vendor'
+                }
+                if (id.includes('react-router')) {
                   return 'react-router-vendor'
                 }
-                if (id.includes('react')) {
+                if (
+                  id.includes('react/') ||
+                  id.endsWith('react') ||
+                  id.includes('react/index')
+                ) {
                   return 'react-vendor'
                 }
-                const chunks = id.split('node_modules/')
-                const chunk = chunks[chunks.length -1]
-                const packageName = chunk.split('/')[0]
-
-            
-                const cleanName = chunk
-                  .replace("/", "-")
-                  .replace(".", "-")
-                  .replace("js", "")
-                  .replace(/[^a-zA-Z0-9-]/g, '-') // caracteres especiales
-                  .toLowerCase()
-                
-                return `${cleanName}-vendor`
               }
-            }
-          }
-        }
+            },
+          },
+        },
       },
       esbuild: {
-        treeShaking: true
-      }
+        treeShaking: true,
+      },
     }
   }
 })
