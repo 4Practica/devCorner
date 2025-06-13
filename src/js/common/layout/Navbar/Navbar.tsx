@@ -52,9 +52,6 @@ const Navbar = () => {
             <li className={``}>
               <NavLink to='/blog'>Blog</NavLink>
             </li>
-            <li className={``}>
-              <NavLink to='/about'>About us</NavLink>
-            </li>
           </ul>
           <div className={``}>
             <Button
