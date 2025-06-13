@@ -9,6 +9,7 @@ const Hero = () => {
   const { handleChange, handleSubmit, data } = useNewsletter()
   preload('https://img.devcorner.top/landing/hero.webp', {
     as: 'image',
+    fetchPriority: 'high'
   })
 
   return (
@@ -17,6 +18,7 @@ const Hero = () => {
         src='https://img.devcorner.top/landing/hero.webp'
         alt='hero background'
         className={`${styles.hero_bg_image}`}
+        loading='eager'
       />
       <div className={`${styles.hero_content}`}>
         <div className={`${styles.hero_top}`}>

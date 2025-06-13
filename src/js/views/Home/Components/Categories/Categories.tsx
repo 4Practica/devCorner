@@ -4,8 +4,13 @@ import { categories } from './Categories.utils'
 import { Category } from '../Category/Category'
 import { SquareBackground, SquareMadeOfDots } from '@common/patterns'
 import { CircleMadeOfDots } from '@common/patterns/CircleMadeOfDots'
+import { preload } from 'react-dom'
 
 const Categories = () => {
+  preload('https://img.devcorner.top/landing/categories.webp', {
+    as: 'image',
+    fetchPriority: 'low'
+  })
   return (
     <div className={styles['categories-box']}>
       <div className={styles.categories}>
