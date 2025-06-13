@@ -1,25 +1,37 @@
 import Markdown from 'markdown-to-jsx'
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import nightOwl from 'react-syntax-highlighter/dist/esm/styles/prism/night-owl'
 
 import React from 'react'
 import styles from './RenderMD.module.css'
 import {
   CodeBlockProps,
-  languages,
-  registerPrismLanguajes,
   RenderMDProps,
 } from './RenderMD.utils'
 
-/*** 
- Docs:
- Renders code properly highlight: https://www.npmjs.com/package/react-syntax-highlighter
- Renders markdown: 
- */
-registerPrismLanguajes({
-  PrismInstance: SyntaxHighlighter,
-  languages: languages,
-})
+// Import only the languages you need
+import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
+import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javascript'
+import typescript from 'react-syntax-highlighter/dist/esm/languages/prism/typescript'
+import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
+import json from 'react-syntax-highlighter/dist/esm/languages/prism/json'
+import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
+import markdown from 'react-syntax-highlighter/dist/esm/languages/prism/markdown'
+import yaml from 'react-syntax-highlighter/dist/esm/languages/prism/yaml'
+import python from 'react-syntax-highlighter/dist/esm/languages/prism/python'
+import csharp from 'react-syntax-highlighter/dist/esm/languages/prism/csharp'
+
+// Register only the languages you need
+SyntaxHighlighter.registerLanguage('jsx', jsx)
+SyntaxHighlighter.registerLanguage('javascript', javascript)
+SyntaxHighlighter.registerLanguage('typescript', typescript)
+SyntaxHighlighter.registerLanguage('css', css)
+SyntaxHighlighter.registerLanguage('json', json)
+SyntaxHighlighter.registerLanguage('bash', bash)
+SyntaxHighlighter.registerLanguage('markdown', markdown)
+SyntaxHighlighter.registerLanguage('yaml', yaml)
+SyntaxHighlighter.registerLanguage('python', python)
+SyntaxHighlighter.registerLanguage('csharp', csharp)
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
   const language = className ? className.replace(/lang-/, '') : 'javascript'
@@ -39,6 +51,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
     </SyntaxHighlighter>
   )
 }
+
 export const RenderMD: React.FC<RenderMDProps> = ({ MD }) => {
   return (
     <div className={styles[`render-md-box`]}>
