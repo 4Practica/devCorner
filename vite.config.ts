@@ -108,12 +108,12 @@ export default defineConfig(({ command, mode }) => {
               }
               // Vendor chunks
               if (id.includes('node_modules')) {
-                //if (id.includes('react-router-dom')) return 'react-router-vendor'
-                //if (id.includes('react-dom')) return 'react-dom-vendor'
                 if (id.includes('react')) return 'react-vendor'
+                if (id.includes('markdown-to-jsx') || id.includes('react-syntax-highlighter')) return 'md-vendor'
+                if (id.includes('refractor')) return 'md-refractor-vendor'
+                return 'vendor'
                 return 'vendor/vendor-' + Math.floor(Math.random() * 10000000)
               }
-              console.log(id)
             },
           },
         },
