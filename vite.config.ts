@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 /* import alias from '@rollup/plugin-alias'; */
 import react from '@vitejs/plugin-react'
+import { visualizer } from 'rollup-plugin-visualizer'
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -8,7 +9,14 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const projectRootDir = path.resolve(__dirname)
   const globalConfig = {
-    plugins: [react()],
+    plugins: [react(), 
+      /* visualizer({
+        filename: 'dist/stats.html',
+        open: true,
+        gzipSize: true,
+        brotliSize: true,
+      }) */
+    ],
     base: '/',
     assetsInclude: ['**/*.md'],
     resolve: {
@@ -94,10 +102,6 @@ export default defineConfig(({ command, mode }) => {
                 const componentName = id.split('/').pop()?.split('.')[0]
                 return `view-${componentName.toLowerCase()}`
               }
-              if (id.includes('src/js/common/components/')) {
-                const componentName = id.split('/').pop()?.split('.')[0]
-                return `component-${componentName.toLowerCase()}`
-              }
               if (id.includes('src/js/services')) {
                 const componentName = id.split('/').pop()?.split('.')[0]
                 return `service-${componentName.toLowerCase()}`
@@ -108,9 +112,10 @@ export default defineConfig(({ command, mode }) => {
               }
               // Vendor chunks
               if (id.includes('node_modules')) {
-                if (id.includes('react')) return 'react-vendor'
-                if (id.includes('markdown-to-jsx') || id.includes('react-syntax-highlighter')) return 'md-vendor'
+                if (id.includes('markdown-to-jsx')) return 'md-vendor'
+                if (id.includes('react-syntax-highlighter')) return 'md-highlight-vendor'
                 if (id.includes('refractor')) return 'md-refractor-vendor'
+                if (id.includes('react')) return 'react-vendor'
                 return 'vendor'
                 return 'vendor/vendor-' + Math.floor(Math.random() * 10000000)
               }
