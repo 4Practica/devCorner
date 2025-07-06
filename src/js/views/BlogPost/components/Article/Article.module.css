@@ -74,17 +74,6 @@
   overflow: hidden;
 }
 
-.article__content {
-  width: 100%;
-  max-width: 46.875rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: column nowrap;
-  padding: var(--article-padding);
-}
-.article__footer {
-  width: 100%;
-  max-width: 46.875rem;
-  padding: var(--article-padding);
+.article__content, .article__footer  {
+  padding: var(--app-padding);
 }
