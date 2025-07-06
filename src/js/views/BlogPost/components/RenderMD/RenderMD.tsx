@@ -4,10 +4,7 @@ import nightOwl from 'react-syntax-highlighter/dist/esm/styles/prism/night-owl'
 
 import React from 'react'
 import styles from './RenderMD.module.css'
-import {
-  CodeBlockProps,
-  RenderMDProps,
-} from './RenderMD.utils'
+import { CodeBlockProps, RenderMDProps } from './RenderMD.utils'
 
 // Import only the languages you need
 import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
@@ -67,6 +64,12 @@ export const RenderMD: React.FC<RenderMDProps> = ({ MD }) => {
             img: {
               props: {
                 loading: 'lazy',
+              },
+            },
+            a: {
+              props: {
+                target: '_blank',
+                rel: 'noopener noreferrer',
               },
             },
           },
