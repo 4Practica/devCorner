@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { Button } from '@common/components/Button'
 import styles from './Navbar.module.css'
-import { NavbarHamburguer } from './components'
+import { NavbarHamburguer, NavbarLinks } from './components'
 import { useButtonHandler } from './Navbar.hooks'
 import { AppContainer } from '..'
 import { BG_STYLES_CLASSES } from '@common/utils/enums'
@@ -46,12 +46,7 @@ const Navbar = () => {
         <div className={styles.navbar_content}>
           <ul className={`${styles.navbar_content__items}`}>
             {/* <NavbarLink /> */}
-            <li className={``}>
-              <NavLink to='/'>Home</NavLink>
-            </li>
-            <li className={``}>
-              <NavLink to='/blog'>Blog</NavLink>
-            </li>
+            <NavbarLinks />
           </ul>
           <div className={``}>
             <Button
