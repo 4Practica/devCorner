@@ -14,7 +14,7 @@ interface AuthorProps {
 }
 export const Author: React.FC<AuthorProps> = ({
   name,
-  role = 'Fullstack developer at Merge',
+  role = 'Fullstack developer',
   avatar,
   github,
   linkedIn,
@@ -34,30 +34,38 @@ export const Author: React.FC<AuthorProps> = ({
         <h2 className={styles['author__desc--title']}>{name}</h2>
         <p className={styles['author__desc--role']}>{role}</p>
         <div className={styles['author__desc--icons']}>
-          <a
-            href={github}
-            aria-label={'Github of ' + name}
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <GithubIcon color='#2a3342' width='30' height='30' />
-          </a>
-          <a
-            href={webAddress}
-            aria-label={'Portfolio of ' + name}
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <BrowserIcon color='#2a3342' width='30' height='30' />
-          </a>
-          <a
-            href={linkedIn}
-            aria-label={'Linkedin of ' + name}
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <LinkedInIcon color='#2a3342' width='30' height='30' />
-          </a>
+          {github && (
+            <a
+              href={github}
+              aria-label={'Github of ' + name}
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <GithubIcon color='#2a3342' width='30' height='30' />
+            </a>
+          )}
+
+          {webAddress && (
+            <a
+              href={webAddress}
+              aria-label={'Portfolio of ' + name}
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <BrowserIcon color='#2a3342' width='30' height='30' />
+            </a>
+          )}
+
+          {linkedIn && (
+            <a
+              href={linkedIn}
+              aria-label={'Linkedin of ' + name}
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <LinkedInIcon color='#2a3342' width='30' height='30' />
+            </a>
+          )}
         </div>
       </figcaption>
     </figure>
