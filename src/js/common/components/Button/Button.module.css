@@ -46,6 +46,11 @@
   cursor: default;
 }
 
+.button.transparent {
+  background-color: transparent;
+  color: var(--color-black-900);
+}
+
 @media (prefers-color-scheme: dark) {
   .button.primary {
     background-color: var(--color-primary);
