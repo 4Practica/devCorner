@@ -10,9 +10,11 @@ const NavLinks = () => {
   return (
     <>
       {links.map((link) => (
-        <NavLink key={link.to} to={link.to}>
-          <li>{link.label}</li>
-        </NavLink>
+        <li key={link.to}>
+          <NavLink key={link.to} to={link.to}>
+            {link.label}
+          </NavLink>
+        </li>
       ))}
     </>
   )

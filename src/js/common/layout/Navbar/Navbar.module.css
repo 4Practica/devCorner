@@ -64,7 +64,7 @@
   font-weight: 700;
   margin: 1rem 0 2rem 0;
 }
-.navbar_content__items a {
+.navbar_content__items li a {
   padding: 0.5rem 1rem;
   transition: background-color 250ms ease-in-out;
   &:hover {
@@ -72,7 +72,7 @@
     background-color: var(--color-light-blue);
   }
 }
-.navbar_content__items a {
+.navbar_content__items li a {
   display: block;
   font-size: var(--font-base);
   color: var(--font-color);
@@ -80,7 +80,8 @@
   text-decoration: none;
   width: 100%;
 }
-.navbar_content__items > a[aria-current='page'] {
+
+.navbar_content__items > li:has(> a[aria-current='page']) {
   border-bottom: 3px solid var(--color-dark-green);
 }
 
