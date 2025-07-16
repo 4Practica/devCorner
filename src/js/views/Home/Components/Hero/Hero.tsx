@@ -3,18 +3,46 @@ import { Button } from '@common/components/Button'
 import { Chip } from '@common/components/Chip'
 import { useNewsletter } from './Hero.hooks'
 import { ArrowDownIcon } from '@common/icons'
+import { Modal } from '@common/components/Modal'
+import { useNavigate } from 'react-router-dom'
+import CircleCheck from '@common/icons/CircleCheck'
+import CircleErrorDisclaimer from '@common/icons/CircleErrorDisclaimer'
 
 const Hero = () => {
-  const { handleChange, handleSubmit, data } = useNewsletter()
+  const {
+    handleChange,
+    handleSubmit,
+    data,
+    modalInfo,
+    setDefaultModal,
+    modalContent,
+  } = useNewsletter()
+  const navigate = useNavigate()
+
+  const icon =
+    modalContent.icon === 'CircleCheck' ?
+      <CircleCheck width={60} height={60} />
+    : <CircleErrorDisclaimer width={60} height={60} color='#df2b28' />
 
   return (
     <div id='hero-cta' className={`${styles.hero_container}`}>
+      <Modal
+        open={modalInfo.open}
+        icon={icon}
+        primaryFn={() => setDefaultModal()}
+        secondaryFn={() => {
+          navigate('/blog')
+          setDefaultModal()
+        }}
+        content={modalContent.content}
+      />
+
       <img
         src='https://img.devcorner.top/landing/hero.webp'
         alt='hero background'
         className={`${styles.hero_bg_image}`}
         loading='eager'
-        fetchPriority="high"
+        fetchPriority='high'
       />
       <div className={`${styles.hero_content}`}>
         <div className={`${styles.hero_top}`}>
